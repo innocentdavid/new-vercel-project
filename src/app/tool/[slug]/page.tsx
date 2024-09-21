@@ -20,7 +20,6 @@ import {
 } from "@/components/ui/accordion";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ClipboardCopy } from "lucide-react";
-import { handleCopy } from "@/lib/helpers";
 import CopyComp from "@/components/CopyComp";
 
 async function getToolBySlug(slug: string) {
