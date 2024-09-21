@@ -46,7 +46,10 @@ export default async function ToolPage({
       </div>
 
       <div className="py-12">
-        <section className="flex flex-col md:items-center lg:items-start md:flex-row gap-8" id="hero">
+        <section
+          className="flex flex-col md:items-center lg:items-start md:flex-row gap-8"
+          id="hero"
+        >
           <div className="w-full lg:w-[30%] grid gap-8">
             <div className="">
               <h1 className="text-4xl font-bold leading-[1.333334] capitalize">
@@ -55,9 +58,11 @@ export default async function ToolPage({
               <p className="text-gray-600 text-sm">Added on Jul 31, 2024</p>
 
               <div className="flex items-center mt-4 gap-4">
-                <Button className="bg-pink-500 hover:bg-pink-600 text-white h-fit">
-                  Open Website
-                </Button>
+                <Link href={tool.siteLink}>
+                  <Button className="bg-pink-500 hover:bg-pink-600 text-white h-fit">
+                    Open Website
+                  </Button>
+                </Link>
                 <button className="bg-[#F0F4F8] dark:bg-[#181A1C] hover:bg-[#DDE7EE] dark:hover:bg-[#32383E] px-4 py-[0.375rem] rounded-[150px]">
                   <p className="text-[0.875rem]">⭐️</p>
                 </button>
@@ -203,8 +208,8 @@ export default async function ToolPage({
               </Card>
 
               <Button className="mt-8 bg-pink-500 hover:bg-pink-600 text-white text-base">
-                View &nbsp;<span className="capitalize">{tool.title}</span>&nbsp;
-                Alternatives
+                View &nbsp;<span className="capitalize">{tool.title}</span>
+                &nbsp; Alternatives
               </Button>
             </div>
           </section>
@@ -218,7 +223,7 @@ export default async function ToolPage({
 
               <Card>
                 <CardContent className="flex flex-col md:flex-row items-center gap-4 p-4">
-                  <p className="">
+                  <p className="text-center md:text-start">
                     Use the following badges to drive support from your
                     community for your launch. High stared tools are more likely
                     to be featured on the homepage and in our newsletters.

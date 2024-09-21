@@ -35,7 +35,7 @@ export default function Header() {
     <header className="sticky top-0 z-[1000]">
       <div className="w-full bg-white dark:bg-[#0A0A0A] flex flex-col justify-center items-center">
         <nav className="w-full flex items-center justify-between space-x-4 bg-white dark:bg-[#0A0A0A] shadow-sm dark:shadow-[#343434] p-4">
-          <div className="flex items-center space-x-4">
+          <Link href={`/`} className="flex items-center space-x-4">
             <Image
               src="/placeholder.svg?height=32&width=32"
               alt=""
@@ -44,7 +44,7 @@ export default function Header() {
               className="rounded-full"
             />
             <span className="text-lg font-semibold">funfun.tools</span>
-          </div>
+          </Link>
 
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4">
