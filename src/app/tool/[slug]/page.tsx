@@ -46,7 +46,7 @@ export default async function ToolPage({
       </div>
 
       <div className="py-12">
-        <section className="flex flex-col md:flex-row gap-8" id="hero">
+        <section className="flex flex-col md:items-center lg:items-start md:flex-row gap-8" id="hero">
           <div className="w-full lg:w-[30%] grid gap-8">
             <div className="">
               <h1 className="text-4xl font-bold leading-[1.333334] capitalize">
@@ -99,7 +99,7 @@ export default async function ToolPage({
               alt=""
               width={900}
               height={700}
-              className=" w-full h-full rounded-[16px]"
+              className=" w-full h-auto rounded-[16px]"
             />
           </div>
         </section>
@@ -203,7 +203,7 @@ export default async function ToolPage({
               </Card>
 
               <Button className="mt-8 bg-pink-500 hover:bg-pink-600 text-white text-base">
-                View <span className="capitalize">{tool.title}</span>{" "}
+                View &nbsp;<span className="capitalize">{tool.title}</span>&nbsp;
                 Alternatives
               </Button>
             </div>
@@ -217,7 +217,7 @@ export default async function ToolPage({
               </h2>
 
               <Card>
-                <CardContent className="flex items-center gap-4 p-4">
+                <CardContent className="flex flex-col md:flex-row items-center gap-4 p-4">
                   <p className="">
                     Use the following badges to drive support from your
                     community for your launch. High stared tools are more likely
@@ -269,11 +269,6 @@ export default async function ToolPage({
                   </div>
                 </CardContent>
               </Card>
-
-              <Button className="mt-8 bg-pink-500 hover:bg-pink-600 text-white text-base">
-                View <span className="capitalize">{tool.title}</span>{" "}
-                Alternatives
-              </Button>
             </div>
           </section>
         </div>
