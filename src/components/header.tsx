@@ -1,282 +1,236 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
-import { Menu } from "lucide-react";
-
-// import { cn } from "@/lib/utils"
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import Image from "next/image";
+// import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { ModeToggle } from "./ModeToggle";
 
 const navItems = [
-  { title: "Home", href: "/" },
+  // { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Services", href: "/services" },
   { title: "Contact", href: "/contact" },
 ];
-// import React from "react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
+
+  // useEffect(() => {
+  //   const checkIsMobile = () => {
+  //     setIsMobile(window.innerWidth < 769);
+  //   };
+  //   checkIsMobile();
+  //   window.addEventListener("resize", checkIsMobile);
+  //   return () => window.removeEventListener("resize", checkIsMobile);
+  // }, []);
+
+  // const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
-    <header className="sticky top-0 z-[1000] bg-[#FEFEFE]">
-      <nav className="border-b">
-        <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="flex items-center flex-shrink-0">
-            <Link href="/" className="text-xl font-bold">
-              <svg
-                className="w-8 h-8 text-primary"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M12 5.74C16.444 1.33 22.884 7.26 19.65 11.23C17.03 14.49 12 17.49 12 21C12 17.49 6.97 14.49 4.35 11.23C1.115 7.26 7.555 1.33 12 5.74Z" />
-              </svg>
-              <span className="sr-only">Your Company</span>
-            </Link>
+    <header className="sticky top-0 z-[1000]">
+      <div className="w-full bg-white dark:bg-[#0A0A0A] flex flex-col justify-center items-center">
+        <nav className="w-full flex items-center justify-between space-x-4 bg-white dark:bg-[#0A0A0A] shadow-sm dark:shadow-[#343434] p-4">
+          <div className="flex items-center space-x-4">
+            <Image
+              src="/placeholder.svg?height=32&width=32"
+              alt=""
+              width={32}
+              height={32}
+              className="rounded-full"
+            />
+            <span className="text-lg font-semibold">funfun.tools</span>
           </div>
-          <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 border-b-2 border-transparent hover:border-gray-300"
-              >
-                {item.title}
-              </Link>
-            ))}
-          </div>
-          <div className="flex items-center sm:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="relative">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle navigation menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right">
-                <nav className="flex flex-col space-y-4 mt-4">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                      onClick={() => setIsOpen(false)}
+
+          <div className="flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-4">
+              <ul className="flex items-center space-x-4">
+                {navItems.map((item, i) => (
+                  <li key={i}>
+                    <Link href={item.href}>{item.title}</Link>
+                  </li>
+                ))}
+              </ul>
+              <Button className="bg-pink-500 text-white hover:bg-pink-600 py-[6px] h-fit">
+                <div className="flex items-center gap-2">
+                  <span className="">
+                    <svg
+                      className="w-[1.2rem] h-[1.2rem]"
+                      fill="currentColor"
+                      focusable="false"
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      data-testid="AddCircleRoundedIcon"
                     >
-                      {item.title}
-                    </Link>
-                  ))}
-                </nav>
-              </SheetContent>
-            </Sheet>
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m4 11h-3v3c0 .55-.45 1-1 1s-1-.45-1-1v-3H8c-.55 0-1-.45-1-1s.45-1 1-1h3V8c0-.55.45-1 1-1s1 .45 1 1v3h3c.55 0 1 .45 1 1s-.45 1-1 1" />
+                    </svg>
+                  </span>
+
+                  <span className="hidden sm:inline">Submit Tool</span>
+                </div>
+                <span className="sm:hidden">+</span>
+              </Button>
+
+              <ModeToggle />
+              {/* <Button variant="ghost" size="icon">
+                <Settings className="h-5 w-5" />
+              </Button> */}
+            </div>
+
+            {/* {isMobile && (
+            )} */}
+            {/* <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleMenu}
+              className="lg:hidden"
+            >
+              <Menu className="h-5 w-5" />
+            </Button> */}
+            <div className="flex items-center lg:hidden">
+              <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="relative">
+                    {/* {isOpen ? (
+                      <X className="h-6 w-6" />
+                    ) : (
+                    )} */}
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle navigation menu</span>
+                  </Button>
+                </SheetTrigger>
+
+                <SheetContent side="right" className="mt-[70px]">
+                  <nav className="flex flex-col space-y-4 mt-4">
+                    {navItems.map((item) => (
+                      <Link
+                        key={item.title}
+                        href={item.href}
+                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </nav>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+
+        {/* <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="fixed top-0 right-0 h-full w-64 bg-white dark:bg-[#0A0A0A] shadow-lg z-50 p-4 lg:hidden"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleMenu}
+                className="absolute top-4 right-4"
+              >
+                <X className="h-5 w-5" />
+              </Button>
+              <div className="flex flex-col space-y-4 mt-16">
+                <Button variant="ghost">Menu Item 1</Button>
+                <Button variant="ghost">Menu Item 2</Button>
+                <Button variant="ghost">Menu Item 3</Button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence> */}
+      </div>
     </header>
   );
-  //   return (
-  //     <header className="sticky top-0 z-[1000] flex flex-col items-center bg-[#FDFDFD] object-fill px-4 lg:h-[90px] lg:px-10 shadow-sm">
-  //       <nav className=" z-[999] mx-auto flex w-full items-center justify-between bg-[#FDFDFD] py-1 xl:max-w-[1350px]">
-  //         <a className="mr-4 flex flex-none items-center gap-2 py-4" href="/">
-  //           <div>
-  //             LOGO
-  //           </div>
-  //           <span className="sr-only">Logo</span>
-  //         </a>
-  //         <nav className="static hidden h-full w-auto items-center justify-center text-[#858585] lg:flex">
-  //           <div className="flex items-center">
-  //             <a
-  //               className="mx-2 mr-1 flex items-center justify-center p-[28px_12px] px-1 text-left align-top font-medium leading-6 hover:text-green-500"
-  //               href="#"
-  //             >
-  //               AI Social Assistant
-  //             </a>
-  //             <div className="mr-2 flex items-center justify-center rounded-[6px] border border-[#e8e8e8] bg-[#f4f4f4] px-2 py-1 text-xs font-medium">
-  //               <p className="_text-[#5c5c5c] mb-0 w-auto bg-gradient-to-tr from-emerald-500 to-emerald-500/5 bg-clip-text text-left text-sm font-semibold leading-[100%] text-transparent">
-  //                 New
-  //               </p>
-  //             </div>
-  //           </div>
-  //           <div className="flex items-center">
-  //             <a
-  //               className="flex items-center justify-center gap-2 px-6 py-[28px] text-left align-top font-medium leading-6 hover:text-green-500"
-  //               href="/pricing"
-  //             >
-  //               Pricing
-  //             </a>
-  //           </div>
-  //           <div className="flex items-center">
-  //             <a
-  //               className="flex items-center justify-center gap-2 px-3 py-[28px] text-left align-top font-medium leading-6 hover:text-green-500"
-  //               href="/reviews"
-  //             >
-  //               Reviews
-  //             </a>
-  //           </div>
-  //           <div className="group flex items-center">
-  //             <div className="group flex cursor-pointer items-center justify-center gap-2 px-6 py-[28px] text-left align-top font-medium leading-6 group-hover:text-green-500">
-  //               <span>Resources</span>
-  //               <svg
-  //                 xmlns="http://www.w3.org/2000/svg"
-  //                 width={16}
-  //                 height={16}
-  //                 viewBox="0 0 24 24"
-  //                 fill="none"
-  //                 stroke="currentColor"
-  //                 strokeWidth={3}
-  //                 strokeLinecap="round"
-  //                 strokeLinejoin="round"
-  //                 className="lucide lucide-chevron-up _rotate-180 transition-all delay-100 duration-300 rotate-180 _group-hover:rotate-0"
-  //               >
-  //                 <path d="m18 15-6-6-6 6" />
-  //               </svg>
-  //             </div>
-  //           </div>
-  //         </nav>
-  //         <div className="hidden min-h-[50px] items-center justify-end gap-2 lg:flex">
-  //           <a
-  //             rel="alternate"
-  //             hrefLang="en"
-  //             href="https://app.gainsty.com/en/signup"
-  //           >
-  //             <button
-  //               type="button"
-  //               className="mx-0 h-auto rounded-[8px] border border-[#10B981] bg-[#10B981] p-[6px_24px_7px] text-center font-medium leading-6 text-[whitesmoke] shadow-[3px_3px_4px_rgba(0,0,0,.2)] hover:border-[#10aa81] hover:bg-[#10aa81]"
-  //             >
-  //               Start Free Trial
-  //             </button>
-  //           </a>
-  //           <a
-  //             rel="alternate"
-  //             hrefLang="en"
-  //             href="https://app.gainsty.com/en/login"
-  //           >
-  //             <button
-  //               type="button"
-  //               className="mx-0 h-auto rounded-[8px] border border-[#e8e8e8] bg-white p-[6px_24px_7px] text-center font-medium leading-6 shadow-[3px_3px_4px_rgba(0,0,0,.2)] hover:border-[#10B981] hover:bg-[#10B981] hover:text-[whitesmoke]"
-  //             >
-  //               Sign In
-  //             </button>
-  //           </a>
-  //         </div>
-  //         <div className="flex items-center gap-3 lg:hidden">
-  //           <a
-  //             rel="alternate"
-  //             hrefLang="en"
-  //             className="hidden sm:inline-block"
-  //             href="https://app.gainsty.com/en/signup"
-  //           >
-  //             <button
-  //               type="button"
-  //               className="mx-0 h-auto rounded-[8px] border border-[#10B981] bg-[#10B981] p-[6px_12px_8px] text-center font-medium leading-6 text-[whitesmoke] shadow-[3px_3px_4px_rgba(0,0,0,.2)] hover:border-[#10aa81] hover:bg-[#10aa81]"
-  //             >
-  //               Start Free Trial
-  //             </button>
-  //           </a>
-  //           <button
-  //             type="button"
-  //             title="menu"
-  //             className="mx-0 h-auto rounded-[8px] border border-[#e8e8e8] bg-white p-2 text-center font-medium leading-6 shadow-[3px_3px_4px_rgba(0,0,0,.06)] hover:text-[whitesmoke] _!text-[#6D7282] text-red-800"
-  //           >
-  //             <svg
-  //               xmlns="http://www.w3.org/2000/svg"
-  //               width={20}
-  //               height={20}
-  //               viewBox="0 0 24 24"
-  //               fill="none"
-  //               stroke="currentColor"
-  //               strokeWidth={3}
-  //               strokeLinecap="round"
-  //               strokeLinejoin="round"
-  //               className="lucide lucide-menu"
-  //             >
-  //               <line x1={4} x2={20} y1={12} y2={12} />
-  //               <line x1={4} x2={20} y1={6} y2={6} />
-  //               <line x1={4} x2={20} y1={18} y2={18} />
-  //             </svg>
-  //           </button>
-  //         </div>
-  //       </nav>
-  //       <nav className="absolute top-full z-10 w-full border-t-2 !bg-[#FDFDFD] transition-all duration-300 h-screen overflow-auto pb-40 lg:hidden _opacity-0 pointer-events-none -left-[1000%] _h-0">
-  //         <div className="flex items-center border-b-2 px-4">
-  //           <a
-  //             className="mr-1 flex w-full items-center p-[28px_12px] px-0 text-left align-top font-medium leading-6 hover:text-green-500"
-  //             href="#"
-  //           >
-  //             AI Social Assistant
-  //           </a>
-  //           <div className="flex items-center justify-center rounded-[6px] border border-[#e8e8e8] bg-[#f4f4f4] px-2 py-1 text-xs font-medium">
-  //             <p className="_text-[#5c5c5c] mb-0 w-auto bg-gradient-to-tr from-emerald-500 to-emerald-500/5 bg-clip-text text-left text-sm font-semibold leading-[100%] text-transparent">
-  //               New
-  //             </p>
-  //           </div>
-  //         </div>
-  //         <div className="flex items-center border-b-2 px-4">
-  //           <a
-  //             className="flex w-full items-center gap-2 py-[28px] text-left align-top font-medium leading-6 hover:text-green-500"
-  //             href="/pricing"
-  //           >
-  //             Pricing
-  //           </a>
-  //         </div>
-  //         <div className="flex items-center border-b-2 px-4">
-  //           <a
-  //             className="flex w-full items-center gap-2 py-[28px] text-left align-top font-medium leading-6 hover:text-green-500"
-  //             href="/reviews"
-  //           >
-  //             Reviews
-  //           </a>
-  //         </div>
-  //         <div className="group relative border-b-2">
-  //           <div className="group flex w-full cursor-pointer items-center justify-between gap-2 px-4 py-[28px] text-left align-top font-medium leading-6 group-hover:text-green-500">
-  //             <span>Resources</span>
-  //             <svg
-  //               xmlns="http://www.w3.org/2000/svg"
-  //               width={16}
-  //               height={16}
-  //               viewBox="0 0 24 24"
-  //               fill="none"
-  //               stroke="currentColor"
-  //               strokeWidth={3}
-  //               strokeLinecap="round"
-  //               strokeLinejoin="round"
-  //               className="lucide lucide-chevron-up _rotate-180 transition-all delay-100 duration-300 rotate-180 _group-hover:rotate-0"
-  //             >
-  //               <path d="m18 15-6-6-6 6" />
-  //             </svg>
-  //           </div>
-  //         </div>
-  //         {/* <div className="flex items-center border-b-2 px-4">
-  //           <a
-  //             rel="alternate"
-  //             hrefLang="en"
-  //             className="flex w-full items-center gap-2 py-[28px] text-left align-top font-medium leading-6 hover:text-green-500"
-  //             href="https://app.gainsty.com/en/login"
-  //           >
-  //             Sign In
-  //           </a>
-  //         </div>
-  //         <div className="mt-8 px-4">
-  //           <a
-  //             rel="alternate"
-  //             hrefLang="en"
-  //             href="https://app.gainsty.com/en/signup"
-  //           >
-  //             <button
-  //               type="button"
-  //               className="h-auto w-full rounded-[8px] border border-[#10B981] bg-[#10B981] p-[14px_40px] text-center font-medium leading-6 text-[whitesmoke] shadow-[3px_3px_4px_rgba(0,0,0,.2)] hover:border-[#10aa81] hover:bg-[#10aa81]"
-  //             >
-  //               Start Free Trial
-  //             </button>
-  //           </a>
-  //         </div> */}
-  //       </nav>
-  //     </header>
-  //   );
 }
+
+// "use client";
+
+// import * as React from "react";
+// import Link from "next/link";
+// import { Menu } from "lucide-react";
+
+// import { Button } from "@/components/ui/button";
+
+// const navItems = [
+//   { title: "Home", href: "/" },
+//   { title: "About", href: "/about" },
+//   { title: "Services", href: "/services" },
+//   { title: "Contact", href: "/contact" },
+// ];
+
+// export default function Header() {
+//   const [isOpen, setIsOpen] = React.useState(false);
+
+//   return (
+//     <header className="sticky top-0 z-[1000] bg-[#FEFEFE]">
+//       <nav className="border-b">
+//         <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-7xl sm:px-6 lg:px-8">
+//           <div className="flex items-center flex-shrink-0">
+//             <Link href="/" className="text-xl font-bold">
+//               <svg
+//                 className="w-8 h-8 text-primary"
+//                 fill="none"
+//                 height="24"
+//                 stroke="currentColor"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 strokeWidth="2"
+//                 viewBox="0 0 24 24"
+//                 width="24"
+//                 xmlns="http://www.w3.org/2000/svg"
+//               >
+//                 <path d="M12 5.74C16.444 1.33 22.884 7.26 19.65 11.23C17.03 14.49 12 17.49 12 21C12 17.49 6.97 14.49 4.35 11.23C1.115 7.26 7.555 1.33 12 5.74Z" />
+//               </svg>
+//               <span className="sr-only">Your Company</span>
+//             </Link>
+//           </div>
+//           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+//             {navItems.map((item) => (
+//               <Link
+//                 key={item.title}
+//                 href={item.href}
+//                 className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 border-b-2 border-transparent hover:border-gray-300"
+//               >
+//                 {item.title}
+//               </Link>
+//             ))}
+//           </div>
+//           <div className="flex items-center sm:hidden">
+//             <Sheet open={isOpen} onOpenChange={setIsOpen}>
+//               <SheetTrigger asChild>
+//                 <Button variant="ghost" size="icon" className="relative">
+//                   <Menu className="h-6 w-6" />
+//                   <span className="sr-only">Toggle navigation menu</span>
+//                 </Button>
+//               </SheetTrigger>
+//               <SheetContent side="right">
+//                 <nav className="flex flex-col space-y-4 mt-4">
+//                   {navItems.map((item) => (
+//                     <Link
+//                       key={item.title}
+//                       href={item.href}
+//                       className="text-base font-medium text-gray-900 hover:text-gray-700"
+//                       onClick={() => setIsOpen(false)}
+//                     >
+//                       {item.title}
+//                     </Link>
+//                   ))}
+//                 </nav>
+//               </SheetContent>
+//             </Sheet>
+//           </div>
+//         </div>
+//       </nav>
+//     </header>
+//   );
+// }
