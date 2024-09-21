@@ -203,7 +203,8 @@ export default async function ToolPage({
               </Card>
 
               <Button className="mt-8 bg-pink-500 hover:bg-pink-600 text-white text-base">
-                View Nudiva Alternatives
+                View <span className="capitalize">{tool.title}</span>{" "}
+                Alternatives
               </Button>
             </div>
           </section>
@@ -270,7 +271,8 @@ export default async function ToolPage({
               </Card>
 
               <Button className="mt-8 bg-pink-500 hover:bg-pink-600 text-white text-base">
-                View Nudiva Alternatives
+                View <span className="capitalize">{tool.title}</span>{" "}
+                Alternatives
               </Button>
             </div>
           </section>
