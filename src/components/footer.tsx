@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="mb-4">
               <Link
                 className="flex items-center justify-center w-8 h-8 bg-white rounded shadow-sm shadow-zinc-950/20"
-                href="#"
+                href="/"
               >
                 <Image
                   alt="Logo"
