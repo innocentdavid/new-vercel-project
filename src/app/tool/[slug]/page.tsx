@@ -190,7 +190,7 @@ export default async function ToolPage({
                         value={`item-${index}`}
                         className="hover:bg-slate-100 dark:hover:bg-[#171A1C] px-4 my-[6px]"
                       >
-                        <AccordionTrigger className="text-lg">
+                        <AccordionTrigger className="text-lg text-start">
                           {faq.q}
                         </AccordionTrigger>
                         <AccordionContent className="text-base">
