@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
+    <div className="mb-20">
       <BackgroundBeamsWithCollisionDemo />
       <section className="max-w-[1536px] mx-auto mt-20">
         <h2 className="mb-6 text-center text-3xl font-bold">Just Launched</h2>
@@ -24,22 +24,7 @@ export default function Home() {
           <Button>Load More</Button>
         </div>
       </section>
-      {/* <br />
-      <br />
-      <br />
-      <HoverBorderGradientDemo />
-      <br />
-      <br />
-      <br />
-      <ExpandableCardDemo />
-      <br />
-      <br />
-      <br />
-      <ExpandableCardDemoStandard />
-      <br />
-      <br />
-      <br /> */}
-    </>
+    </div>
   );
 }
 
@@ -62,11 +47,11 @@ function ProductCard(tool: (typeof TOOLS)[0]) {
               />
             </Link>
           </div>
-          <div className="absolute bottom-0 translate-y-1/2 mr-auto right-4 z-[2] rounded-[50%]">
+          <Link href={`/review/${tool.slug}`} className="absolute bottom-0 translate-y-1/2 mr-auto right-4 z-[2] rounded-[50%]">
             <button className="bg-[#F0F4F8] dark:bg-[#0A0E0F] hover:bg-[#DDE7EE] dark:hover:bg-[#32383E] px-4 py-[0.375rem] rounded-[150px]">
               <p className="text-[0.875rem]">⭐️</p>
             </button>
-          </div>
+          </Link>
         </div>
 
         <Link href={`/tool/${tool.slug}`} className="" prefetch={false}>

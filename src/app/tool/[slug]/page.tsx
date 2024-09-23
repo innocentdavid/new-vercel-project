@@ -63,9 +63,12 @@ export default async function ToolPage({
                     Open Website
                   </Button>
                 </Link>
-                <button className="bg-[#F0F4F8] dark:bg-[#181A1C] hover:bg-[#DDE7EE] dark:hover:bg-[#32383E] px-4 py-[0.375rem] rounded-[150px]">
-                  <p className="text-[0.875rem]">⭐️</p>
-                </button>
+
+                <Link href={`/review/${tool.slug}`}>
+                  <button className="bg-[#F0F4F8] dark:bg-[#181A1C] hover:bg-[#DDE7EE] dark:hover:bg-[#32383E] px-4 py-[0.375rem] rounded-[150px]">
+                    <p className="text-[0.875rem]">⭐️</p>
+                  </button>
+                </Link>
               </div>
 
               <div className="flex space-x-2 mt-2">

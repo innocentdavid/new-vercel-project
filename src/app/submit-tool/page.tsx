@@ -6,7 +6,7 @@ import React from "react";
 
 export default function SubmitToolPage() {
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-10 lg:gap-8 mt-[76px] w-full mb-20">
+    <div className="flex flex-col lg:grid lg:grid-cols-10 lg:gap-8 mt-4 w-full mb-20">
       <div className="lg:col-span-10">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <section className="py-6">
