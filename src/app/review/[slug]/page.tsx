@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { TOOLS } from "@/lib/mockToolsData";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -6,11 +7,85 @@ import {
   SquarePen,
   Star,
 } from "lucide-react";
+import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import React from "react";
 
-export default function ReviewPage() {
+function decodeURLString(encodedString: string) {
+  try {
+    return decodeURIComponent(encodedString);
+  } catch (e) {
+    console.error("Error decoding URL string:", e);
+    return encodedString; // Return the original string if decoding fails
+  }
+}
+
+const generateSeoDescription = (text: string, wordLimit = 22) => {
+  // Function to strip HTML tags from text
+  const stripHtmlTags = (text: string) => {
+    return text.replace(/<\/?[^>]+>/gi, "");
+  };
+
+  // Remove HTML tags from the text
+  const cleanText = stripHtmlTags(text);
+
+  // Split the cleaned text into words
+  const words = cleanText.split(" ");
+
+  // Check if the number of words exceeds the limit
+  if (words.length <= wordLimit) {
+    return cleanText;
+  }
+
+  // Truncate the text and add ellipsis
+  return words.slice(0, wordLimit).join(" ") + " ...";
+};
+
+async function getToolBySlug(slug: string) {
+  const tool = TOOLS.find((tool) => tool.slug === slug);
+  return tool;
+}
+
+export async function generateMetadata(
+  { params }: { params: { slug: string } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+
+  const slug = decodeURLString(params.slug);
+  const tool = await getToolBySlug(slug);
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+  // const seo_description = generateSeoDescription(tool?.excerpt!);
+  const seo_description = generateSeoDescription(
+    "We've tested seospark.io, the Keyword Research & Automation tool for SEO professionals"
+  );
+
+  return {
+    title: `FunFun.tool: ${tool?.title} - review`,
+    description: seo_description,
+    alternates: {
+      canonical: `https://new-vercel-project-vert.vercel.app/tool/${slug}`,
+    },
+    openGraph: {
+      // images: tool?.mainImageUrl || "",
+      images: [tool?.mainImageUrl || "", ...previousImages],
+    },
+  };
+}
+
+export default async function ReviewPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const slug = decodeURLString(params.slug);
+  const tool = await getToolBySlug(slug);
+  if (!tool) return notFound();
+
   return (
     <div
       className="flex flex-col lg:grid lg:grid-cols-10 lg:gap-8 mt-4 w-full mb-20"

@@ -5,6 +5,7 @@ import HoverBorderGradientDemo from "@/components/homepage/hover-border-gradient
 import AreaChartComponent from "@/components/ui/AreaChart";
 import { Button } from "@/components/ui/button";
 import { TOOLS } from "@/lib/mockToolsData";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
