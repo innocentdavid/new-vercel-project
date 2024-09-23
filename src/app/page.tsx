@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <BackgroundBeamsWithCollisionDemo />
-      <section className="mt-20">
+      <section className="max-w-[1536px] mx-auto mt-20">
         <h2 className="mb-6 text-center text-3xl font-bold">Just Launched</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4">
@@ -24,7 +24,7 @@ export default function Home() {
           <Button>Load More</Button>
         </div>
       </section>
-      <br />
+      {/* <br />
       <br />
       <br />
       <HoverBorderGradientDemo />
@@ -38,13 +38,12 @@ export default function Home() {
       <ExpandableCardDemoStandard />
       <br />
       <br />
-      <br />
+      <br /> */}
     </>
   );
 }
 
-
-function ProductCard(tool: typeof TOOLS[0]) {
+function ProductCard(tool: (typeof TOOLS)[0]) {
   return (
     <div className="group">
       <div
