@@ -159,6 +159,7 @@ const CollisionMechanism = React.forwardRef<
     const animationInterval = setInterval(checkCollision, 50);
 
     return () => clearInterval(animationInterval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cycleCollisionDetected, containerRef]);
 
   useEffect(() => {
