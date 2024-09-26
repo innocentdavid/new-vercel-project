@@ -13,7 +13,7 @@ export default function SubmitToolPage() {
             <div className="px-6 max-w-7xl lg:px-8">
               <div className="flex items-center">
                 <h1 className="text-3xl font-bold tracking-tight dark:text-gray-50">
-                  Advertising on Uneed
+                  Advertising on FollowersTool
                 </h1>
               </div>
               <p className="max-w-3xl mt-4 text-xl leading-8 text-gray-600 dark:text-gray-400">
@@ -65,7 +65,7 @@ export default function SubmitToolPage() {
                     Skip the waiting line
                   </h3>
                   <p className="mt-6 text-base leading-7 text-gray-600 dark:text-gray-400">
-                    Launch your product on Uneed the day you want{" "}
+                    Launch your product on FollowersTool the day you want{" "}
                   </p>
                   <ul
                     role="list"
@@ -95,7 +95,7 @@ export default function SubmitToolPage() {
                         aria-hidden="true"
                         style={{}}
                       />{" "}
-                      Your product stays on Uneed forever and earn a lifetime
+                      Your product stays on FollowersTool forever and earn a lifetime
                       dofollow backlink, no matter your launch's results{" "}
                     </li>
                     <li className="flex gap-x-3">
@@ -159,7 +159,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          Your product stays on Uneed forever and earn a
+                          Your product stays on FollowersTool forever and earn a
                           lifetime dofollow backlink, no matter your launch's
                           results
                         </span>
@@ -281,7 +281,7 @@ export default function SubmitToolPage() {
                       </span>
                     </div>
                     <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-2">
-                      Promote your product on Uneed
+                      Promote your product on FollowersTool
                     </p>
                   </div>
                   <div className="flex flex-row items-baseline gap-x-1">
@@ -464,7 +464,7 @@ export default function SubmitToolPage() {
                         href="https://www.testimonialdonut.com?ref=uneed.best"
                         rel="noopener noreferrer"
                         target="_blank"
-                        aria-label="Uneed x Testimonial Donut"
+                        aria-label="FollowersTool x Testimonial Donut"
                         className="focus:outline-none"
                         tabIndex={-1}
                         data-v-fd9b37b1
@@ -487,7 +487,7 @@ export default function SubmitToolPage() {
                           className="text-lg font-bold text-[#FF6CA8] sm:text-xl"
                           data-v-fd9b37b1
                         >
-                          Uneed x Testimonial Donut
+                          FollowersTool x Testimonial Donut
                         </h2>
                       </div>
                       <p
@@ -495,7 +495,7 @@ export default function SubmitToolPage() {
                         data-v-fd9b37b1
                       >
                         {" "}
-                        Uneed is partnering with Testimonial Donut, allowing you
+                        FollowersTool is partnering with Testimonial Donut, allowing you
                         to collect valuable video feedback for your product at a
                         low price 🤩{" "}
                       </p>
@@ -634,7 +634,7 @@ export default function SubmitToolPage() {
                   >
                     <figure className="p-8 mt-8 text-sm leading-6 border border-sand-600 dark:border-gray-800 sm:mt-0 bg-sand-500 rounded-2xl dark:bg-gray-600 dark:border-0 dark:group-hover:bg-gray-400 group-hover:bg-sand-600">
                       <blockquote className="dark:text-gray-50 min-h-[48px]">
-                        <p>“Can confirm. Uneed is incredible.”</p>
+                        <p>“Can confirm. FollowersTool is incredible.”</p>
                       </blockquote>
                       <figcaption className="flex items-center mt-6 gap-x-4">
                         <Image
@@ -663,7 +663,7 @@ export default function SubmitToolPage() {
                     <figure className="p-8 mt-8 text-sm leading-6 border border-sand-600 dark:border-gray-800 sm:mt-0 bg-sand-500 rounded-2xl dark:bg-gray-600 dark:border-0 dark:group-hover:bg-gray-400 group-hover:bg-sand-600">
                       <blockquote className="dark:text-gray-50">
                         <p>
-                          “That's soo cool, I get traffic from Uneed everyday,
+                          “That's soo cool, I get traffic from FollowersTool everyday,
                           definitely worth the launch :)”
                         </p>
                       </blockquote>
@@ -695,7 +695,7 @@ export default function SubmitToolPage() {
                       <blockquote className="dark:text-gray-50">
                         <p>
                           “One of my 3 launchpads I check every day. PH, DH and
-                          Uneed. More people should know about this one.”
+                          FollowersTool. More people should know about this one.”
                         </p>
                       </blockquote>
                       <figcaption className="flex items-center mt-6 gap-x-4">

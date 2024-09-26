@@ -128,7 +128,7 @@ export default async function ReviewPage({
                     <p>Welcome to our seospark review!</p>
                     <p>
                       This review is a bit special for us, as seospark is a
-                      product that perfectly aligns with Uneed: keyword research
+                      product that perfectly aligns with FollowersTool: keyword research
                       and data-driven SEO are at the core of our marketing
                       strategy, and it's thanks to this that we exist today!
                     </p>
@@ -473,7 +473,7 @@ export default async function ReviewPage({
                       decisions.
                     </p>
                     <p>
-                      Overall, seospark gets a thumbs up from us at Uneed 👍!
+                      Overall, seospark gets a thumbs up from us at FollowersTool 👍!
                     </p>
 
                     <GetReview />
