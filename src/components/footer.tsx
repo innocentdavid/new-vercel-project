@@ -20,12 +20,12 @@ export default function Footer() {
                   decoding="async"
                   data-nimg={1}
                   style={{ color: "transparent" }}
-                  src="https://cdn.funfun.tools/_next/image?url=%2Flogo.png&w=48&q=75"
+                  src="https://cdn.FollowersTool/_next/image?url=%2Flogo.png&w=48&q=75"
                 />
               </Link>
             </div>
             <div className="text-sm text-zinc-500">
-              © funfun.tools All rights reserved.
+              © FollowersTool All rights reserved.
             </div>
           </div>
           <div className="grid gap-8 sm:grid-cols-12 sm:col-span-10 md:col-span-10 lg:col-span-10">
@@ -86,10 +86,10 @@ export default function Footer() {
                 <li>
                   <a
                     className="transition text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300"
-                    href="mailto:business@funfun.tools"
+                    href="mailto:business@FollowersTool"
                     target="_blank"
                   >
-                    business@funfun.tools
+                    business@FollowersTool
                   </a>
                 </li>
                 <li>
@@ -266,7 +266,7 @@ export default function Footer() {
   //             className="h-10"
   //           />
   //           <p className="text-gray-500 text-base">
-  //             © funfun.tools All rights reserved.
+  //             © FollowersTool All rights reserved.
   //           </p>
   //         </div>
   //         <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
@@ -293,8 +293,8 @@ export default function Footer() {
   //               </h3>
   //               <ul role="list" className="mt-4 space-y-4">
   //                 <li>
-  //                   <a href="mailto:business@funfun.tools" className="text-base text-gray-500 hover:text-gray-900">
-  //                     business@funfun.tools
+  //                   <a href="mailto:business@FollowersTool" className="text-base text-gray-500 hover:text-gray-900">
+  //                     business@FollowersTool
   //                   </a>
   //                 </li>
   //                 <li>

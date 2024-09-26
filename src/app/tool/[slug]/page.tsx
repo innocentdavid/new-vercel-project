@@ -319,7 +319,7 @@ export default async function ToolPage({
                           FEATURED ON
                         </p>
                         <p className="text-pink-500 font-extrabold">
-                          funfun.tools
+                          FollowersTool
                         </p>
                       </div>
                       <div className="text-pink-500 text-xl">★</div>

@@ -22,14 +22,23 @@ export default function Header() {
       <div className="w-full bg-white dark:bg-[#0A0A0A] flex flex-col justify-center items-center">
         <nav className="w-full flex items-center justify-between space-x-4 bg-white dark:bg-[#0A0A0A] shadow-sm dark:shadow-[#343434] p-4">
           <Link href={`/`} className="flex items-center space-x-4">
-            <Image
-              src="/placeholder.svg?height=32&width=32"
-              alt=""
-              width={32}
-              height={32}
-              className="rounded-full"
-            />
-            <span className="text-lg font-semibold">funfun.tools</span>
+            <div className="">
+              <Image
+                src="/followerstoolblack.png"
+                alt=""
+                width={32}
+                height={32}
+                className="rounded-full_ hidden dark:inline-block"
+              />
+              <Image
+                src="/followerstoolwhite.png"
+                alt=""
+                width={32}
+                height={32}
+                className="rounded-full_ dark:hidden"
+              />
+            </div>
+            <span className="text-lg font-semibold">FollowersTool</span>
           </Link>
 
           <div className="flex items-center space-x-4">

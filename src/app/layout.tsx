@@ -18,14 +18,15 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const APP_NAME = "FunFun.tools";
-const APP_DEFAULT_TITLE = "FunFun.tools";
+const APP_NAME = "FollowersTool";
+const APP_DEFAULT_TITLE = "FollowersTool";
 
 export const metadata: Metadata = {
   title: APP_NAME,
   description: "Discover the best AI tools and products in 2024. Find the top AI websites and tools to help you grow your business, improve productivity, and drive innovation.",
   applicationName: APP_NAME,
   metadataBase: new URL("https://new-vercel-project-vert.vercel.app"),
+  manifest: "/manifest.json"
 };
 
 export default function RootLayout({
