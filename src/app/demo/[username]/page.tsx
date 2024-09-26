@@ -34,11 +34,11 @@ export default function Demo(
           <EngagementRateChart />
         </div>
 
-        <Targeting />
+        {/* <Targeting /> */}
 
-        <div className="h-6"></div>
+        {/* <div className="h-6"></div>
 
-        <Listings />
+        <Listings /> */}
 
         <div className="my-6 flex flex-col items-end text-tremor-label leading-relaxed text-tremor-content-subtle dark:text-dark-tremor-content-subtle">
           <p>
