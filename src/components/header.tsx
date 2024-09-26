@@ -98,7 +98,10 @@ export default function Header() {
                         {item.title}
                       </Link>
                     ))}
-                    <Link href={`/submit-tool`}>
+                    <Link
+                      href={`/submit-tool`}
+                      onClick={() => setIsOpen(false)}
+                    >
                       <Button className="bg-pink-500 text-white hover:bg-pink-600 py-[6px] h-fit w-fit lg:w-full">
                         <div className="flex items-center gap-2">
                           <span className="">
