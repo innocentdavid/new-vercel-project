@@ -501,7 +501,7 @@ export const TOOLS = [
   {
     id: 18,
     "name": "AscendViral",
-    "logo": "",
+    "logo": "/products/ascendviral.png",
     "description": "Get 100%% real Instagram followers organically. Grow your Instagram account with Ascend Viral! Authentic IG Growth Guaranteed. Sign up today to get started!",
     "saves": 8,
     "mainImageUrl": "https://ascendviral.com/wp-content/uploads/2023/05/dashboard-1.png",
@@ -554,7 +554,7 @@ export const TOOLS = [
   },
   {
     id: 24,
-    "name": "/products/Engagementboost",
+    "name": "Engagementboost",
     "logo": "/products/Engagementboost.png",
     "description": "Start Now For FREE! No risk, cancel, anytime. Join thousands of users growing 1-10K Followers monthly! Custom Targeting • 100% REAL Growth • Boost Engagement",
     "saves": 8,

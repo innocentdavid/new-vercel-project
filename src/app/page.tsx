@@ -1,3 +1,4 @@
+import AddBookmark from "@/components/AddBookmark";
 import ExpandableCardDemo from "@/components/blocks/expandable-card-demo-grid";
 import ExpandableCardDemoStandard from "@/components/blocks/expandable-card-demo-standard";
 import BackgroundBeamsWithCollisionDemo from "@/components/homepage/background-beams-with-collision-demo";
@@ -6,6 +7,7 @@ import AreaChartComponent from "@/components/ui/AreaChart";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import { Button } from "@/components/ui/button";
 import { TOOLS } from "@/lib/mockToolsData";
+import { Star } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -96,7 +98,7 @@ export default function Home() {
 
 function ProductCard_V2(tool: (typeof TOOLS)[0]) {
   return (
-    <div className="flex flex-col bg-card text-card-foreground h-full w-full rounded-xl border shadow-lg">
+    <div className="flex flex-col bg-card text-card-foreground h-full w-full rounded-xl border shadow-lg overflow-hidden">
       <div className="px-6 pb-2 pt-4 flex h-24 flex-row items-start gap-4">
         <Link href={`/tool/${tool.slug}`}>
           <div className="relative flex flex-shrink-0 rounded-xl border">
@@ -114,9 +116,7 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
               />
 
               <AvatarFallback className="rounded-xl">
-                {tool.name
-                  .split(" ")
-                  .map((s) => s[0].toUpperCase())}
+                {tool.name.split(" ").map((s) => s[0].toUpperCase())}
               </AvatarFallback>
             </Avatar>
             {/* <Image
@@ -156,101 +156,16 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
           <Link href={`/tool/${tool.slug}`}>
             <div className="flex items-center gap-2 text-lg">
               <div className="flex">
-                <div className="flex">
-                  <svg
-                    className="text-yellow-500 h-4 w-4"
-                    fill="none"
-                    height={24}
-                    role="img"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={0}
-                    viewBox="0 0 24 24"
-                    width={24}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      fill="#727272"
-                    />
-                  </svg>
-                  <svg
-                    className="text-gray-300 h-4 w-4"
-                    fill="none"
-                    height={24}
-                    role="img"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={0}
-                    viewBox="0 0 24 24"
-                    width={24}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      fill="#727272"
-                    />
-                  </svg>
-                  <svg
-                    className="text-gray-300 h-4 w-4"
-                    fill="none"
-                    height={24}
-                    role="img"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={0}
-                    viewBox="0 0 24 24"
-                    width={24}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      fill="#727272"
-                    />
-                  </svg>
-                  <svg
-                    className="text-gray-300 h-4 w-4"
-                    fill="none"
-                    height={24}
-                    role="img"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={0}
-                    viewBox="0 0 24 24"
-                    width={24}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      fill="#727272"
-                    />
-                  </svg>
-                  <svg
-                    className="text-gray-300 h-4 w-4"
-                    fill="none"
-                    height={24}
-                    role="img"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={0}
-                    viewBox="0 0 24 24"
-                    width={24}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      fill="#727272"
-                    />
-                  </svg>
+                <div className="flex text-yellow-500">
+                  <Star size={15} fill="currentColor" />
+                  <Star size={15} fill="currentColor" />
+                  <Star size={15} fill="currentColor" />
+                  <Star size={15} fill="currentColor" />
+                  <Star size={15} fill="currentColor" />
                   <span className="sr-only">Rated 5 out of 5</span>
                 </div>
               </div>
-              (0)
+              {/* (0) */}
             </div>
           </Link>
         </div>
@@ -258,26 +173,28 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
       <div className="px-6">
         <div className="flex justify-between text-lg">
           <span>Paid</span>
-          <span className="flex items-center text-slate-500">
-            <span className="mr-1">17</span>
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-bookmark h-5 w-5 hover:cursor-pointer hover:fill-primary-500 hover:stroke-primary-500 fill-bookmark-inactive stroke-bookmark-inactive"
-                role="presentation"
-              >
-                <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
-              </svg>
-              <span className="sr-only">Add bookmark</span>
-            </button>
+          <span className="flex items-center text-slate-500 gap-1">
+            <div className="">{tool.saves}</div>
+            <AddBookmark>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-bookmark h-5 w-5 hover:cursor-pointer hover:fill-primary-500 hover:stroke-primary-500 fill-bookmark-inactive stroke-bookmark-inactive"
+                  role="presentation"
+                >
+                  <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+                </svg>
+                <span className="sr-only">Add bookmark</span>
+              </button>
+            </AddBookmark>
           </span>
         </div>
       </div>
