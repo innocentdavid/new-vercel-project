@@ -11,33 +11,37 @@ import { demoProfile } from "@/lib/demo-data";
 import axios from "axios";
 import { UserProfile } from "@/lib/types";
 import { notFound } from "next/navigation";
+import getUserProfileData from "@/lib/profile-data";
 
 async function getUserProfile(username: string) {
   if (username === "katharinefoster") {
     return demoProfile;
   }
-  
+
   try {
-    const url = `http://localhost:3000/api/profile-data`;
-    const res = await axios.get<{
-      data: {
-        username: string;
-        full_name: string;
-        profile_pic_url: string;
-        biography: string;
-        follower_count: number;
-        following_count: number;
-        media_count: number;
-      };
-    }>(url, {
-      params: { username: encodeURIComponent(username) },
-    });
+    // const url = `/api/profile-data`;
+    // const res = await axios.get<{
+    //   data: {
+    //     username: string;
+    //     full_name: string;
+    //     profile_pic_url: string;
+    //     biography: string;
+    //     follower_count: number;
+    //     following_count: number;
+    //     media_count: number;
+    //   };
+    // }>(url, {
+    //   params: { username: encodeURIComponent(username) },
+    // });
 
-    const data = res.data.data;
+    // console.log("res.data");
+    // console.log(res.data);
 
-    console.log("res.data");
-    console.log(res.data);
-    
+    const data = await getUserProfileData(username);
+
+    // console.log("data");
+    // console.log(data);
+
     const userProfile: UserProfile = {
       name: data.full_name,
       username,
