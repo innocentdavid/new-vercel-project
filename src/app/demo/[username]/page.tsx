@@ -34,6 +34,10 @@ async function getUserProfile(username: string) {
     });
 
     const data = res.data.data;
+
+    console.log("res.data");
+    console.log(res.data);
+    
     const userProfile: UserProfile = {
       name: data.full_name,
       username,
