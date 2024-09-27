@@ -102,7 +102,7 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
           <div className="relative flex flex-shrink-0 rounded-xl border">
             <Avatar className="h-[60px] w-[60px] rounded-xl relative">
               <AvatarImage
-                src={tool.mainImageUrl}
+                src={tool.logo}
                 alt={`${tool.toolName} logo`}
                 loading="lazy"
                 width={120}
