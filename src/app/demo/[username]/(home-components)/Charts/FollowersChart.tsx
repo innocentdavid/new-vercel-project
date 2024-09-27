@@ -34,8 +34,60 @@ const followersDataGenerator = () => {
   return data;
 };
 
-export function FollowersChart() {
-  const chartData = followersDataGenerator();
+const futureFollowersDataGenerator = (currentFollowersCount: number) => {
+  const startDate = new Date();
+  const endDate = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
+  const data = [];
+
+  // Calculate the total increase needed
+  let targetFollowersIncrease;
+  if (currentFollowersCount >= 0 && currentFollowersCount <= 5000) {
+    targetFollowersIncrease =
+      Math.floor(Math.random() * (1200 - 800 + 1)) + 800;
+  } else if (currentFollowersCount >= 5000 && currentFollowersCount <= 100000) {
+    targetFollowersIncrease = currentFollowersCount * 0.2; // For >5,000 <= 100,000 followers
+  } else {
+    targetFollowersIncrease = currentFollowersCount * 0.1; // For >5000 followers
+  }
+
+  const targetFollowersCount = currentFollowersCount + targetFollowersIncrease;
+
+  // Iterate over the next 30 days
+  for (
+    let date = new Date(startDate.getTime());
+    date <= endDate;
+    date.setDate(date.getDate() + 1)
+  ) {
+    const dateStr = new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "numeric",
+    }).format(date);
+
+    const timeDifferenceInDays =
+      (date.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24);
+
+    // Apply a logistic-like growth formula to simulate an accelerating growth curve
+    const growthFactor = 1.05; // Factor to increase the speed of growth
+    const progression = (timeDifferenceInDays / 30) ** growthFactor;
+    const followers = Math.round(
+      currentFollowersCount +
+        (targetFollowersCount - currentFollowersCount) * progression
+    );
+
+    data.push({ date: dateStr, Followers: followers });
+  }
+
+  return data;
+};
+
+export function FollowersChart({
+  currentFollowersCount,
+}: {
+  currentFollowersCount?: number | null;
+}) {
+  const chartData = currentFollowersCount
+    ? futureFollowersDataGenerator(currentFollowersCount)
+    : followersDataGenerator();
 
   return (
     <div className=" p-4 sm:p-6 rounded-xl border border-tremor-border dark:border-dark-tremor-border">

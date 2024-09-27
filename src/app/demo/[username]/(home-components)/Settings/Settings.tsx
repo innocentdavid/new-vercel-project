@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import TargetingFilter from "./TargetingFilter";
 import Status from "./Status";
 import { STATUSES, StatusName } from "./statusData";
+import Link from "next/link";
 
 export default function Settings({ status }: { status: StatusName }) {
   const statusItem =
@@ -24,16 +25,18 @@ export default function Settings({ status }: { status: StatusName }) {
               <DurationSettingMenu />
             </span>
           </Suspense>
+          
           <TargetingFilter />
 
-          <a
-            href="https://wa.me/message/NQHPFCGYZWAXJ1"
-            target="_blank"
-            className="flex items-center gap-2 rounded-lg bg-white/0 px-2 py-2  ring-1 ring-tremor-content transition-colors duration-200 ease-in-out hover:bg-tremor-background-muted dark:ring-dark-tremor-content dark:hover:bg-dark-tremor-background-muted"
+          <Link
+            href="#"
+            // href="https://wa.me/message/NQHPFCGYZWAXJ1"
+            // target="_blank"
+            className="flex items-center gap-2 rounded-lg bg-white/0 px-2 py-2  ring-1 ring-tremor-content transition-colors duration-200 ease-in-out hover:bg-tremor-background-muted dark:ring-dark-tremor-content dark:hover:bg-dark-tremor-background-muted cursor-default"
           >
             <span className="sr-only">Message us on WhatsApp</span>
             <PiWhatsappLogo />
-          </a>
+          </Link>
         </div>
       </div>
       <Suspense>
