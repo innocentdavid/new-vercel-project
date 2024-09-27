@@ -11,7 +11,7 @@ import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import React from "react";
+import React, { Fragment } from "react";
 
 function decodeURLString(encodedString: string) {
   try {
@@ -65,7 +65,7 @@ export async function generateMetadata(
   );
 
   return {
-    title: `FunFun.tool: ${tool?.title} - review`,
+    title: `FunFun.tool: ${tool?.name} - review`,
     description: seo_description,
     alternates: {
       canonical: `https://new-vercel-project-vert.vercel.app/tool/${slug}`,
@@ -117,20 +117,67 @@ export default async function ReviewPage({
             <div className="max-w-6xl px-4 mx-auto mt-24 mb-12 prose md:prose-lg lg:prose-xl prose-code:text-white prose-h1:text-primary-500 prose-h2:text-primary-500 prose-a:text-primary-500 prose-a:no-underline sm:px-12 lg:px-16 dark:prose-invert">
               <div className="grid grid-cols-1 gap-24 lg:grid-cols-3 scroll-smooth">
                 <article className="block col-span-1 mt-0 lg:col-span-2">
-                  <Image
-                    width={649}
-                    height={365}
-                    alt=""
-                    src="https://www.uneed.best/_ipx/_/reviews/seospark.jpg"
-                    className="object-cover w-full h-auto !mt-0 border rounded-lg border-primary-500 dark:border-ngray-600"
-                  />
+                  {tool.audio ? (
+                    <div>
+                      <iframe
+                        width="100%"
+                        height={166}
+                        scrolling="no"
+                        frameBorder="no"
+                        allow="autoplay"
+                        src={tool.audio.iframe}
+                      />
+                      <div
+                        style={{
+                          fontSize: 10,
+                          color: "#cccccc",
+                          lineBreak: "anywhere",
+                          wordBreak: "normal",
+                          overflow: "hidden",
+                          whiteSpace: "nowrap",
+                          textOverflow: "ellipsis",
+                          fontFamily:
+                            "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+                          fontWeight: 100,
+                        }}
+                      >
+                        {tool.audio.others.map((item, i) => (
+                          <Fragment key={i}>
+                            <a
+                              href={item.link}
+                              title="Social Media Reviews"
+                              target="_blank"
+                              style={{
+                                color: "#cccccc",
+                                textDecoration: "none",
+                              }}
+                            >
+                              {item.name}
+                            </a>
+                            {i + 1 < tool.audio.others.length && (
+                              <span className="px-2">|</span>
+                            )}
+                          </Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Image
+                      width={649}
+                      height={365}
+                      alt=""
+                      src="https://www.uneed.best/_ipx/_/reviews/seospark.jpg"
+                      className="object-cover w-full h-auto !mt-0 border rounded-lg border-primary-500 dark:border-ngray-600"
+                    />
+                  )}
                   <div>
                     <p>Welcome to our seospark review!</p>
                     <p>
                       This review is a bit special for us, as seospark is a
-                      product that perfectly aligns with FollowersTool: keyword research
-                      and data-driven SEO are at the core of our marketing
-                      strategy, and it's thanks to this that we exist today!
+                      product that perfectly aligns with FollowersTool: keyword
+                      research and data-driven SEO are at the core of our
+                      marketing strategy, and it's thanks to this that we exist
+                      today!
                     </p>
                     <p>
                       We will therefore try to go as far as possible in our
@@ -473,7 +520,8 @@ export default async function ReviewPage({
                       decisions.
                     </p>
                     <p>
-                      Overall, seospark gets a thumbs up from us at FollowersTool 👍!
+                      Overall, seospark gets a thumbs up from us at
+                      FollowersTool 👍!
                     </p>
 
                     <GetReview />

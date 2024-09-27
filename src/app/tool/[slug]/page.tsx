@@ -75,7 +75,7 @@ export async function generateMetadata(
   );
 
   return {
-    title: `FunFun.tool: ${tool?.title}`,
+    title: `FunFun.tool: ${tool?.name}`,
     description: seo_description,
     alternates: {
       canonical: `https://new-vercel-project-vert.vercel.app/tool/${slug}`,
@@ -102,7 +102,7 @@ export default async function ToolPage({
         <Link href={`/`} className="underline decoration-blue-500">
           Home
         </Link>{" "}
-        <div>/</div> <div className="capitalize">{tool.title}</div>
+        <div>/</div> <div className="capitalize">{tool.name}</div>
       </div>
 
       <div className="py-12">
@@ -113,12 +113,12 @@ export default async function ToolPage({
           <div className="w-full lg:w-[30%] grid gap-8">
             <div className="">
               <h1 className="text-4xl font-bold leading-[1.333334] capitalize">
-                {tool.title}
+                {tool.name}
               </h1>
               <p className="text-gray-600 text-sm">Added on Jul 31, 2024</p>
 
               <div className="flex items-center mt-4 gap-4">
-                <Link href={tool.siteLink}>
+                <Link href={tool.siteLink||""}>
                   <Button className="bg-pink-500 hover:bg-pink-600 text-white h-fit">
                     Open Website
                   </Button>
@@ -132,7 +132,7 @@ export default async function ToolPage({
               </div>
 
               <div className="flex space-x-2 mt-2">
-                {tool.socialMediaHandles.map((social) => (
+                {tool?.socialMediaHandles?.map((social) => (
                   <a
                     key={social}
                     href={`${social}`}
@@ -154,7 +154,7 @@ export default async function ToolPage({
 
             <div className="grid gap-4">
               <h2 className="text-3xl font-bold leading-[1.333334]">
-                What is <span className="capitalize">{tool.title}</span>?
+                What is <span className="capitalize">{tool.name}</span>?
               </h2>
 
               <p className="text-lg">{tool.description}</p>
@@ -163,7 +163,7 @@ export default async function ToolPage({
 
           <div className="w-full lg:w-[70%]">
             <Image
-              src={tool.mainImageUrl}
+              src={tool.mainImageUrl||""}
               alt=""
               width={900}
               height={700}
@@ -177,11 +177,11 @@ export default async function ToolPage({
         <div className="mt-8 space-y-8">
           <section className="grid gap-4" id="features">
             <h2 className="my-[30px] text-3xl font-bold">
-              Features of <span className="capitalize">{tool.title}</span>
+              Features of <span className="capitalize">{tool.name}</span>
             </h2>
             <Card>
               <CardContent className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-                {tool.features.map((feature, index) => (
+                {tool?.features?.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-2">
                     <svg
                       className="text-[1.5rem] w-6 h-6"
@@ -203,13 +203,13 @@ export default async function ToolPage({
 
           <section className="grid gap-4" id="useCases">
             <h2 className="my-[30px] text-3xl font-bold">
-              Use Cases of <span className="capitalize">{tool.title}</span>
+              Use Cases of <span className="capitalize">{tool.name}</span>
             </h2>
 
             <Card>
               <CardContent className="p-4">
                 <div className="py-[6px]">
-                  {tool.useCases.map((useCase, index) => (
+                  {tool.useCases?.map((useCase, index) => (
                     <Fragment key={index}>
                       <div className="flex flex-col md:flex-row md:items-center px-3 py-1 gap-2 md:gap-6 my-6 md:my-0">
                         <h3 className="font-semibold mb-2">#{index + 1}</h3>
@@ -227,10 +227,10 @@ export default async function ToolPage({
 
           <section className="grid gap-4" id="pricing">
             <h2 className="my-[30px] text-3xl font-bold">
-              Pricing of <span className="capitalize">{tool.title}</span>
+              Pricing of <span className="capitalize">{tool.name}</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {tool.prices.map((tier, index) => (
+              {tool.prices?.map((tier, index) => (
                 <PricingTier
                   key={index}
                   title={tier.plan}
@@ -245,14 +245,14 @@ export default async function ToolPage({
           <section className="grid gap-4" id="faq">
             <div className="mt-8">
               <h2 className="my-[30px] text-3xl font-bold">
-                <span className="capitalize">{tool.title}</span> Frequently
+                <span className="capitalize">{tool.name}</span> Frequently
                 Asked Questions
               </h2>
 
               <Card>
                 <CardContent>
                   <Accordion type="single" collapsible className="w-full">
-                    {tool.faqs.map((faq, index) => (
+                    {tool.faqs?.map((faq, index) => (
                       <AccordionItem
                         key={index}
                         value={`item-${index}`}
@@ -271,7 +271,7 @@ export default async function ToolPage({
               </Card>
 
               <Button className="mt-8 bg-pink-500 hover:bg-pink-600 text-white text-base">
-                View &nbsp;<span className="capitalize">{tool.title}</span>
+                View &nbsp;<span className="capitalize">{tool.name}</span>
                 &nbsp; Alternatives
               </Button>
             </div>
@@ -281,7 +281,7 @@ export default async function ToolPage({
             <div className="mt-8">
               <h2 className="my-[30px] text-3xl font-bold">
                 Launch Badges for{" "}
-                <span className="capitalize">{tool.title}</span>
+                <span className="capitalize">{tool.name}</span>
               </h2>
 
               <Card>
