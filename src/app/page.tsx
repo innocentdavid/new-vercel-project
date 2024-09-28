@@ -111,7 +111,7 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
                 height={120}
                 decoding={"async"}
                 data-nimg={1}
-                className="aspect-square h-[60px] w-[60px] rounded-xl"
+                className="aspect-square h-[60px]_ h-fit w-[50px] m-auto rounded-xl"
                 style={{ color: "transparent" }}
               />
 
