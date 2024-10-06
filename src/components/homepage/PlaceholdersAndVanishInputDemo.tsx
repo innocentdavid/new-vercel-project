@@ -26,10 +26,10 @@ export function PlaceholdersAndVanishInputDemo() {
     e.preventDefault();
     console.log("submitted");
     setProcessing(true);
-    router.push(`/demo/${value.startsWith("@") ? value.substring(1) : value}`);
+    router.push(`/growth/${value.startsWith("@") ? value.substring(1) : value}`);
     setTimeout(() => {
       setProcessing(false);
-    }, 500);
+    }, 2000);
   };
   return (
     <div className="max-h-[40rem] flex flex-col justify-center  items-center px-4">

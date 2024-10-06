@@ -1,6 +1,6 @@
 "use client";
 
-import { BadgeDelta, BarChart, CustomTooltipProps } from "@tremor/react";
+import { AreaChart, BadgeDelta, BarChart, CustomTooltipProps } from "@tremor/react";
 import { CustomTooltip } from "./CustomTooltip";
 
 const ratesDataGenerator = () => {
@@ -70,8 +70,8 @@ export function EngagementRateChart() {
         </div>
       </div>
 
-      <BarChart
-        className="h-40 mt-8"
+      <AreaChart
+        className="h-80 mt-8"
         data={chartData}
         index="date"
         categories={["%"]}

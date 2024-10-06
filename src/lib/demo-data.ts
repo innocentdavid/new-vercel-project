@@ -2,8 +2,10 @@ export const demoProfile = {
   name: "Katharine McPhee Foster",
   username: "katharinefoster",
   profileImage: "/demo-avatars/1.jpeg",
-  followers: null, // 67300,
-  followings: null, // 1701,
+  // followers: null, // 67300,
+  // followings: null, // 1701,
+  followers: 927200, // 67300,
+  followings: 1701, // 1701,
 };
 
 type Account = {
