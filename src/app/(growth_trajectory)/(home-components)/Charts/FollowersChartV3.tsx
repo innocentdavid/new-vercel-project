@@ -23,23 +23,28 @@ const followersDataGeneratorV2 = (
 ) => {
   let totalPeriods;
   let interval;
+  let growthRange;
 
   switch (range) {
     case "daily":
       totalPeriods = 12;
       interval = 1;
+      growthRange = { min: 30, max: 40 };
       break;
     case "weekly":
       totalPeriods = 12;
       interval = 7;
+      growthRange = { min: 250 * 7, max: 325 * 7 };
       break;
     case "monthly":
       totalPeriods = 12;
       interval = 30;
+      growthRange = { min: 1000 * 12, max: 1300 * 12 };
       break;
     default:
       totalPeriods = 12;
       interval = 30;
+      growthRange = { min: 1000 * 12, max: 1300 * 12 };
   }
 
   const data = [];
@@ -58,7 +63,7 @@ const followersDataGeneratorV2 = (
     startingFollowersCount = 915883;
     endingFollowersCount = 938517;
     startingNormalCount = 915883;
-    endingNormalCount = 938517 * 0.8;
+    endingNormalCount = 938517 * 0.6; // Lower the endingNormalCount to create more distinction
   } else {
     // Generate future data
     startDate = new Date();
@@ -66,24 +71,19 @@ const followersDataGeneratorV2 = (
     endDate.setDate(endDate.getDate() + totalPeriods * interval);
 
     // Calculate target followers increase
-    let targetFollowersIncrease;
-    if (currentFollowersCount >= 0 && currentFollowersCount <= 5000) {
-      targetFollowersIncrease =
-        Math.floor(Math.random() * (1200 - 800 + 1)) + 800;
-    } else if (
-      currentFollowersCount > 5000 &&
-      currentFollowersCount <= 100000
-    ) {
-      targetFollowersIncrease = currentFollowersCount * 0.2;
-    } else {
-      targetFollowersIncrease = currentFollowersCount * 0.1;
-    }
+    const targetFollowersIncrease =
+      Math.floor(Math.random() * (growthRange.max - growthRange.min + 1)) +
+      growthRange.min;
 
     // Set starting and ending counts for future data
     startingFollowersCount = currentFollowersCount;
     endingFollowersCount = currentFollowersCount + targetFollowersIncrease;
     startingNormalCount = currentFollowersCount;
-    endingNormalCount = currentFollowersCount + targetFollowersIncrease * 0.8;
+    if (range === "daily") {
+      endingNormalCount = currentFollowersCount + targetFollowersIncrease * 0.3; // Lower the growth for Normal for daily
+    } else {
+      endingNormalCount = currentFollowersCount + targetFollowersIncrease * 0.5; // Lower the growth for Normal for other ranges
+    }
   }
 
   const totalDays = Math.round(
@@ -117,13 +117,20 @@ const followersDataGeneratorV2 = (
     );
 
     // Calculate Normal (slower growth)
+    // console.log({startingNormalCount, endingNormalCount, progression});
+
     const normal = Math.round(
-      startingNormalCount +
+      (startingNormalCount -
+        (0.2 * startingNormalCount)) +
         (endingNormalCount - startingNormalCount) * progression
     );
 
+    // console.log("normal");
+    // console.log(normal);
+    
+
     // Ensure Followers > Normal
-    const finalNormal = normal < followers ? normal : followers - 1;
+    const finalNormal = normal < followers ? normal : followers - 5; // Increase the gap between Followers and Normal
 
     data.push({ date: dateStr, Followers: followers, Normal: finalNormal });
   }
@@ -162,11 +169,11 @@ const tickFormatter = (
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "hsl(var(--chart-1))",
+    color: "#3B81F6",
   },
   mobile: {
     label: "Mobile",
-    color: "hsl(var(--chart-2))",
+    color: "#EAB305",
   },
 } satisfies ChartConfig;
 
@@ -252,7 +259,7 @@ export function FollowersChartV3({
   const [range, setRange] = useState<"daily" | "weekly" | "monthly">("monthly");
 
   useEffect(() => {
-    const range = "daily"
+    const range = "daily";
     const generatedChartData = currentFollowersCount
       ? followersDataGeneratorV2(currentFollowersCount, range)
       : followersDataGeneratorV2(null, range);
@@ -271,69 +278,70 @@ export function FollowersChartV3({
   }, [currentFollowersCount, range, setChartData]);
 
   return (
-    <div className=" p-4 sm:p-6 rounded-xl border border-tremor-border dark:border-dark-tremor-border">
-      <div className="flex justify-between items-start">
-        <div>
-          <h2 className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-            Followers
-          </h2>
-          <div className="flex gap-2 mt-2">
-            <p className="text-lg text-dark-tremor-content-strong font-semibold bg-primary-400 py-1 px-3 rounded-md">
-              Gaisnty:{" "}
-              {new Intl.NumberFormat("en-US").format(
-                chartDataMain[chartDataMain.length - 1]?.Followers
-              )}
-            </p>
-            <p className="text-base text-dark-tremor-content-strong font-medium bg-gray-400 py-1 px-3 rounded-md">
-              Normal:{" "}
-              {new Intl.NumberFormat("en-US").format(
-                chartDataMain[0]?.Followers
-              )}
-            </p>
+    <>
+      <div className=" p-4 sm:p-6 rounded-xl border border-tremor-border dark:border-dark-tremor-border">
+        <div className="flex justify-between items-start">
+          <div>
+            <h2 className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+              Followers
+            </h2>
+            <div className="flex gap-2 mt-2">
+              <p className="text-lg text-dark-tremor-content-strong font-semibold bg-primary-400 py-1 px-3 rounded-md">
+                Gaisnty:{" "}
+                {new Intl.NumberFormat("en-US").format(
+                  chartDataMain[chartDataMain.length - 1]?.Followers
+                )}
+              </p>
+              <p className="text-base text-dark-tremor-content-strong font-medium bg-gray-400 py-1 px-3 rounded-md">
+                Normal:{" "}
+                {new Intl.NumberFormat("en-US").format(
+                  chartDataMain[0]?.Followers
+                )}
+              </p>
+            </div>
           </div>
+
+          <Select
+            defaultValue={range}
+            onValueChange={(value) => setRange(value as any)}
+          >
+            <SelectTrigger className="w-[180px] bg-transparent border">
+              <div className="flex items-center">
+                <CalendarDays className="mr-3" />{" "}
+                <SelectValue placeholder="Select range" />
+              </div>
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="daily">Daily</SelectItem>
+              <SelectItem value="weekly">Weekly</SelectItem>
+              <SelectItem value="monthly">Monthly</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
 
-        <Select
-          defaultValue={range}
-          onValueChange={(value) => setRange(value as any)}
-        >
-          <SelectTrigger className="w-[180px] bg-transparent border">
-            <div className="flex items-center">
-              <CalendarDays className="mr-3" />{" "}
-              <SelectValue placeholder="Select range" />
-            </div>
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="daily">Daily</SelectItem>
-            <SelectItem value="weekly">Weekly</SelectItem>
-            <SelectItem value="monthly">Monthly</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <ChartContainer config={chartConfig}>
-        <AreaChart
-          accessibilityLayer
-          data={chartDataMain}
-          margin={{
-            left: 12,
-            right: 12,
-          }}
-        >
-          <CartesianGrid vertical={false} />
-          <XAxis
-            dataKey="date"
-            tickLine={false}
-            axisLine={false}
-            tickMargin={8}
-            // tickFormatter={(value) => value.slice(0, 3)}
-            tickFormatter={(value) => tickFormatter(value, range)}
-          />
-          <ChartTooltip
-            cursor={false}
-            content={<ChartTooltipContent indicator="dot" />}
-          />
-          <Area
+        <ChartContainer config={chartConfig} className="h-[450px] w-full">
+          <AreaChart
+            accessibilityLayer
+            data={chartDataMain}
+            margin={{
+              left: 12,
+              right: 12,
+            }}
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="date"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              // tickFormatter={(value) => value.slice(0, 3)}
+              tickFormatter={(value) => tickFormatter(value, range)}
+            />
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent indicator="dot" />}
+            />
+            {/* <Area
             dataKey="Followers"
             type="natural"
             fill="var(--color-mobile)"
@@ -348,9 +356,100 @@ export function FollowersChartV3({
             fillOpacity={0.4}
             stroke="var(--color-desktop)"
             stackId="a"
+          /> */}
+
+            <defs>
+              <linearGradient id="colorFollowers" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="rgba(245,133,41,0.3)" />
+                <stop offset="25%" stopColor="rgba(252,199,55,0.3)" />
+                <stop offset="50%" stopColor="rgba(221,42,123,0.3)" />
+                <stop offset="75%" stopColor="rgba(129,52,175,0.3)" />
+                <stop offset="100%" stopColor="rgba(81,91,212,0.3)" />
+              </linearGradient>
+              <linearGradient id="strokeFollowers" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="rgba(245,133,41,1)" />
+                <stop offset="25%" stopColor="rgba(252,199,55,1)" />
+                <stop offset="50%" stopColor="rgba(221,42,123,1)" />
+                <stop offset="75%" stopColor="rgba(129,52,175,1)" />
+                <stop offset="100%" stopColor="rgba(81,91,212,1)" />
+              </linearGradient>
+
+              {/* <linearGradient id="colorNormal" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="rgba(245,133,41,0.4)" />
+                <stop offset="25%" stopColor="rgba(252,199,55,0.4)" />
+                <stop offset="50%" stopColor="rgba(221,42,123,0.4)" />
+                <stop offset="75%" stopColor="rgba(129,52,175,0.4)" />
+                <stop offset="100%" stopColor="rgba(81,91,212,0.4)" />
+              </linearGradient>
+              <linearGradient id="strokeNormal" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="rgba(245,133,41,1)" />
+                <stop offset="25%" stopColor="rgba(252,199,55,1)" />
+                <stop offset="50%" stopColor="rgba(221,42,123,1)" />
+                <stop offset="75%" stopColor="rgba(129,52,175,1)" />
+                <stop offset="100%" stopColor="rgba(81,91,212,1)" />
+              </linearGradient> */}
+
+              <linearGradient id="colorNormal" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="rgba(200,200,200,0.4)" />
+                <stop offset="50%" stopColor="rgba(150,150,150,0.4)" />
+                <stop offset="100%" stopColor="rgba(100,100,100,0.4)" />
+              </linearGradient>
+              <linearGradient id="strokeNormal" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="rgba(200,200,200,1)" />
+                <stop offset="50%" stopColor="rgba(150,150,150,1)" />
+                <stop offset="100%" stopColor="rgba(100,100,100,1)" />
+              </linearGradient>
+            </defs>
+            <Area
+              dataKey="Followers"
+              type="monotone"
+              fill="url(#colorNormal)"
+              fillOpacity={0.4}
+              // stroke="var(--color-mobile)"
+              stroke="url(#strokeNormal)"
+              stackId="a"
+            />
+            <Area
+              dataKey="Normal"
+              type="monotone"
+              fill="url(#colorFollowers)"
+              // fillOpacity={0.4}
+              // stroke="var(--color-desktop)"
+              stroke="url(#strokeFollowers)"
+              stackId="a"
+            />
+
+            {/* <Area
+            dataKey="Followers"
+            type="natural"
+            fill="url(#gradientFollowers)"
+            color="blue"
+            fillOpacity={0.8}
+            stroke="#1989FF"
+            strokeWidth={4}
           />
-        </AreaChart>
-      </ChartContainer>
-    </div>
+          <Area
+            dataKey="Normal"
+            type="natural"
+            fill="url(#gradientNormal)"
+            color="yellow"
+            fillOpacity={0.8}
+            stroke="#EAB305"
+            strokeWidth={4}
+          />
+          <defs>
+            <linearGradient id="gradientFollowers" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#1989FF" stopOpacity={0.4} />
+              <stop offset="100%" stopColor="#1989FF" stopOpacity={0.1} />
+            </linearGradient>
+            <linearGradient id="gradientNormal" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#EAB305" stopOpacity={0.4} />
+              <stop offset="100%" stopColor="#EAB305" stopOpacity={0.1} />
+            </linearGradient>
+          </defs> */}
+          </AreaChart>
+        </ChartContainer>
+      </div>
+    </>
   );
 }

@@ -158,8 +158,23 @@ export function FollowersChartV4({
   return (
     <Card className="bg-transparent p-4 sm:p-6 rounded-xl border border-tremor-border dark:border-dark-tremor-border">
       <CardHeader>
-        <CardTitle>Bar Chart - Stacked + Legend</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Sample Daily Followers</CardTitle>
+        <CardDescription>
+          <div className="flex gap-2 mt-2">
+            <p className="text-lg text-dark-tremor-content-strong font-semibold bg-primary-400 py-1 px-3 rounded-md">
+              Gaisnty:{" "}
+              {new Intl.NumberFormat("en-US").format(
+                chartData[chartData.length - 1]?.Followers
+              )}
+            </p>
+            <p className="text-base text-dark-tremor-content-strong font-medium bg-gray-400 py-1 px-3 rounded-md">
+              Normal:{" "}
+              {new Intl.NumberFormat("en-US").format(
+                chartData[0]?.Followers
+              )}
+            </p>
+          </div>
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>

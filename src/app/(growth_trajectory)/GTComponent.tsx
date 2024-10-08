@@ -7,6 +7,7 @@ import { UserProfile } from "@/lib/types";
 import { FollowersChartV3 } from "./(home-components)/Charts/FollowersChartV3";
 import { useState } from "react";
 import { FollowersChartV4 } from "./(home-components)/Charts/FollowersChartV4";
+import FAQ from "@/components/FAQ";
 
 export default function GTComponent({
   userProfile,
@@ -27,15 +28,10 @@ export default function GTComponent({
 
         {/* <Settings status={StatusName.Active} /> */}
 
-        {/* <FollowersChart currentFollowersCount={userProfile.followers || null} /> */}
-
-        {/* <FollowersChartV2 /> */}
         <FollowersChartV3
-          currentFollowersCount={userProfile.followings || null}
+          currentFollowersCount={userProfile.followers || null}
           setChartData={setChartData}
         />
-
-        {/* <FollowersChartv6 currentFollowersCount={userProfile.followings || null} /> */}
 
         <div className="h-6"></div>
 
@@ -48,6 +44,7 @@ export default function GTComponent({
           <FollowersChartV4 innitialChartData={chartData} />
         </div>
 
+<FAQ />
         {/* <Targeting /> */}
 
         {/* <div className="h-6"></div>
