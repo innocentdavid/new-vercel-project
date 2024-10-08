@@ -30,7 +30,7 @@ export default function UserInfo({
   userProfile: UserProfile;
 }) {
   return (
-    <div className="flex flex-row gap-4 items-end sm:items-center justify-between px-1 py-4 mb-6 rounded-xl border border-tremor-border dark:border-dark-tremor-border">
+    <div className="flex flex-col md:flex-row gap-4 md:gap-0 lg:gap-4 md:items-end sm:items-center justify-between px-1 py-4 mb-6 rounded-xl border border-tremor-border dark:border-dark-tremor-border">
       <div className="flex items-center gap-4 px-4">
         <Avatar className="size-12 outline outline-2 outline-offset-2 outline-tremor-border dark:outline-dark-tremor-border">
           <AvatarImage src={userProfile.profileImage} />
@@ -60,9 +60,10 @@ export default function UserInfo({
           </Link>
         </div>
       </div>
-      <div className="flex items-center">
+
+      <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center">
         <div className="border-x px-4 flex items-center w-full">
-          <div className="px-6">
+          <div className="px-2 lg:px-6">
             <div className="text-tremor-metric text-tremor-content-strong dark:text-dark-tremor-content-strong font-semibold">
               {minimizeNumber(userProfile.followers || 0)}
             </div>
@@ -70,7 +71,7 @@ export default function UserInfo({
               Followers
             </div>
           </div>
-          <div className="px-6">
+          <div className="px-2 lg:px-6">
             <div className="text-tremor-metric text-tremor-content-strong dark:text-dark-tremor-content-strong font-semibold">
               {minimizeNumber(userProfile.followings || 0)}
             </div>
@@ -78,7 +79,7 @@ export default function UserInfo({
               Followings
             </div>
           </div>
-          {/* <div className="px-6">
+          {/* <div className="px-2 lg:px-6">
             <div className="text-tremor-metric text-tremor-content-strong dark:text-dark-tremor-content-strong font-semibold">
               3.1M
             </div>
@@ -88,8 +89,8 @@ export default function UserInfo({
           </div> */}
         </div>
 
-        <div className="px-4 flex items-center gap-12 w-full">
-          <div className="pl-10 whitespace-nowrap">{getNext30Days()}</div>
+        <div className="px-4 flex items-center gap-4 lg:gap-12 w-full">
+          <div className="pl-2 lg:pl-10 whitespace-nowrap">{getNext30Days()}</div>
           <Link href={`https://app.gainsty.com`} target="_blank">
             <button
               type="button"
