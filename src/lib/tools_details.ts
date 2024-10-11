@@ -2159,8 +2159,8 @@ export const tools_details = [
     name: "Path Social",
     slug: "path-social",
     logo: "/products/path-social.png",
-    main_image: "/products/Trendgramthumbnail.png",
-    siteLink: "",
+    main_image: "/products/PathSocialThumbnail.png",
+    siteLink: "https://www.pathsocial.com/",
     audio: null,
     added_on: "new Date('Apr 15, 2024')",
     hero_sub_heading:
