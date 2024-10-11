@@ -1,15 +1,8 @@
 import AddBookmark from "@/components/AddBookmark";
-import ExpandableCardDemo from "@/components/blocks/expandable-card-demo-grid";
-import ExpandableCardDemoStandard from "@/components/blocks/expandable-card-demo-standard";
 import BackgroundBeamsWithCollisionDemo from "@/components/homepage/background-beams-with-collision-demo";
-import HoverBorderGradientDemo from "@/components/homepage/hover-border-gradient-demo";
-import AreaChartComponent from "@/components/ui/AreaChart";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
-import { Button } from "@/components/ui/button";
 import { tool_rating, TOOLS } from "@/lib/mockToolsData";
 import { Star } from "lucide-react";
-import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {

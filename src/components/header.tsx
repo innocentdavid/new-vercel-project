@@ -7,12 +7,13 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
+import ContactPopup from "./ContactUsPopUp";
 
-const navItems = [
-  { title: "About", href: "/about" },
-  { title: "Services", href: "/services" },
-  { title: "Contact", href: "/contact" },
-];
+// const navItems = [
+//   { title: "About", href: "/about" },
+//   { title: "Services", href: "/services" },
+//   { title: "Contact", href: "/contact" },
+// ];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,13 +45,16 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4">
               <ul className="flex items-center space-x-4">
-                {navItems.map((item, i) => (
+                <li>
+                  <ContactPopup />
+                </li>
+                {/* {navItems.map((item, i) => (
                   <li key={i}>
                     <Link href={item.href} prefetch>
                       {item.title}
                     </Link>
                   </li>
-                ))}
+                ))} */}
               </ul>
               <Link href={`/submit-tool`}>
                 <Button className="bg-pink-500 text-white hover:bg-pink-600 py-[6px] h-fit">
@@ -87,7 +91,8 @@ export default function Header() {
 
                 <SheetContent side="right" className="mt-[70px]">
                   <nav className="flex flex-col space-y-4 mt-4">
-                    {navItems.map((item) => (
+                  <ContactPopup />
+                    {/* {navItems.map((item) => (
                       <Link
                         key={item.title}
                         href={item.href}
@@ -97,7 +102,7 @@ export default function Header() {
                       >
                         {item.title}
                       </Link>
-                    ))}
+                    ))} */}
                     <Link
                       href={`/submit-tool`}
                       onClick={() => setIsOpen(false)}

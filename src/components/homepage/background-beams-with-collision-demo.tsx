@@ -19,7 +19,7 @@ export default function BackgroundBeamsWithCollisionDemo() {
           Growth Tools in 2024
         </h2>
 
-        <p className="mb-8 !leading-8 text-gray-600 max-md:mx-auto max-w-[600px] mx-auto sm:text-lg text-center">
+        <p className="mt-6 mb-8 !leading-8 text-gray-600 max-md:mx-auto max-w-[600px] mx-auto sm:text-lg text-center">
         See which Instagram growth tool is real with our unfiltered reviews and get the best deals from the most trusted Instagram followers growth services.
         </p>
 
