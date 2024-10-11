@@ -14,6 +14,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import React, { Fragment } from "react";
 import { BlogPost, TocComp } from "./comp";
+import { tools_details } from "@/lib/tools_details";
 
 function decodeURLString(encodedString: string) {
   try {
@@ -63,9 +64,7 @@ export async function generateMetadata(
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
   // const seo_description = generateSeoDescription(tool?.excerpt!);
-  const seo_description = generateSeoDescription(
-    "We've tested seospark.io, the Keyword Research & Automation tool for SEO professionals"
-  );
+  const seo_description = generateSeoDescription(tool?.content || "");
 
   return {
     title: `FunFun.tool: ${tool?.name} - review`,
@@ -88,6 +87,7 @@ export default async function ReviewPage({
   const slug = decodeURLString(params.slug);
   const tool = await getToolBySlug(slug);
   if (!tool) return notFound();
+  const toolDetails = tools_details.find(t => t.slug === tool.slug)
 
   return (
     <div
@@ -99,7 +99,7 @@ export default async function ReviewPage({
           <div className="w-full">
             <div className="max-w-6xl px-4 mx-auto sm:px-12 lg:px-16">
               <Link
-                href="/"
+                href={`/tool/${tool.slug}`}
                 className="router-link-active flex items-center text-gray-500 dark:text-gray-400 hover:text-primary-500"
               >
                 <ArrowLeft size={16} /> Go Back{" "}
@@ -110,17 +110,17 @@ export default async function ReviewPage({
               {/* <p className="mt-4 text-lg font-normal text-gray-500 dark:text-gray-400 current-post-excerpt lg:text-xl">
                 {tool.description}
               </p> */}
-              <div className="flex flex-wrap items-center gap-3 mt-8 current-post-tags-wrapper lg:mt-10">
+              <div className="flex flex-wrap items-center gap-3 mt-3 current-post-tags-wrapper _lg:mt-10">
                 <span className="text-sm text-gray-400 current-post-publish-date">
-                  <time title="09/16/2024">September 16, 2024</time>
+                  <time title={toolDetails?.added_on.toLocaleString()||""}>{new Date(toolDetails?.added_on||"").toLocaleDateString()}</time>
                 </span>
               </div>
             </div>
 
             <div className="max-w-6xl px-4 mx-auto mt-24 mb-12 prose md:prose-lg lg:prose-xl prose-code:text-white prose-h1:text-primary-500 prose-h2:text-primary-500 prose-a:text-primary-500 prose-a:no-underline sm:px-12 lg:px-16 dark:prose-invert">
               <div className="grid grid-cols-1 gap-24 lg:grid-cols-3 scroll-smooth">
-              <article className="block col-span-1 mt-0 lg:col-span-2">
-              {tool.audio ? (
+                <article className="block col-span-1 mt-0 lg:col-span-2">
+                  {tool.audio ? (
                     <div>
                       <iframe
                         width="100%"

@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
-// import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";

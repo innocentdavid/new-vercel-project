@@ -6,7 +6,7 @@ import HoverBorderGradientDemo from "@/components/homepage/hover-border-gradient
 import AreaChartComponent from "@/components/ui/AreaChart";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import { Button } from "@/components/ui/button";
-import { TOOLS } from "@/lib/mockToolsData";
+import { tool_rating, TOOLS } from "@/lib/mockToolsData";
 import { Star } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -16,8 +16,11 @@ export default function Home() {
   return (
     <div className="mb-20 dark:bg-[#1E1E1E]">
       <BackgroundBeamsWithCollisionDemo />
+
       <section className="max-w-[1536px] mx-auto py-20">
-        <h2 className="mb-6 text-center text-3xl font-bold">Just Launched</h2>
+        <h2 className="mb-6 text-center text-3xl font-bold">
+          Instagram Followers Growth Tools 2024
+        </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4">
           {TOOLS.map((tool, i) => (
@@ -27,9 +30,9 @@ export default function Home() {
             </>
           ))}
         </div>
-        <div className="flex justify-center mt-8">
+        {/* <div className="flex justify-center mt-8">
           <Button>Load More</Button>
-        </div>
+        </div> */}
       </section>
     </div>
   );
@@ -46,7 +49,7 @@ export default function Home() {
 //           <div className="aspect-w-16 aspect-h-9">
 //             <Link href={`/tool/${tool.slug}`}>
 //               <Image
-//                 src={tool.mainImageUrl}
+//                 src={tool.main_image}
 //                 alt=""
 //                 width={352}
 //                 height={185}
@@ -97,6 +100,8 @@ export default function Home() {
 // }
 
 function ProductCard_V2(tool: (typeof TOOLS)[0]) {
+  const rating = tool_rating.find((t) => t.slug === tool.slug)?.rating;
+
   return (
     <div className="flex flex-col bg-card text-card-foreground h-full w-full rounded-xl border shadow-lg overflow-hidden">
       <div className="px-6 pb-2 pt-4 flex h-24 flex-row items-start gap-4">
@@ -105,13 +110,16 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
             <Avatar className="h-[60px] w-[60px] rounded-xl relative">
               <AvatarImage
                 src={tool.logo}
+                // src={"/products/lift-logo.png"}
                 alt={`${tool.toolName} logo`}
                 loading="lazy"
                 width={120}
                 height={120}
                 decoding={"async"}
                 data-nimg={1}
-                className="aspect-square h-[60px]_ h-fit w-[50px] m-auto rounded-xl"
+                className={`aspect-square_ h-[60px]_ h-auto w-[50px] m-auto rounded-xl ${
+                  tool.slug === "liftinfluence" && "!h-[40px] !w-auto"
+                }`}
                 style={{ color: "transparent" }}
               />
 
@@ -128,7 +136,7 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
               data-nimg={1}
               className="aspect-square h-[60px] w-[60px] rounded-xl"
               style={{ color: "transparent" }}
-              src={tool.mainImageUrl}
+              src={tool.main_image}
             /> */}
             {tool.is_verified && (
               <div className="inline-flex items-center text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-0 p-0 m-0 absolute right-0 top-0 -translate-y-1/2 translate-x-1/2 transform rounded">
@@ -155,17 +163,25 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
           </Link>
           <Link href={`/tool/${tool.slug}`}>
             <div className="flex items-center gap-2 text-lg">
-              <div className="flex">
+              <StarRating rating={rating||1} />
+              {/* <div className="flex">
                 <div className="flex text-yellow-500">
                   <Star size={15} fill="currentColor" />
                   <Star size={15} fill="currentColor" />
                   <Star size={15} fill="currentColor" />
                   <Star size={15} fill="currentColor" />
-                  <Star size={15} fill="currentColor" />
-                  <span className="sr-only">Rated 5 out of 5</span>
+                  <div className="relative">
+                    <Star size={15} fill="none" stroke="currentColor" />
+                    <div
+                      className="absolute top-0 left-0 h-full overflow-hidden"
+                      style={{ width: "50%" }}
+                    >
+                      <Star size={15} fill="currentColor" />
+                    </div>
+                  </div>
+                  <span className="sr-only">Rated 4.5 out of 5</span>
                 </div>
-              </div>
-              {/* (0) */}
+              </div> */}
             </div>
           </Link>
         </div>
@@ -199,29 +215,28 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
         </div>
       </div>
       <p className="text-muted-foreground my-2 line-clamp-2 overflow-hidden overflow-ellipsis px-6 text-base">
-        Revolutionize customer targeting with AI-driven insights, detailed
-        profiling, and strategic marketing recommendations.
+        {tool?.description}
       </p>
       <div className="px-6 mb-6 flex flex-wrap gap-1 py-2 text-base text-primary-500">
         <div className="flex flex-wrap gap-x-2 gap-y-1 ">
-          <Link
-            className="hover:text-underline"
-            href="https://www.futurepedia.io/ai-tools/marketing"
+          <span
+            className="hover:text-underline cursor-pointer"
+            // href=""
           >
-            #marketing
-          </Link>
-          <Link
-            className="hover:text-underline"
-            href="https://www.futurepedia.io/ai-tools/customer-support"
+            #{tool.name}
+          </span>
+          <span
+            className="hover:text-underline cursor-pointer"
+            // href=""
           >
-            #customer support
-          </Link>
-          <Link
-            className="hover:text-underline"
-            href="https://www.futurepedia.io/ai-tools/sales-assistant"
+            #instagram
+          </span>
+          <span
+            className="hover:text-underline cursor-pointer"
+            // href=""
           >
-            #sales
-          </Link>
+            #followers
+          </span>
         </div>
       </div>
       <div className="px-6 mt-auto flex items-center justify-between pb-4">
@@ -279,3 +294,36 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
     </div>
   );
 }
+
+
+const StarRating = ({ rating }: { rating: number }) => {
+  const filledStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 >= 0.5;
+
+  return (
+    <div className="flex text-yellow-500">
+      {[...Array(5)].map((_, index) => {
+        if (index < filledStars) {
+          return <Star key={index} size={15} fill="currentColor" />;
+        } else if (index === filledStars && hasHalfStar) {
+          return (
+            <div className="relative" key={index}>
+              <Star size={15} fill="none" stroke="currentColor" />
+              <div
+                className="absolute top-0 left-0 h-full overflow-hidden"
+                style={{ width: "50%" }}
+              >
+                <Star size={15} fill="currentColor" />
+              </div>
+            </div>
+          );
+        } else {
+          return (
+            <Star key={index} size={15} fill="none" stroke="currentColor" />
+          );
+        }
+      })}
+      <span className="sr-only">Rated {rating} out of 5</span>
+    </div>
+  );
+};

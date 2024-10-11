@@ -6,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { TOOLS } from "@/lib/mockToolsData";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,9 +17,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ClipboardCopy } from "lucide-react";
-import CopyComp from "@/components/CopyComp";
 import { Metadata, ResolvingMetadata } from "next";
 import { tools_details } from "@/lib/tools_details";
 
@@ -68,11 +64,12 @@ export async function generateMetadata(
 
   const slug = decodeURLString(params.slug);
   const tool = await getToolBySlug(slug);
+  // const tool_review = tools_review.find(t => t.slug === tool?.slug)
 
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
   // const seo_description = generateSeoDescription(tool?.excerpt!);
-  const seo_description = generateSeoDescription("");
+  const seo_description = generateSeoDescription(tool?.hero_sub_heading||"");
 
   return {
     title: `FunFun.tool: ${tool?.name}`,
@@ -116,21 +113,27 @@ export default async function ToolPage({
                 {tool.name}
               </h1>
               <p className="text-gray-600 text-sm">
-                Added on {new Date("Jul 31, 2024").toLocaleDateString()}
+                Added on {new Date(tool.added_on).toLocaleDateString()}
               </p>
 
               <div className="flex items-center mt-4 gap-4">
-                <Link href={tool.siteLink || ""}>
+                <Link href={`/review/${tool.slug}`}>
                   <Button className="bg-pink-500 hover:bg-pink-600 text-white h-fit">
+                    See our Review
+                  </Button>
+                </Link>
+
+                <Link href={tool.siteLink || "https://"+tool.slug+".com"} target="_blank">
+                  <Button className="ring-2 ring-pink-500 bg-transparent text-black hover:bg-pink-600 hover:text-white dark:text-white h-fit">
                     Open Website
                   </Button>
                 </Link>
 
-                <Link href={`/review/${tool.slug}`}>
+                {/* <Link href={`/review/${tool.slug}`}>
                   <button className="bg-[#F0F4F8] dark:bg-[#181A1C] hover:bg-[#DDE7EE] dark:hover:bg-[#32383E] px-4 py-[0.375rem] rounded-[150px]">
                     <p className="text-[0.875rem]">⭐️</p>
                   </button>
-                </Link>
+                </Link> */}
               </div>
 
               {/* <div className="flex space-x-2 mt-2">
@@ -272,10 +275,10 @@ export default async function ToolPage({
                 </CardContent>
               </Card>
 
-              <Button className="mt-8 bg-pink-500 hover:bg-pink-600 text-white text-base">
+              {/* <Button className="mt-8 bg-pink-500 hover:bg-pink-600 text-white text-base">
                 View &nbsp;<span className="capitalize">{tool.name}</span>
                 &nbsp; Alternatives
-              </Button>
+              </Button> */}
             </div>
           </section>
 

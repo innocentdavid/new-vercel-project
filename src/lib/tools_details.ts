@@ -3,7 +3,7 @@ export const tools_details = [
     id: 1,
     name: "Gainsty",
     slug: "gainsty",
-    main_image: "/products/gainsty-dark.png",
+    main_image: "/products/GaisntyThumbnail.png",
     toolLink: "https://www.gainsty.com/caption-writer",
     siteLink: "https://www.gainsty.com",
     audio: null,
@@ -97,7 +97,7 @@ export const tools_details = [
     toolLink: "https://www.liftinfluence.com/caption-writer",
     siteLink: "https://www.liftinfluence.com",
     logo: "/products/liftinfluece-logo.png",
-    main_image: "/products/liftinfluece-logo.png",
+    main_image: "/products/LiftinfluenceThumbnail.png",
     audio: null,
     added_on: new Date("Feb 02, 2024"),
     hero_sub_heading:
@@ -208,7 +208,7 @@ export const tools_details = [
     toolLink: "https://www.liftinfluence.com/caption-writer",
     siteLink: "https://www.liftinfluence.com",
     logo: "https://www.upgrow.com/img/upgrow-logo-icon.svg",
-    main_image: "https://www.upgrow.com/img/upgrow-logo-icon.svg",
+    main_image: "/products/UpgrowThumbnail.png",
     audio: {
       iframe:
         "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1920845039&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
@@ -223,7 +223,7 @@ export const tools_details = [
         },
       ],
     },
-    added_on: "new Date('Oct 01, 2024')",
+    added_on: new Date('Oct 01, 2024'),
     hero_sub_heading:
       "UpGrow is an AI-powered Instagram growth service that claims to help users gain real, active followers on their Instagram accounts. The platform markets itself as a safe, Instagram-compliant solution for organic growth, promising to deliver authentic followers without using bots or fake accounts. UpGrow positions its service as an alternative to traditional social media marketing teams, offering automated growth strategies at a fraction of the cost.",
     features: [
@@ -331,10 +331,10 @@ export const tools_details = [
     name: "Social Crow",
     slug: "social-crow",
     logo: "",
-    main_image: "https://www.socialcrow.co/assets/images/twitter-header.jpg",
-    siteLink: "",
+    main_image: "/products/social-crow_b.png",
+    siteLink: "https://www.socialcrow.co/home",
     audio: null,
-    added_on: "new Date('Jul 31, 2024')",
+    added_on: new Date('Jul 31, 2024'),
     hero_sub_heading:
       "Social Crow is a social media services provider that claims to help users grow their social media presence, particularly on platforms like Twitter and Instagram. The company offers various services aimed at increasing followers, likes, comments, and overall engagement for social media accounts.",
     features: [
@@ -410,15 +410,15 @@ export const tools_details = [
   },
   {
     id: 5,
-    name: "Viralized",
-    slug: "viralized",
+    name: "Virallized",
+    slug: "virallized",
     logo: "/products/Virallized.png",
-    main_image: "/products/Virallizedthumbnail.png",
-    siteLink: "",
+    main_image: "/products/VirallizedThumbnail.png",
+    siteLink: "https://www.virallized.com/",
     audio: null,
-    added_on: "new Date('Jun 15, 2024')",
+    added_on: new Date('Jun 15, 2024'),
     hero_sub_heading:
-      "Viralized is an Instagram growth service that promises to help users gain real, organic followers on their Instagram accounts. Using advanced AI technology, Viralized claims to identify and convert your target audience into engaged followers. The service focuses on attracting followers who are genuinely interested in your content, aiming to provide up to 2,500 new followers per month who will like, comment, and interact with your posts.",
+      "Virallized is an Instagram growth service that promises to help users gain real, organic followers on their Instagram accounts. Using advanced AI technology, Virallized claims to identify and convert your target audience into engaged followers. The service focuses on attracting followers who are genuinely interested in your content, aiming to provide up to 2,500 new followers per month who will like, comment, and interact with your posts.",
     features: [
       "AI-powered targeting to find your ideal audience",
       "Up to 2,500 new followers per month",
@@ -434,36 +434,36 @@ export const tools_details = [
       "Money-back guarantee",
     ],
     use_cases: [
-      "Aspiring Influencers: New content creators looking to build their Instagram presence can use Viralized to kickstart their growth. By gaining targeted followers interested in their niche, they can increase their chances of brand collaborations and sponsorships.",
-      "Small Businesses: Local shops or online stores can leverage Viralized to expand their reach on Instagram. By growing their follower count with potential customers, they can increase brand awareness and drive more sales through the platform.",
-      "Personal Branding: Professionals aiming to establish themselves as thought leaders in their industry can benefit from Viralized. The service can help them connect with like-minded individuals and potential clients, enhancing their personal brand and networking opportunities.",
-      "Non-Profit Organizations: Charities and NGOs can use Viralized to spread awareness about their cause. By gaining more followers interested in their mission, they can increase donations, volunteers, and overall impact.",
-      "Artists and Creatives: Photographers, painters, musicians, and other creatives can expand their audience using Viralized. This growth can lead to more exposure for their work, potential commissions, and a larger fan base.",
+      "Aspiring Influencers: New content creators looking to build their Instagram presence can use Virallized to kickstart their growth. By gaining targeted followers interested in their niche, they can increase their chances of brand collaborations and sponsorships.",
+      "Small Businesses: Local shops or online stores can leverage Virallized to expand their reach on Instagram. By growing their follower count with potential customers, they can increase brand awareness and drive more sales through the platform.",
+      "Personal Branding: Professionals aiming to establish themselves as thought leaders in their industry can benefit from Virallized. The service can help them connect with like-minded individuals and potential clients, enhancing their personal brand and networking opportunities.",
+      "Non-Profit Organizations: Charities and NGOs can use Virallized to spread awareness about their cause. By gaining more followers interested in their mission, they can increase donations, volunteers, and overall impact.",
+      "Artists and Creatives: Photographers, painters, musicians, and other creatives can expand their audience using Virallized. This growth can lead to more exposure for their work, potential commissions, and a larger fan base.",
     ],
     faq: [
       {
         q: "How soon will I start seeing new followers?",
-        a: "Viralized claims that you'll begin noticing new followers within 72 hours of signing up for their service. Your growth rate will accelerate over time, reaching full speed by the end of your first week. This gradual increase helps maintain a natural-looking growth pattern for your account.",
+        a: "Virallized claims that you'll begin noticing new followers within 72 hours of signing up for their service. Your growth rate will accelerate over time, reaching full speed by the end of your first week. This gradual increase helps maintain a natural-looking growth pattern for your account.",
       },
       {
-        q: "Will I lose the followers if I cancel my Viralized subscription?",
-        a: "No, you won't lose the followers you've gained through Viralized if you decide to cancel your subscription. The service emphasizes that the followers they bring to your account are real people who chose to follow you because they're interested in your content. Canceling your subscription doesn't affect these genuine connections.",
+        q: "Will I lose the followers if I cancel my Virallized subscription?",
+        a: "No, you won't lose the followers you've gained through Virallized if you decide to cancel your subscription. The service emphasizes that the followers they bring to your account are real people who chose to follow you because they're interested in your content. Canceling your subscription doesn't affect these genuine connections.",
       },
       {
-        q: "Are there any risks in using Viralized?",
-        a: "According to Viralized, there are no risks associated with using their service. They state that they've been operating since 2017 and have successfully grown tens of thousands of client accounts without any instances of bans or account harm. However, it's always wise to use third-party services cautiously and in compliance with Instagram's terms of service.",
+        q: "Are there any risks in using Virallized?",
+        a: "According to Virallized, there are no risks associated with using their service. They state that they've been operating since 2017 and have successfully grown tens of thousands of client accounts without any instances of bans or account harm. However, it's always wise to use third-party services cautiously and in compliance with Instagram's terms of service.",
       },
       {
-        q: "Can I cancel my Viralized subscription at any time?",
-        a: "Yes, Viralized offers flexibility in their subscription model. You can cancel your subscription at any time by simply emailing their support team. They don't lock you into long-term contracts or commitments, allowing you to use the service for as long as you find it beneficial.",
+        q: "Can I cancel my Virallized subscription at any time?",
+        a: "Yes, Virallized offers flexibility in their subscription model. You can cancel your subscription at any time by simply emailing their support team. They don't lock you into long-term contracts or commitments, allowing you to use the service for as long as you find it beneficial.",
       },
       {
-        q: "How does Viralized's pricing work?",
-        a: "Viralized offers three main pricing tiers: Standard, Pro, and Max. The Standard plan starts at $99 per month and promises 250-1,000 new followers monthly. The Pro plan, at $149 per month, aims for 500-2,000 new followers. The Max plan, priced at $199 per month, targets 750-2,500 new followers. They also offer annual billing options for cost savings.",
+        q: "How does Virallized's pricing work?",
+        a: "Virallized offers three main pricing tiers: Standard, Pro, and Max. The Standard plan starts at $99 per month and promises 250-1,000 new followers monthly. The Pro plan, at $149 per month, aims for 500-2,000 new followers. The Max plan, priced at $199 per month, targets 750-2,500 new followers. They also offer annual billing options for cost savings.",
       },
       {
-        q: "Is Viralized suitable for all types of Instagram accounts?",
-        a: "While Viralized claims to work for various niches, it's important to note that results may vary depending on your specific content and target audience. The service emphasizes its ability to find and attract followers within your niche, but the effectiveness can depend on factors like your content quality, posting frequency, and overall Instagram strategy.",
+        q: "Is Virallized suitable for all types of Instagram accounts?",
+        a: "While Virallized claims to work for various niches, it's important to note that results may vary depending on your specific content and target audience. The service emphasizes its ability to find and attract followers within your niche, but the effectiveness can depend on factors like your content quality, posting frequency, and overall Instagram strategy.",
       },
     ],
     prices: [
@@ -517,10 +517,10 @@ export const tools_details = [
     name: "Keesy",
     slug: "keesy",
     logo: "/products/keesy.png",
-    main_image: "https://cdn.prod.website-files.com/65e8cb7da76e6790c4e6a110/66105326e1feacbdc1ad4173_Video%20Thumnail.webp",
+    main_image: "/products/keesy_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Aug 15, 2024')",
+    added_on: new Date('Aug 15, 2024'),
     hero_sub_heading:
       "Keesy is an Instagram growth service that claims to help users gain real followers automatically using AI technology. The company presents itself as a solution for organic Instagram growth, promising to deliver genuine, engaged followers without using bots or fake accounts. Keesy emphasizes its use of GPT-4 powered targeting and human expertise to grow Instagram accounts safely and effectively.",
     features: [
@@ -623,10 +623,10 @@ export const tools_details = [
     name: "Media Mister",
     slug: "media-mister",
     logo: "/products/mediamister.png",
-    main_image: "https://www.mediamister.com/images/og/mediamister.jpg",
-    siteLink: "",
+    main_image: "/products/mediamister_b.png",
+    siteLink: "https://www.mediamister.com",
     audio: null,
-    added_on: "new Date('May 10, 2024')",
+    added_on: new Date('May 10, 2024'),
     hero_sub_heading:
       "Media Mister is an online service that claims to help users grow their social media presence across various platforms. The company positions itself as a one-stop solution for all social media marketing needs, offering a wide range of promotional services designed to boost visibility and engagement on popular social networks like Instagram, TikTok, YouTube, Facebook, and Spotify.",
     features: [
@@ -724,10 +724,10 @@ export const tools_details = [
     name: "SidesMedia",
     slug: "sidesmedia",
     logo: "/products/sides-media.png",
-    main_image: "/products/sidesmediathumbnail.png",
-    siteLink: "",
+    main_image: "/products/sidesmedia_b.png",
+    siteLink: "https://sidesmedia.com/",
     audio: null,
-    added_on: "new Date('Apr 15, 2024')",
+    added_on: new Date('Apr 15, 2024'),
     hero_sub_heading:
       "SidesMedia claims to be a social media growth service that offers followers, likes, views, and other engagement metrics for various platforms including Instagram, TikTok, YouTube, Twitter, Facebook, and Spotify. They position themselves as a marketplace for social media growth, promising to help individuals and businesses increase their online presence quickly and effectively.",
     features: [
@@ -1055,10 +1055,10 @@ export const tools_details = [
     name: "Pixicrowd",
     slug: "pixicrowd",
     logo: "",
-    main_image: "https://www.pixicrowd.com/ig_social_2.png",
-    siteLink: "",
+    main_image: "/products/pixicrowd_b.png",
+    siteLink: "https://www.pixicrowd.com/",
     audio: null,
-    added_on: "new Date('Mar 25, 2024')",
+    added_on: new Date('Mar 25, 2024'),
     hero_sub_heading:
       "Pixicrowd claims to be a social media growth service that helps users increase their presence on platforms like Instagram and TikTok. They promise to boost your online visibility by providing likes, views, and followers through what they call a 'growth network.' Pixicrowd says they focus on creating lasting growth that goes beyond just increasing numbers, aiming to connect users with real people behind those numbers.",
     features: [
@@ -1147,10 +1147,10 @@ export const tools_details = [
     name: "Stormlikes",
     slug: "stormlikes",
     logo: "/products/stormlikes.png",
-    main_image: "/products/stormlikethumbnail.png",
+    main_image: "/products/stormlikes_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Feb 18, 2024')",
+    added_on: new Date('Feb 18, 2024'),
     hero_sub_heading:
       "Stormlikes claims to be a social media growth service that offers Instagram followers, likes, views, and auto likes. They promise to deliver these engagement metrics quickly, often within minutes of purchase. Stormlikes positions itself as a tool to help businesses and individuals increase their social media popularity and visibility in the rapidly growing digital landscape.",
     features: [
@@ -1251,10 +1251,10 @@ export const tools_details = [
     name: "Poprey",
     slug: "poprey",
     logo: "",
-    main_image: "/products/Popreythumbnail.png",
-    siteLink: "",
+    main_image: "/products/poprey_b.png",
+    siteLink: "https://poprey.com",
     audio: null,
-    added_on: "new Date('Jan 5, 2024')",
+    added_on: new Date('Jan 5, 2024'),
     hero_sub_heading:
       "Poprey claims to be a social media growth service that offers various engagement metrics for Instagram, including likes, followers, auto-likes, views, and comments. They position themselves as a tool to help businesses and individuals increase their visibility and popularity on Instagram quickly and easily.",
     features: [
@@ -1403,10 +1403,10 @@ export const tools_details = [
     name: "Ampfluence",
     slug: "ampfluence",
     logo: "",
-    main_image: "https://www.ampfluence.com/wp-content/uploads/2023/11/IMG-Managed-Social.png",
-    siteLink: "",
+    main_image: "/products/ampfluence_b.png",
+    siteLink: "https://ampfluence.com",
     audio: null,
-    added_on: "new Date('Jun 20, 2024')",
+    added_on: new Date('Jun 20, 2024'),
     hero_sub_heading:
       "Ampfluence claims to be a 100% human-powered social media growth service, primarily focused on Instagram. They position themselves as a comprehensive solution for businesses and individuals looking to increase their social media presence without using bots or automated tools. Ampfluence offers managed social media services, content creation, ad management, and user-generated content (UGC) services.",
     features: [
@@ -1511,10 +1511,10 @@ export const tools_details = [
     name: "AiGrow",
     slug: "aigrow",
     logo: "/products/AiGrow.png",
-    main_image: "https://aigrow.me/wp-content/uploads/2021/12/AiGrow-HP.jpg",
-    siteLink: "",
+    main_image: "/products/aigrow_b.png",
+    siteLink: "https://www.aigrow.me/",
     audio: null,
-    added_on: "new Date('Jul 12, 2024')",
+    added_on: new Date('Jul 12, 2024'),
     hero_sub_heading:
       "AiGrow claims to be an Instagram and TikTok growth service that promises to dramatically increase followers, engagement, and reach through organic methods. They say they focus on creating and posting short-form videos (Reels and TikToks) to attract genuine followers interested in your content.",
     features: [
@@ -1630,10 +1630,10 @@ export const tools_details = [
     name: "Kicksta",
     slug: "kicksta",
     logo: "/products/kicksta.png",
-    main_image: "https://kicksta.co/assets/images/kicksta-ogimage.png",
-    siteLink: "",
+    main_image: "/products/kicksta_b.png",
+    siteLink: "https://kicksta.co",
     audio: null,
-    added_on: "new Date('Mar 14, 2024')",
+    added_on: new Date('Mar 14, 2024'),
     hero_sub_heading:
       "Kicksta claims to be an Instagram growth tool that uses artificial intelligence to help users gain real followers organically. They position themselves as an alternative to buying fake followers, promising to connect users with genuine Instagram accounts interested in their content.",
     features: [
@@ -1794,10 +1794,10 @@ export const tools_details = [
     name: "Nitreo",
     slug: "nitreo",
     logo: "",
-    main_image: "https://nitreo.com/img/nitreo-og-image-1200-630.jpg",
+    main_image: "/products/nitreo_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Feb 28, 2024')",
+    added_on: new Date('Feb 28, 2024'),
     hero_sub_heading:
       "Nitreo claims to be an Instagram growth service that helps users gain more followers organically. They position themselves as a hands-free tool that takes care of engagement tasks to grow your Instagram account without the need for fake followers or bots.",
     features: [
@@ -1925,10 +1925,10 @@ export const tools_details = [
     name: "Plixi",
     slug: "plixi",
     logo: "/products/plixi.png",
-    main_image: "https://plixi.com/plixi-results.jpg",
+    main_image: "/products/plixi_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Jun 5, 2024')",
+    added_on: new Date('Jun 5, 2024'),
     hero_sub_heading:
       "Plixi claims to be an AI-powered Instagram growth service that promises to help users gain real followers organically. They position themselves as a tool that uses artificial intelligence and automation to increase your Instagram followers, likes, and engagement without using bots or fake accounts.",
     features: [
@@ -2045,10 +2045,10 @@ export const tools_details = [
     name: "TrendGram",
     slug: "trendgram",
     logo: "/products/Trendgram.png",
-    main_image: "/products/Trendgramthumbnail.png",
+    main_image: "/products/trendgram_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('May 25, 2024')",
+    added_on: new Date('May 25, 2024'),
     hero_sub_heading:
       "TrendGram claims to be an AI-powered Instagram growth service that promises to help users gain real, organic followers. They position themselves as a tool that uses artificial intelligence and a network of influencers to increase your Instagram followers and engagement without using bots or fake accounts.",
     features: [
@@ -2156,15 +2156,15 @@ export const tools_details = [
   },
   {
     id: 18,
-    name: "Path Social",
-    slug: "path-social",
-    logo: "/products/path-social.png",
-    main_image: "/products/PathSocialThumbnail.png",
+    name: "Pathsocial",
+    slug: "pathsocial",
+    logo: "/products/pathsocial.png",
+    main_image: "/products/pathsocial_b.png",
     siteLink: "https://www.pathsocial.com/",
     audio: null,
-    added_on: "new Date('Apr 15, 2024')",
+    added_on: new Date('Apr 15, 2024'),
     hero_sub_heading:
-      "Path Social claims to be an AI-powered Instagram growth service that promises to help users gain real, organic followers. They position themselves as a tool that uses artificial intelligence and a network of influencers to increase your Instagram followers and engagement without using bots or fake accounts.",
+      "Pathsocial claims to be an AI-powered Instagram growth service that promises to help users gain real, organic followers. They position themselves as a tool that uses artificial intelligence and a network of influencers to increase your Instagram followers and engagement without using bots or fake accounts.",
     features: [
       "AI-powered targeting algorithm",
       "Organic promotion through influencers and publications",
@@ -2180,27 +2180,27 @@ export const tools_details = [
       "Quick results promised (growth within 2 days)",
     ],
     use_cases: [
-      "Fitness Brand Growth: A fitness and health brand uses Path Social to increase their Instagram following. They utilize the targeting features to reach potential customers interested in fitness and wellness. The brand aims to grow their follower count significantly and increase engagement rates.",
-      "Personal Training Business Expansion: A personal trainer employs Path Social to boost their follower count and attract new clients. They use the AI targeting to find and engage with users who are interested in personal fitness services. The trainer hopes to convert these new followers into paying customers.",
-      "Fashion Influencer Reach: An aspiring fashion influencer utilizes Path Social to grow their Instagram presence. They leverage the organic promotion through influencers to showcase their content to a wider audience. The influencer aims to reach a follower threshold that will make them attractive to brand partnerships and sponsorships.",
-      "Local Restaurant Promotion: A small, local restaurant uses Path Social to increase their local Instagram following. They target food enthusiasts in their area, hoping to attract more customers to their establishment. The restaurant aims to showcase their dishes and atmosphere to a broader local audience.",
+      "Fitness Brand Growth: A fitness and health brand uses Pathsocial to increase their Instagram following. They utilize the targeting features to reach potential customers interested in fitness and wellness. The brand aims to grow their follower count significantly and increase engagement rates.",
+      "Personal Training Business Expansion: A personal trainer employs Pathsocial to boost their follower count and attract new clients. They use the AI targeting to find and engage with users who are interested in personal fitness services. The trainer hopes to convert these new followers into paying customers.",
+      "Fashion Influencer Reach: An aspiring fashion influencer utilizes Pathsocial to grow their Instagram presence. They leverage the organic promotion through influencers to showcase their content to a wider audience. The influencer aims to reach a follower threshold that will make them attractive to brand partnerships and sponsorships.",
+      "Local Restaurant Promotion: A small, local restaurant uses Pathsocial to increase their local Instagram following. They target food enthusiasts in their area, hoping to attract more customers to their establishment. The restaurant aims to showcase their dishes and atmosphere to a broader local audience.",
     ],
     faq: [
       {
-        q: "Is there any risk to my Instagram account when using Path Social?",
-        a: "Path Social claims that their service poses no risk to your account. They state that unlike other 'growth tools,' they don't ask for your Instagram password and don't use automation or mass following tactics. Instead, they claim to use only organic promotion through influencers and their in-house platform. However, it's important to note that many users have reported receiving fake or bot followers, which could potentially put your account at risk.",
+        q: "Is there any risk to my Instagram account when using Pathsocial?",
+        a: "Pathsocial claims that their service poses no risk to your account. They state that unlike other 'growth tools,' they don't ask for your Instagram password and don't use automation or mass following tactics. Instead, they claim to use only organic promotion through influencers and their in-house platform. However, it's important to note that many users have reported receiving fake or bot followers, which could potentially put your account at risk.",
       },
       {
-        q: "How is Path Social different from other Instagram growth services?",
-        a: "Path Social states that they differ from other services by not asking for your Instagram password or using any kind of automation or bots. They claim to only use manual, organic outreach and promotion to build real, long-lasting followers. However, user reviews suggest that the reality may be quite different from these claims.",
+        q: "How is Pathsocial different from other Instagram growth services?",
+        a: "Pathsocial states that they differ from other services by not asking for your Instagram password or using any kind of automation or bots. They claim to only use manual, organic outreach and promotion to build real, long-lasting followers. However, user reviews suggest that the reality may be quite different from these claims.",
       },
       {
-        q: "Will I lose followers if I cancel my Path Social subscription?",
-        a: "According to Path Social, you won't lose any followers after cancelling their service. They claim that the followers they provide are organic users who follow you because they genuinely like your content. However, many user reviews report that the followers gained through the service are often fake or bot accounts.",
+        q: "Will I lose followers if I cancel my Pathsocial subscription?",
+        a: "According to Pathsocial, you won't lose any followers after cancelling their service. They claim that the followers they provide are organic users who follow you because they genuinely like your content. However, many user reviews report that the followers gained through the service are often fake or bot accounts.",
       },
       {
-        q: "How quickly will I see results with Path Social?",
-        a: "Path Social claims that you'll start seeing growth within 2 days, with full ramp-up occurring after about a week. They state that if you don't see results, they'll offer a refund. However, it's crucial to approach these claims with caution, as many users have reported difficulties in obtaining refunds and have questioned the quality of the followers received.",
+        q: "How quickly will I see results with Pathsocial?",
+        a: "Pathsocial claims that you'll start seeing growth within 2 days, with full ramp-up occurring after about a week. They state that if you don't see results, they'll offer a refund. However, it's crucial to approach these claims with caution, as many users have reported difficulties in obtaining refunds and have questioned the quality of the followers received.",
       },
     ],
     prices: [
@@ -2266,10 +2266,10 @@ export const tools_details = [
     name: "Ascend Viral",
     slug: "ascend-viral",
     logo: "/products/ascendviral.png",
-    main_image: "https://ascendviral.com/wp-content/uploads/2023/05/dashboard-1.png",
+    main_image: "/products/ascend-viral_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Aug 15, 2024')",
+    added_on: new Date('Aug 15, 2024'),
     hero_sub_heading:
       "Ascend Viral claims to be a leading Instagram growth service that helps businesses and influencers gain real Instagram followers organically. They position themselves as experts in safe and effective Instagram marketing techniques, offering a range of tools and services to help users increase their Instagram presence.",
     features: [
@@ -2364,10 +2364,10 @@ export const tools_details = [
     name: "Trusy",
     slug: "trusy",
     logo: "",
-    main_image: "http://d9hhrg4mnvzow.cloudfront.net/go.trusy.co/start/8e89bc70-man-phone-crop3_10000000ig0dc002000000.jpg",
+    main_image: "/products/trusy_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Sep 3, 2024')",
+    added_on: new Date('Sep 3, 2024'),
     hero_sub_heading:
       "Trusy is a social media growth service that claims to supercharge your online presence, particularly on platforms like Instagram and TikTok. They promise to help users gain real, engaged followers through targeted algorithms and influencer-driven strategies. Trusy positions itself as a solution for individuals and businesses looking to expand their reach, build a loyal following, and potentially monetize their social media presence.",
     features: [
@@ -2474,10 +2474,10 @@ export const tools_details = [
     name: "Social Boost",
     slug: "social-boost",
     logo: "",
-    main_image: "https://socialboostwebsite.fra1.cdn.digitaloceanspaces.com/og-image-1.png",
+    main_image: "/products/social-boost_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Oct 1, 2024')",
+    added_on: new Date('Oct 1, 2024'),
     hero_sub_heading:
       "Social Boost claims to be the #1 Instagram Marketing Agency, offering organic Instagram growth services. They promise to help users grow their Instagram accounts with real followers who will engage with their content. Social Boost states that they use a team of hand-trained Instagram Marketers to manage and grow accounts, avoiding bots and automation.",
     features: [
@@ -2585,10 +2585,10 @@ export const tools_details = [
     name: "Combin",
     slug: "combin",
     logo: "",
-    main_image: "https://static.combin.com/base/img/logo-500px.7bdcd859e2f6.png",
+    main_image: "/products/combin_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Jul 8, 2024')",
+    added_on: new Date('Jul 8, 2024'),
     hero_sub_heading:
       "Combin is a suite of tools designed to help users manage and grow their Instagram and TikTok presence. It claims to offer solutions for Instagram audience management, content planning, and automation of certain tasks to help users attract new followers and engage with their audience more efficiently.",
     features: [
@@ -2676,10 +2676,10 @@ export const tools_details = [
     name: "Wolf Growth",
     slug: "wolf-growth",
     logo: "/products/Wolfgrowth.png",
-    main_image: "https://wolfgrowth.com/wp-content/uploads/2021/05/logo_top_main-e1621770156664.png",
+    main_image: "/products/wolf-growth_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Aug 20, 2024')",
+    added_on: new Date('Aug 20, 2024'),
     hero_sub_heading:
       "Wolf Growth claims to be an AI-powered organic growth service for Instagram. They say they offer a smarter way to automate posting, watching, reacting, and liking Instagram stories. Wolf Growth positions itself as an out-of-the-box creative solution for Instagram growth that can be accessed from any device without installing software.",
     features: [
@@ -2793,10 +2793,10 @@ export const tools_details = [
     name: "SimplyGram",
     slug: "simplygram",
     logo: "",
-    main_image: "https://www.simplygram.com/wp-content/uploads/2022/06/Simplygrm_social_image_2.png",
+    main_image: "/products/simplygram_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Oct 2, 2024')",
+    added_on: new Date('Oct 2, 2024'),
     hero_sub_heading:
       "SimplyGram claims to be an organic Instagram growth service designed to help users increase their follower count and engagement on the platform. The service promises to add up to 5,000 targeted, niche-specific followers to your Instagram account every month using what they call a 'Mother/Child' method and AI-powered optimization.",
     features: [
@@ -2894,10 +2894,10 @@ export const tools_details = [
     name: "EngagementBoost",
     slug: "engagementboost",
     logo: "/products/Engagementboost.png",
-    main_image: "/products/Engagementboostthumbnail.png",
+    main_image: "/products/engagementboost_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Oct 3, 2024')",
+    added_on: new Date('Oct 3, 2024'),
     hero_sub_heading:
       "EngagementBoost claims to be an Instagram growth service that promises to help users gain real, targeted followers. They position themselves as a tool to increase credibility, earn money through influencer marketing, and grow your Instagram presence rapidly and conveniently.",
     features: [
@@ -2968,10 +2968,10 @@ export const tools_details = [
     name: "Flock Social",
     slug: "flock-social",
     logo: "/products/flocksocial.png",
-    main_image: "https://flocksocial.com/wp-content/uploads/2021/05/flock-featured-image.png",
+    main_image: "/products/flock-social_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Oct 4, 2024')",
+    added_on: new Date('Oct 4, 2024'),
     hero_sub_heading:
       "Flock Social claims to be an organic Instagram growth service that promises to help users gain real followers without using bots, spam, or fake accounts. They position themselves as a tool to find and engage with your target audience, increasing your followers and brand awareness on Instagram.",
     features: [
@@ -3136,10 +3136,10 @@ export const tools_details = [
     name: "Upleap",
     slug: "upleap",
     logo: "",
-    main_image: "https://upleap.com/wp-content/uploads/2023/05/upleap-featured-image.jpg",
+    main_image: "/products/upleap_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Oct 6, 2024')",
+    added_on: new Date('Oct 6, 2024'),
     hero_sub_heading:
       "Upleap claims to be an Instagram growth service that promises to help users gain real followers through targeted organic growth. They position themselves as a tool to increase reach, influence, followers, and engagement on Instagram without using bots or fake accounts.",
     features: [
@@ -3308,10 +3308,10 @@ export const tools_details = [
     name: "Stim Social",
     slug: "stim-social",
     logo: "/products/stim-logo.png",
-    main_image: "https://stimsocial.com/wp-content/uploads/2021/07/stim-featured-image.png",
+    main_image: "/products/stim-social_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Oct 10, 2024')",
+    added_on: new Date('Oct 10, 2024'),
     hero_sub_heading:
       "Stim Social claims to be an Instagram marketing tool that helps users increase their exposure and connect with new customers. They promise to provide valuable insights, analytics, and reports to help convert followers into real customers, while also offering automated growth services to attract new followers.",
     features: [
@@ -3472,10 +3472,10 @@ export const tools_details = [
     name: "OwskiMedia",
     slug: "owski-media",
     logo: "/products/owskimedia.png",
-    main_image: "https://owskimedia.com/opengraph-image.png",
+    main_image: "/products/owski-media_b.png",
     siteLink: "",
     audio: null,
-    added_on: "new Date('Oct 10, 2024')",
+    added_on: new Date('Oct 10, 2024'),
     hero_sub_heading:
       "OwskiMedia claims to be an Instagram growth service designed to help users gain real followers, leads, engagement, and visibility for their brand. The service promises to handle the growth aspect of your Instagram account while you focus on creating content and building your brand.",
     features: [

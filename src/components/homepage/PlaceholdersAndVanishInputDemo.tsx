@@ -11,11 +11,10 @@ export function PlaceholdersAndVanishInputDemo() {
   const [processing, setProcessing] = useState(false);
 
   const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis Hiding?",
-    "Write a Javascript method to reverse a string",
-    "How to assemble your own PC?",
+    "Write your Instagram Username",
+    "@therock",
+    "https://www.instagram.com/therock",
+    "therock",
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,11 +25,28 @@ export function PlaceholdersAndVanishInputDemo() {
     e.preventDefault();
     console.log("submitted");
     setProcessing(true);
-    router.push(`/growth/${value.startsWith("@") ? value.substring(1) : value}`);
-    setTimeout(() => {
-      setProcessing(false);
-    }, 2000);
+  
+    // Normalize the input value
+    let username = value.trim();
+  
+    // Handle inputs starting with '@'
+    if (username.startsWith('@')) {
+      username = username.substring(1);
+    }
+  
+    // Handle inputs with Instagram URLs
+    if (username.startsWith('https://www.instagram.com/')) {
+      username = username.replace('https://www.instagram.com/', '').split('/')[0];
+    }
+
+    if (username.startsWith('https://instagram.com/')) {
+      username = username.replace('https://instagram.com/', '').split('/')[0];
+    }
+  
+    // Ensure the username is clean before redirecting
+    router.push(`/growth/${username}`);
   };
+  
   return (
     <div className="max-h-[40rem] flex flex-col justify-center  items-center px-4">
       {processing && (
