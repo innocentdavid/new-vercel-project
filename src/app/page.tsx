@@ -253,7 +253,7 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
           data-sponsorship-status="active"
           data-sponsor-position={2}
           data-sponsor-status="not_active"
-          href={`${tool.toolLink}?utm_source=Futurepedia&utm_medium=1004`}
+          href={`${tool.siteLink}?utm_source=Futurepedia&utm_medium=1004`}
         >
           <button className="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-500 flex items-center gap-2 border-2 border-primary-500 hover:bg-primary-500 hover:text-white h-10 px-4 py-2">
             <span className="whitespace-nowrap text-lg font-normal">Visit</span>

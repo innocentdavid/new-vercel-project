@@ -51,14 +51,14 @@ export default function GTComponent({
 
         <Listings /> */}
 
-        <div className="my-6 flex flex-col items-end text-tremor-label leading-relaxed text-tremor-content-subtle dark:text-dark-tremor-content-subtle">
+        {/* <div className="my-6 flex flex-col items-end text-tremor-label leading-relaxed text-tremor-content-subtle dark:text-dark-tremor-content-subtle">
           <p>
             Started tracking on <strong>May 13th, 2024.</strong>
           </p>
           <p>
             Last updated <strong>a few seconds ago.</strong>
           </p>
-        </div>
+        </div> */}
       </main>
     </div>
   );

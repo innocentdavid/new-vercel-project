@@ -132,11 +132,11 @@ const futureFollowersDataGenerator = (currentFollowersCount: number) => {
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "hsl(var(--chart-1))",
+    color: "#3B81F6",
   },
   mobile: {
     label: "Mobile",
-    color: "hsl(var(--chart-2))",
+    color: "#EAB305",
   },
 } satisfies ChartConfig;
 
@@ -158,7 +158,9 @@ export function FollowersChartV4({
   return (
     <Card className="bg-transparent p-4 sm:p-6 rounded-xl border border-tremor-border dark:border-dark-tremor-border">
       <CardHeader>
-        <CardTitle>Sample Daily Followers</CardTitle>
+        <CardTitle className="font-normal !text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+          Sample Daily Followers
+        </CardTitle>
         <CardDescription>
           <div className="flex gap-2 mt-2">
             <p className="text-lg text-dark-tremor-content-strong font-semibold bg-primary-400 py-1 px-3 rounded-md">
@@ -169,14 +171,13 @@ export function FollowersChartV4({
             </p>
             <p className="text-base text-dark-tremor-content-strong font-medium bg-gray-400 py-1 px-3 rounded-md">
               Normal:{" "}
-              {new Intl.NumberFormat("en-US").format(
-                chartData[0]?.Followers
-              )}
+              {new Intl.NumberFormat("en-US").format(chartData[0]?.Followers)}
             </p>
           </div>
         </CardDescription>
       </CardHeader>
-      <CardContent>
+
+      <CardContent className="!p-0">
         <ChartContainer config={chartConfig}>
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
@@ -192,15 +193,33 @@ export function FollowersChartV4({
             <Bar
               dataKey="Followers"
               stackId="a"
-              fill="var(--color-desktop)"
+              // fill="var(--color-desktop)"
+              fill="url(#colorNormalFollowerGraph)"
               radius={[0, 0, 4, 4]}
             />
             <Bar
               dataKey="Normal"
               stackId="a"
-              fill="var(--color-mobile)"
+              // fill="var(--color-mobile)"
+              fill="url(#colorFollowersFollowerGraph)"
               radius={[4, 4, 0, 0]}
             />
+
+            <defs>
+              <linearGradient id="colorFollowersFollowerGraph" x1="0" y1="0" x2="1" y2="0">
+                {/* <stop offset="0%" stopColor="rgba(245,133,41,0.3)" />
+                <stop offset="25%" stopColor="rgba(252,199,55,0.3)" />
+                <stop offset="0%" stopColor="rgba(221,42,123,0.3)" /> */}
+                <stop offset="0%" stopColor="rgba(129,52,175,0.3)" />
+                <stop offset="100%" stopColor="rgba(81,91,212,0.3)" />
+              </linearGradient>
+              
+              <linearGradient id="colorNormalFollowerGraph" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="rgba(200,200,200,0.4)" />
+                <stop offset="50%" stopColor="rgba(150,150,150,0.4)" />
+                <stop offset="100%" stopColor="rgba(100,100,100,0.4)" />
+              </linearGradient>
+            </defs>
           </BarChart>
         </ChartContainer>
       </CardContent>

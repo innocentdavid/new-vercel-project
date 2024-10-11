@@ -22,6 +22,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ClipboardCopy } from "lucide-react";
 import CopyComp from "@/components/CopyComp";
 import { Metadata, ResolvingMetadata } from "next";
+import { tools_details } from "@/lib/tools_details";
 
 function decodeURLString(encodedString: string) {
   try {
@@ -54,7 +55,8 @@ const generateSeoDescription = (text: string, wordLimit = 22) => {
 };
 
 async function getToolBySlug(slug: string) {
-  const tool = TOOLS.find((tool) => tool.slug === slug);
+  // const tool = TOOLS.find((tool) => tool.slug === slug);
+  const tool = tools_details.find((tool) => tool.slug === slug);
   return tool;
 }
 
@@ -70,9 +72,7 @@ export async function generateMetadata(
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
   // const seo_description = generateSeoDescription(tool?.excerpt!);
-  const seo_description = generateSeoDescription(
-    "Chaindesk is a no-code platform that allows businesses to easily train custom ChatGPT chatbots on their own data, enabling them to provide secure, precise customer support and lead generation in a personalized and scalable way."
-  );
+  const seo_description = generateSeoDescription("");
 
   return {
     title: `FunFun.tool: ${tool?.name}`,
@@ -81,8 +81,8 @@ export async function generateMetadata(
       canonical: `https://new-vercel-project-vert.vercel.app/tool/${slug}`,
     },
     openGraph: {
-      // images: tool?.mainImageUrl || "",
-      images: [tool?.mainImageUrl || "", ...previousImages],
+      // images: tool?.main_image || "",
+      images: [tool?.main_image || "", ...previousImages],
     },
   };
 }
@@ -115,10 +115,12 @@ export default async function ToolPage({
               <h1 className="text-4xl font-bold leading-[1.333334] capitalize">
                 {tool.name}
               </h1>
-              <p className="text-gray-600 text-sm">Added on Jul 31, 2024</p>
+              <p className="text-gray-600 text-sm">
+                Added on {new Date("Jul 31, 2024").toLocaleDateString()}
+              </p>
 
               <div className="flex items-center mt-4 gap-4">
-                <Link href={tool.siteLink||""}>
+                <Link href={tool.siteLink || ""}>
                   <Button className="bg-pink-500 hover:bg-pink-600 text-white h-fit">
                     Open Website
                   </Button>
@@ -131,7 +133,7 @@ export default async function ToolPage({
                 </Link>
               </div>
 
-              <div className="flex space-x-2 mt-2">
+              {/* <div className="flex space-x-2 mt-2">
                 {tool?.socialMediaHandles?.map((social) => (
                   <a
                     key={social}
@@ -149,7 +151,7 @@ export default async function ToolPage({
                     </svg>
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             <div className="grid gap-4">
@@ -157,13 +159,13 @@ export default async function ToolPage({
                 What is <span className="capitalize">{tool.name}</span>?
               </h2>
 
-              <p className="text-lg">{tool.description}</p>
+              <p className="text-lg">{tool.hero_sub_heading}</p>
             </div>
           </div>
 
           <div className="w-full lg:w-[70%]">
             <Image
-              src={tool.mainImageUrl||""}
+              src={tool.main_image || ""}
               alt=""
               width={900}
               height={700}
@@ -184,7 +186,7 @@ export default async function ToolPage({
                 {tool?.features?.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-2">
                     <svg
-                      className="text-[1.5rem] w-6 h-6"
+                      className="text-[1.5rem] min-w-6 max-w-6 min-h-6 max-h-6"
                       fill="#10b981"
                       focusable="false"
                       aria-hidden="true"
@@ -209,13 +211,13 @@ export default async function ToolPage({
             <Card>
               <CardContent className="p-4">
                 <div className="py-[6px]">
-                  {tool.useCases?.map((useCase, index) => (
+                  {tool.use_cases?.map((useCase, index) => (
                     <Fragment key={index}>
                       <div className="flex flex-col md:flex-row md:items-center px-3 py-1 gap-2 md:gap-6 my-6 md:my-0">
                         <h3 className="font-semibold mb-2">#{index + 1}</h3>
                         <p>{useCase}</p>
                       </div>
-                      {tool.useCases.length != index + 1 && (
+                      {tool.use_cases.length != index + 1 && (
                         <Divider className="my-[6px]" />
                       )}
                     </Fragment>
@@ -234,7 +236,7 @@ export default async function ToolPage({
                 <PricingTier
                   key={index}
                   title={tier.plan}
-                  price={tier.price}
+                  price={tier?.price}
                   features={tier.features}
                   buttonText="Sign up"
                 />
@@ -245,14 +247,14 @@ export default async function ToolPage({
           <section className="grid gap-4" id="faq">
             <div className="mt-8">
               <h2 className="my-[30px] text-3xl font-bold">
-                <span className="capitalize">{tool.name}</span> Frequently
-                Asked Questions
+                <span className="capitalize">{tool.name}</span> Frequently Asked
+                Questions
               </h2>
 
               <Card>
                 <CardContent>
                   <Accordion type="single" collapsible className="w-full">
-                    {tool.faqs?.map((faq, index) => (
+                    {tool.faq?.map((faq, index) => (
                       <AccordionItem
                         key={index}
                         value={`item-${index}`}
@@ -277,7 +279,7 @@ export default async function ToolPage({
             </div>
           </section>
 
-          <section className="grid gap-4" id="badges">
+          {/* <section className="grid gap-4" id="badges">
             <div className="mt-8">
               <h2 className="my-[30px] text-3xl font-bold">
                 Launch Badges for{" "}
@@ -338,7 +340,7 @@ export default async function ToolPage({
                 </CardContent>
               </Card>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </div>
@@ -366,7 +368,7 @@ const PricingTier = ({
   buttonText,
 }: {
   title: string;
-  price: number;
+  price: string | number;
   features: string[];
   buttonText: string;
 }) => (

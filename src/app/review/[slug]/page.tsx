@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { TOOLS } from "@/lib/mockToolsData";
+import { tools_review } from "@/lib/tools_review";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -12,6 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React, { Fragment } from "react";
+import { BlogPost, TocComp } from "./comp";
 
 function decodeURLString(encodedString: string) {
   try {
@@ -44,7 +46,8 @@ const generateSeoDescription = (text: string, wordLimit = 22) => {
 };
 
 async function getToolBySlug(slug: string) {
-  const tool = TOOLS.find((tool) => tool.slug === slug);
+  // const tool = TOOLS.find((tool) => tool.slug === slug);
+  const tool = tools_review.find((tool) => tool.slug === slug);
   return tool;
 }
 
@@ -71,8 +74,8 @@ export async function generateMetadata(
       canonical: `https://new-vercel-project-vert.vercel.app/tool/${slug}`,
     },
     openGraph: {
-      // images: tool?.mainImageUrl || "",
-      images: [tool?.mainImageUrl || "", ...previousImages],
+      // images: tool?.main_image || "",
+      images: [tool?.main_image || "", ...previousImages],
     },
   };
 }
@@ -102,21 +105,79 @@ export default async function ReviewPage({
                 <ArrowLeft size={16} /> Go Back{" "}
               </Link>
               <h1 className="mt-8 text-3xl font-bold tracking-tight dark:text-primary-500 sm:text-4xl lg:text-5xl xl:text-6xl">
-                seospark.io Review - Boost your SEO in 2024
+                {tool.title}
               </h1>
-              <p className="mt-4 text-lg font-normal text-gray-500 dark:text-gray-400 current-post-excerpt lg:text-xl">
-                We've tested seospark.io, the Keyword Research &amp; Automation
-                tool for SEO professionals
-              </p>
+              {/* <p className="mt-4 text-lg font-normal text-gray-500 dark:text-gray-400 current-post-excerpt lg:text-xl">
+                {tool.description}
+              </p> */}
               <div className="flex flex-wrap items-center gap-3 mt-8 current-post-tags-wrapper lg:mt-10">
                 <span className="text-sm text-gray-400 current-post-publish-date">
                   <time title="09/16/2024">September 16, 2024</time>
                 </span>
               </div>
             </div>
+
             <div className="max-w-6xl px-4 mx-auto mt-24 mb-12 prose md:prose-lg lg:prose-xl prose-code:text-white prose-h1:text-primary-500 prose-h2:text-primary-500 prose-a:text-primary-500 prose-a:no-underline sm:px-12 lg:px-16 dark:prose-invert">
               <div className="grid grid-cols-1 gap-24 lg:grid-cols-3 scroll-smooth">
-                <article className="block col-span-1 mt-0 lg:col-span-2">
+              <article className="block col-span-1 mt-0 lg:col-span-2">
+              {tool.audio ? (
+                    <div>
+                      <iframe
+                        width="100%"
+                        height={166}
+                        scrolling="no"
+                        frameBorder="no"
+                        allow="autoplay"
+                        src={tool.audio.iframe}
+                      />
+                      <div
+                        style={{
+                          fontSize: 10,
+                          color: "#cccccc",
+                          lineBreak: "anywhere",
+                          wordBreak: "normal",
+                          overflow: "hidden",
+                          whiteSpace: "nowrap",
+                          textOverflow: "ellipsis",
+                          fontFamily:
+                            "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+                          fontWeight: 100,
+                        }}
+                      >
+                        {tool.audio.others.map((item, i) => (
+                          <Fragment key={i}>
+                            <a
+                              href={item.link}
+                              title="Social Media Reviews"
+                              target="_blank"
+                              style={{
+                                color: "#cccccc",
+                                textDecoration: "none",
+                              }}
+                            >
+                              {item.name}
+                            </a>
+                            {i + 1 < tool.audio.others.length && (
+                              <span className="px-2">|</span>
+                            )}
+                          </Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Image
+                      width={649}
+                      height={365}
+                      alt=""
+                      src={tool.main_image}
+                      className="object-cover w-full h-auto !mt-0 border rounded-lg border-primary-500 dark:border-ngray-600"
+                    />
+                  )}
+
+                  <BlogPost contentString={tool.content} />
+                </article>
+
+                <article className="hidden _block col-span-1 mt-0 lg:col-span-2">
                   {tool.audio ? (
                     <div>
                       <iframe
@@ -534,11 +595,12 @@ export default async function ReviewPage({
                       {" "}
                       Table of contents{" "}
                     </h4>
-                    <nav className="mt-4">
+                    <TocComp contentString={tool.content} />
+                    {/* <nav className="mt-4">
                       <ul className="list-none !pl-2 font-medium">
                         <li className="toc-list border-b border-transparent hover:border-black mb-2">
                           <a
-                            className="text-black_ text-primary-500 hover:gray-900 block text-base _text-white !no-underline transition-colors duration-75"
+                            className="text-black_ text-primary-500 hover:text-gray-900 block text-base _text-white !no-underline transition-colors duration-75"
                             role="button"
                             href="#what-is-seospark"
                           >
@@ -547,7 +609,7 @@ export default async function ReviewPage({
                         </li>
                         <li className="toc-list border-b border-transparent hover:border-black mb-2">
                           <a
-                            className="text-black_ text-primary-500 hover:gray-900 block text-base _text-white !no-underline transition-colors duration-75"
+                            className="text-black_ text-primary-500 hover:text-gray-900 block text-base _text-white !no-underline transition-colors duration-75"
                             role="button"
                             href="#discovering-the-tool"
                           >
@@ -556,7 +618,7 @@ export default async function ReviewPage({
                         </li>
                         <li className="toc-list border-b border-transparent hover:border-black mb-2">
                           <a
-                            className="text-black_ text-primary-500 hover:gray-900 block text-base _text-white !no-underline transition-colors duration-75"
+                            className="text-black_ text-primary-500 hover:text-gray-900 block text-base _text-white !no-underline transition-colors duration-75"
                             role="button"
                             href="#keyword-discovery"
                           >
@@ -565,7 +627,7 @@ export default async function ReviewPage({
                         </li>
                         <li className="toc-list border-b border-transparent hover:border-black mb-2">
                           <a
-                            className="text-black_ text-primary-500 hover:gray-900 block text-base _text-white !no-underline transition-colors duration-75"
+                            className="text-black_ text-primary-500 hover:text-gray-900 block text-base _text-white !no-underline transition-colors duration-75"
                             role="button"
                             href="#keyword-clustering"
                           >
@@ -574,7 +636,7 @@ export default async function ReviewPage({
                         </li>
                         <li className="toc-list border-b border-transparent hover:border-black mb-2">
                           <a
-                            className="text-black_ text-primary-500 hover:gray-900 block text-base _text-white !no-underline transition-colors duration-75"
+                            className="text-black_ text-primary-500 hover:text-gray-900 block text-base _text-white !no-underline transition-colors duration-75"
                             role="button"
                             href="#alsoasked"
                           >
@@ -583,7 +645,7 @@ export default async function ReviewPage({
                         </li>
                         <li className="toc-list border-b border-transparent hover:border-black mb-2">
                           <a
-                            className="text-black_ text-primary-500 hover:gray-900 block text-base _text-white !no-underline transition-colors duration-75"
+                            className="text-black_ text-primary-500 hover:text-gray-900 block text-base _text-white !no-underline transition-colors duration-75"
                             role="button"
                             href="#conclusion"
                           >
@@ -591,7 +653,7 @@ export default async function ReviewPage({
                           </a>
                         </li>
                       </ul>
-                    </nav>
+                    </nav> */}
                   </div>
                 </aside>
               </div>

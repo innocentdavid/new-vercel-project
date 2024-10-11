@@ -75,7 +75,7 @@ export function EngagementRateChart() {
         data={chartData}
         index="date"
         categories={["%"]}
-        colors={["green"]}
+        colors={["purple"]}
         valueFormatter={dataFormatter}
         // yAxisWidth={60}
         // autoMinValue
