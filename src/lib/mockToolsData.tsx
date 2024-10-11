@@ -8,7 +8,7 @@ export const TOOLS = [
     toolLink: "https://www.gainsty.com/caption-writer",
     siteLink: "https://www.gainsty.com",
     logo: "/products/gainsty-dark.png",
-    main_image: "/products/GaisntyThumbnail.png",
+    main_image: "/products/gainsty_b.png",
     created_at: "31-06-2024",
     socialMediaHandles: [],
     description:
@@ -126,7 +126,7 @@ export const TOOLS = [
     toolLink: "https://www.liftinfluence.com/caption-writer",
     siteLink: "https://www.liftinfluence.com",
     logo: "/products/liftinfluece-logo.png",
-    main_image: "/products/liftinfluece-logo.png",
+    main_image: "/products/liftinfluence_b.png",
     created_at: "31-06-2024",
     socialMediaHandles: [],
     description:
@@ -244,7 +244,7 @@ export const TOOLS = [
     toolLink: "https://www.liftinfluence.com/caption-writer",
     siteLink: "https://www.liftinfluence.com",
     logo: "https://www.upgrow.com/img/upgrow-logo-icon.svg",
-    main_image: "/products/UpgrowThumbnail.png",
+    main_image: "/products/upgrow_b.png",
     created_at: "31-06-2024",
     socialMediaHandles: [],
     description:
@@ -370,7 +370,7 @@ export const TOOLS = [
     id: 4,
     name: "Social Crow",
     logo: "",
-    main_image: "https://www.socialcrow.co/assets/images/twitter-header.jpg",
+    main_image: "/products/social-crow_b.png",
     description:
       "Buy social media services now to turn potential customers into real ones. All packages are active and cost-effective, get social media services followers instantly!",
     saves: 4,
@@ -380,7 +380,7 @@ export const TOOLS = [
     id: 5,
     name: "Virallized",
     logo: "/products/Virallized.png",
-    main_image: "/products/Virallizedthumbnail.png",
+    main_image: "/products/virallized_b.png",
     description:
       "Get as many as 2,500 real and targeted Instagram followers every month that actually like, comment, and engage with your content by using new AI technology to identify and convert your target audience to followers.",
     saves: 3,
@@ -393,7 +393,7 @@ export const TOOLS = [
       "Keesy is the leading AI Instagram Growth Service in 2024. Get real Instagram followers & engagement with our proprietary AI models and. Start for free today.",
     saves: 4,
     logo: "/products/keesy.png",
-    main_image: "https://cdn.prod.website-files.com/65e8cb7da76e6790c4e6a110/66105326e1feacbdc1ad4173_Video%20Thumnail.webp",
+    main_image: "/products/keesy_b.png",
     slug: "keesy",
   },
   {
@@ -403,7 +403,7 @@ export const TOOLS = [
       "Buy Followers, Fans, Views, Likes, Subscribers, etc., from Media Mister. We are providing social media marketing services at affordable prices",
     saves: 7,
     logo: "/products/mediamister.png",
-    main_image: "https://www.mediamister.com/images/og/mediamister.jpg",
+    main_image: "/products/mediamister_b.png",
     slug: "media-mister",
   },
   {
@@ -413,7 +413,7 @@ export const TOOLS = [
       "Sidesmedia is highly trusted to help provide you social media followers on all major social platforms. Try Sidesmedia now and gain popularity.",
     saves: 5,
     logo: "/products/sides-media.png",
-    main_image: "/products/sidesmediathumbnail.png",
+    main_image: "/products/sidesmedia_b.png",
     slug: "sidesmedia",
   },
   {
@@ -423,7 +423,7 @@ export const TOOLS = [
       "Pixicrowd lets you increase your social exposure and reach with likes, views and followers... Grab attention to yourself through steady growth...",
     saves: 3,
     logo: "",
-    main_image: "https://www.pixicrowd.com/ig_social_2.png",
+    main_image: "/products/pixicrowd_b.png",
     slug: "pixicrowd",
   },
   {
@@ -433,7 +433,7 @@ export const TOOLS = [
       "Buy Instagram followers, likes and views easily and safely from Stormlikes - the #1 voted Instagram growth service in the market.",
     saves: 2,
     logo: "/products/stormlikes.png",
-    main_image: "/products/stormlikethumbnail.png",
+    main_image: "/products/stormlikes_b.png",
     slug: "stormlikes",
   },
   {
@@ -443,7 +443,7 @@ export const TOOLS = [
       "Buy Instagram likes from Poprey.com at $2.60 per 100. These're safest and cheaper option to get real likes by PayPal, Credit card or BTC. Try it now",
     saves: 5,
     logo: "",
-    main_image: "/products/Popreythumbnail.png",
+    main_image: "/products/poprey_b.png",
     slug: "poprey",
   },
   {
@@ -453,7 +453,7 @@ export const TOOLS = [
       "Ampfluence delivers real results with 100% human-powered Instagram management. Dedicated team, account manager, analyst, designer.",
     saves: 6,
     logo: "",
-    main_image: "https://www.ampfluence.com/wp-content/uploads/2023/11/IMG-Managed-Social.png",
+    main_image: "/products/ampfluence_b.png",
     slug: "ampfluence",
   },
   {
@@ -463,7 +463,7 @@ export const TOOLS = [
       "AiGrow is the #1 Instagram growth service you can rely on. No bots. 100% human-powered. Guaranteed results.",
     saves: 6,
     logo: "/products/AiGrow.png",
-    main_image: "https://aigrow.me/wp-content/uploads/2021/12/AiGrow-HP.jpg",
+    main_image: "/products/aigrow_b.png",
     slug: "aigrow",
   },
   {
@@ -473,7 +473,7 @@ export const TOOLS = [
       "Get More Instagram Followers Using The Best Organic Instagram Growth Service In 2024. Sign Up Now To Start Getting Real Followers!",
     saves: 3,
     logo: "/products/kicksta.png",
-    main_image: "https://kicksta.co/assets/images/kicksta-ogimage.png",
+    main_image: "/products/kicksta_b.png",
     slug: "kicksta",
   },
   {
@@ -483,7 +483,7 @@ export const TOOLS = [
       "Get more Instagram followers with the best Instagram growth service. Simply sign up, add your Instagram account, and grow. Get followers faster now!",
     saves: 4,
     logo: "",
-    main_image: "https://nitreo.com/img/nitreo-og-image-1200-630.jpg",
+    main_image: "/products/nitreo_b.png",
     slug: "nitreo",
   },
   {
@@ -493,7 +493,7 @@ export const TOOLS = [
       "What is the best price for the best Instagram growth service? See the details for Plixi's pricing that offers the best AI-powered Instagram tool for follower growth.",
     saves: 5,
     logo: "/products/plixi.png",
-    main_image: "https://plixi.com/plixi-results.jpg",
+    main_image: "/products/plixi_b.png",
     slug: "plixi",
   },
   {
@@ -503,7 +503,7 @@ export const TOOLS = [
       "No bots. No fake users.Grow your community with AI targeted IG follower growth.",
     saves: 7,
     logo: "/products/Trendgram.png",
-    main_image: "/products/Trendgramthumbnail.png",
+    main_image: "/products/trendgram_b.png",
     slug: "trendgram",
   },
   {
@@ -513,7 +513,7 @@ export const TOOLS = [
       "Real, Organic Instagram Followers No bots. No fake users. Build your community with AI targeted IG follower growth. No bots. No fake users. Build your communitywith AI targeted IG follower growth.",
     saves: 2,
     logo: "/products/pathsocial.png",
-    main_image: "/products/Trendgramthumbnail.png",
+    main_image: "/products/pathsocial_b.png",
     slug: "pathsocial",
   },
   {
@@ -523,7 +523,7 @@ export const TOOLS = [
       "Get 100%% real Instagram followers organically. Grow your Instagram account with Ascend Viral! Authentic IG Growth Guaranteed. Sign up today to get started!",
     saves: 2,
     logo: "/products/ascendviral.png",
-    main_image: "https://ascendviral.com/wp-content/uploads/2023/05/dashboard-1.png",
+    main_image: "/products/ascend-viral_b.png",
     slug: "ascendviral",
   },
   {
@@ -533,7 +533,7 @@ export const TOOLS = [
       "Experience massive organic growth on your Social Media platforms with Trusy",
     saves: 3,
     logo: "",
-    main_image: "http://d9hhrg4mnvzow.cloudfront.net/go.trusy.co/start/8e89bc70-man-phone-crop3_10000000ig0dc002000000.jpg",
+    main_image: "/products/trusy_b.png",
     slug: "trusy",
   },
   {
@@ -543,7 +543,7 @@ export const TOOLS = [
       "Social Boost is best organic instagram growth service - helps businesses, influencers and individuals gain more Instagram followers and better engagement.",
     saves: 4,
     logo: "",
-    main_image: "https://socialboostwebsite.fra1.cdn.digitaloceanspaces.com/og-image-1.png",
+    main_image: "/products/social-boost_b.png",
     slug: "socialboost",
   },
   {
@@ -553,7 +553,7 @@ export const TOOLS = [
       "Increase Instagram followers and manage your account effectively. Gain more followers and boost your Instagram account productivity with Combin.",
     saves: 5,
     logo: "",
-    main_image: "https://static.combin.com/base/img/logo-500px.7bdcd859e2f6.png",
+    main_image: "/products/combin_b.png",
     slug: "combin",
   },
   {
@@ -563,7 +563,7 @@ export const TOOLS = [
       "Build Real Instagram Growth & Engagement, no spam, no fake followers, no bots. Powered by cutting-edge AI technology that improves with every single execution.",
     saves: 6,
     logo: "/products/Wolfgrowth.png",
-    main_image: "https://wolfgrowth.com/wp-content/uploads/2021/05/logo_top_main-e1621770156664.png",
+    main_image: "/products/wolf-growth_b.png",
     slug: "wolfgrowth",
   },
   {
@@ -573,7 +573,7 @@ export const TOOLS = [
       "Get more Instagram followers with SimplyGram. Grow & increase your following with AI-powered optimization. 7,500+ Clients. Try us out for FREE today!",
     saves: 7,
     logo: "",
-    main_image: "https://www.simplygram.com/wp-content/uploads/2022/06/Simplygrm_social_image_2.png",
+    main_image: "/products/simplygram_b.png",
     slug: "simplygram",
   },
   {
@@ -583,7 +583,7 @@ export const TOOLS = [
       "Start Now For FREE! No risk, cancel, anytime. Join thousands of users growing 1-10K Followers monthly! Custom Targeting • 100% REAL Growth • Boost Engagement",
     saves: 2,
     logo: "/products/Engagementboost.png",
-    main_image: "/products/Engagementboostthumbnail.png",
+    main_image: "/products/engagementboost_b.png",
     slug: "engagementboost",
   },
   {
@@ -593,7 +593,7 @@ export const TOOLS = [
       "Join over 9,000+ of the world's top brands, agencies & influencers by subscribing to Flock Social organic Instagram growth service.",
     saves: 3,
     logo: "/products/flocksocial.png",
-    main_image: "https://flocksocial.com/wp-content/uploads/2021/05/flock-featured-image.png",
+    main_image: "/products/flock-social_b.png",
     slug: "flocksocial",
   },
   {
@@ -603,7 +603,7 @@ export const TOOLS = [
       "Get more Instagram followers with Upleap, the best organic Instagram growth tool in 2023. Sign Up today and start getting real followers!",
     saves: 4,
     logo: "",
-    main_image: "https://upleap.com/wp-content/uploads/2023/05/upleap-featured-image.jpg",
+    main_image: "/products/upleap_b.png",
     slug: "upleap",
   },
   {
@@ -613,7 +613,7 @@ export const TOOLS = [
       "Maximize your Instagram marketing by using Stim to get valuable INSIGHTS, ANALYTICS, and REPORTS to convert potential customers.",
     saves: 5,
     logo: "/products/stim-logo.png",
-    main_image: "https://stimsocial.com/wp-content/uploads/2021/07/stim-featured-image.png",
+    main_image: "/products/stim-social_b.png",
     slug: "stim-social",
   },
   {
@@ -623,7 +623,7 @@ export const TOOLS = [
       "The number one Instagram growth service. Get real followers, leads, engagement and visibility. Try us today!.",
     saves: 6,
     logo: "/products/owskimedia.png",
-    main_image: "https://owskimedia.com/opengraph-image.png",
+    main_image: "/products/owski-media_b.png",
     slug: "owskimedia",
   },
 ];
