@@ -523,7 +523,7 @@ export const TOOLS = [
       "Get 100%% real Instagram followers organically. Grow your Instagram account with Ascend Viral! Authentic IG Growth Guaranteed. Sign up today to get started!",
     saves: 2,
     logo: "/products/ascendviral.png",
-    main_image: "/products/ascend-viral_b.png",
+    main_image: "/products/ascendviral_b.png",
     slug: "ascendviral",
   },
   {
@@ -538,13 +538,13 @@ export const TOOLS = [
   },
   {
     id: 20,
-    name: "SocialBoost",
+    name: "Social Boost",
     description:
       "Social Boost is best organic instagram growth service - helps businesses, influencers and individuals gain more Instagram followers and better engagement.",
     saves: 4,
     logo: "",
     main_image: "/products/social-boost_b.png",
-    slug: "socialboost",
+    slug: "social-boost",
   },
   {
     id: 21,
@@ -563,7 +563,7 @@ export const TOOLS = [
       "Build Real Instagram Growth & Engagement, no spam, no fake followers, no bots. Powered by cutting-edge AI technology that improves with every single execution.",
     saves: 6,
     logo: "/products/Wolfgrowth.png",
-    main_image: "/products/wolf-growth_b.png",
+    main_image: "/products/wolfgrowth_b.png",
     slug: "wolfgrowth",
   },
   {
@@ -593,7 +593,7 @@ export const TOOLS = [
       "Join over 9,000+ of the world's top brands, agencies & influencers by subscribing to Flock Social organic Instagram growth service.",
     saves: 3,
     logo: "/products/flocksocial.png",
-    main_image: "/products/flock-social_b.png",
+    main_image: "/products/flocksocial_b.png",
     slug: "flocksocial",
   },
   {
@@ -613,8 +613,8 @@ export const TOOLS = [
       "Maximize your Instagram marketing by using Stim to get valuable INSIGHTS, ANALYTICS, and REPORTS to convert potential customers.",
     saves: 5,
     logo: "/products/stim-logo.png",
-    main_image: "/products/stim-social_b.png",
-    slug: "stim-social",
+    main_image: "/products/stimsocial_b.png",
+    slug: "stimsocial",
   },
   {
     id: 28,
@@ -623,7 +623,7 @@ export const TOOLS = [
       "The number one Instagram growth service. Get real followers, leads, engagement and visibility. Try us today!.",
     saves: 6,
     logo: "/products/owskimedia.png",
-    main_image: "/products/owski-media_b.png",
+    main_image: "/products/owskimedia_b.png",
     slug: "owskimedia",
   },
 ];
@@ -710,7 +710,7 @@ export const tool_rating = [
     "rating": 1
   },
   {
-    "slug": "socialboost",
+    "slug": "social-boost",
     "rating": 4
   },
   {
