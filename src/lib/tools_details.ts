@@ -374,32 +374,32 @@ export const tools_details = [
       },
     ],
     prices: [
-      {
-        plan: "Regular Followers",
-        price: "Varies",
-        currency: "$",
-        features: [
-          "Realistic looking followers",
-          "Fast delivery (15-30 minutes)",
-          "No password required",
-          "SSL-protected transactions",
-          "24/7 customer support",
-        ],
-        link: "",
-      },
-      {
-        plan: "Real Followers",
-        price: "Varies",
-        currency: "$",
-        features: [
-          "Authentic followers from diverse regions",
-          "High engagement potential",
-          "Quick delivery",
-          "Secure payment processing",
-          "Refund available for undelivered orders",
-        ],
-        link: "",
-      },
+      // {
+      //   plan: "Regular Followers",
+      //   price: "Varies",
+      //   currency: "$",
+      //   features: [
+      //     "Realistic looking followers",
+      //     "Fast delivery (15-30 minutes)",
+      //     "No password required",
+      //     "SSL-protected transactions",
+      //     "24/7 customer support",
+      //   ],
+      //   link: "",
+      // },
+      // {
+      //   plan: "Real Followers",
+      //   price: "Varies",
+      //   currency: "$",
+      //   features: [
+      //     "Authentic followers from diverse regions",
+      //     "High engagement potential",
+      //     "Quick delivery",
+      //     "Secure payment processing",
+      //     "Refund available for undelivered orders",
+      //   ],
+      //   link: "",
+      // },
     ],
   },
   {

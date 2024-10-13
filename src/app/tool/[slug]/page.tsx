@@ -235,7 +235,7 @@ export default async function ToolPage({
               Pricing of <span className="capitalize">{tool.name}</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {tool.prices?.map((tier, index) => (
+              {tool.prices.length > 0 ? tool.prices?.map((tier:any, index) => (
                 <PricingTier
                   key={index}
                   title={tier.plan}
@@ -243,7 +243,7 @@ export default async function ToolPage({
                   features={tier.features}
                   buttonText="Sign up"
                 />
-              ))}
+              )) : "N/A"}
             </div>
           </section>
 
