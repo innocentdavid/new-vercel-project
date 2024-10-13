@@ -2,6 +2,7 @@ import AddBookmark from "@/components/AddBookmark";
 import BackgroundBeamsWithCollisionDemo from "@/components/homepage/background-beams-with-collision-demo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import { tool_rating, TOOLS } from "@/lib/mockToolsData";
+import { tools_details } from "@/lib/tools_details";
 import { Star } from "lucide-react";
 import Link from "next/link";
 
@@ -94,6 +95,7 @@ export default function Home() {
 
 function ProductCard_V2(tool: (typeof TOOLS)[0]) {
   const rating = tool_rating.find((t) => t.slug === tool.slug)?.rating;
+  const toolDetails = tools_details.find((t) => t.slug === tool.slug);
 
   return (
     <div className="flex flex-col bg-card text-card-foreground h-full w-full rounded-xl border shadow-lg overflow-hidden">
@@ -156,7 +158,7 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
           </Link>
           <Link href={`/tool/${tool.slug}`}>
             <div className="flex items-center gap-2 text-lg">
-              <StarRating rating={rating||1} />
+              <StarRating rating={rating || 1} />
               {/* <div className="flex">
                 <div className="flex text-yellow-500">
                   <Star size={15} fill="currentColor" />
@@ -261,7 +263,9 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
           data-sponsorship-status="active"
           data-sponsor-position={2}
           data-sponsor-status="not_active"
-          href={`${tool.siteLink}?utm_source=Futurepedia&utm_medium=1004`}
+          href={`${
+            toolDetails?.siteLink || "https://" + toolDetails?.slug + ".com"
+          }?utm_source=Futurepedia&utm_medium=1004`}
         >
           <button className="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-500 flex items-center gap-2 border-2 border-primary-500 hover:bg-primary-500 hover:text-white h-10 px-4 py-2">
             <span className="whitespace-nowrap text-lg font-normal">Visit</span>
@@ -287,7 +291,6 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
     </div>
   );
 }
-
 
 const StarRating = ({ rating }: { rating: number }) => {
   const filledStars = Math.floor(rating);

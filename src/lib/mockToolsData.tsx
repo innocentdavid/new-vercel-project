@@ -12,7 +12,7 @@ export const TOOLS = [
     created_at: "31-06-2024",
     socialMediaHandles: [],
     description:
-    "Chaindesk is a no-code platform that allows businesses to easily train custom ChatGPT chatbots on their own data, enabling them to provide secure, precise customer support and lead generation in a personalized and scalable way.",
+      "Join 11,000+ Instagram users who use Gainsty to grow their Instagram followers and engagement organically.",
     saves: 6,
     features: [
       "Human Handoff",
@@ -130,7 +130,7 @@ export const TOOLS = [
     created_at: "31-06-2024",
     socialMediaHandles: [],
     description:
-    "Chaindesk is a no-code platform that allows businesses to easily train custom ChatGPT chatbots on their own data, enabling them to provide secure, precise customer support and lead generation in a personalized and scalable way.",
+      "Gain Real and Targeted Followers with our platform, Fueling Your Instagram Success.",
     saves: 3,
     features: [
       "Human Handoff",
@@ -236,6 +236,86 @@ export const TOOLS = [
     audio: null,
   },
   {
+    id: 18,
+    name: "AscendViral",
+    description:
+      "Get 100%% real Instagram followers organically. Grow your Instagram account with Ascend Viral! Authentic IG Growth Guaranteed. Sign up today to get started!",
+    saves: 2,
+    logo: "/products/ascendviral.png",
+    main_image: "/products/ascendviral_b.png",
+    slug: "ascendviral",
+  },
+  {
+    id: 5,
+    name: "Virallized",
+    logo: "/products/Virallized.png",
+    main_image: "/products/virallized_b.png",
+    description:
+      "Get as many as 2,500 real and targeted Instagram followers every month that actually like, comment, and engage with your content by using new AI technology to identify and convert your target audience to followers.",
+    saves: 3,
+    slug: "virallized",
+  },
+  {
+    id: 16,
+    name: "Trendgram",
+    description:
+      "No bots. No fake users.Grow your community with AI targeted IG follower growth.",
+    saves: 7,
+    logo: "/products/Trendgram.png",
+    main_image: "/products/trendgram_b.png",
+    slug: "trendgram",
+  },
+  {
+    id: 4,
+    name: "Social Crow",
+    logo: "",
+    main_image: "/products/social-crow_b.png",
+    description:
+      "Buy social media services now to turn potential customers into real ones. All packages are active and cost-effective, get social media services followers instantly!",
+    saves: 4,
+    slug: "social-crow",
+  },
+  {
+    id: 8,
+    name: "sidesmedia",
+    description:
+      "Sidesmedia is highly trusted to help provide you social media followers on all major social platforms. Try Sidesmedia now and gain popularity.",
+    saves: 5,
+    logo: "/products/sides-media.png",
+    main_image: "/products/sidesmedia_b.png",
+    slug: "sidesmedia",
+  },
+  {
+    id: 12,
+    name: "Ampfluence",
+    description:
+      "Ampfluence delivers real results with 100% human-powered Instagram management. Dedicated team, account manager, analyst, designer.",
+    saves: 6,
+    logo: "",
+    main_image: "/products/ampfluence_b.png",
+    slug: "ampfluence",
+  },
+  {
+    id: 11,
+    name: "Poprey",
+    description:
+      "Buy Instagram likes from Poprey.com at $2.60 per 100. These're safest and cheaper option to get real likes by PayPal, Credit card or BTC. Try it now",
+    saves: 5,
+    logo: "",
+    main_image: "/products/poprey_b.png",
+    slug: "poprey",
+  },
+  {
+    id: 7,
+    name: "mediamister",
+    description:
+      "Buy Followers, Fans, Views, Likes, Subscribers, etc., from Media Mister. We are providing social media marketing services at affordable prices",
+    saves: 7,
+    logo: "/products/mediamister.png",
+    main_image: "/products/mediamister_b.png",
+    slug: "media-mister",
+  },
+  {
     id: 3,
     slug: "upgrow",
     name: "Upgrow",
@@ -248,7 +328,7 @@ export const TOOLS = [
     created_at: "31-06-2024",
     socialMediaHandles: [],
     description:
-    "Chaindesk is a no-code platform that allows businesses to easily train custom ChatGPT chatbots on their own data, enabling them to provide secure, precise customer support and lead generation in a personalized and scalable way.",
+      "UpGrow is the Best Instagram Growth Service in 2024. ⚡ Get more real Instagram followers with our AI-powered growth engine to get 10x faster results. Get real Instagram followers with organic AI Growth and automation.",
     saves: 4,
     features: [
       "Human Handoff",
@@ -367,54 +447,14 @@ export const TOOLS = [
     },
   },
   {
-    id: 4,
-    name: "Social Crow",
-    logo: "",
-    main_image: "/products/social-crow_b.png",
+    id: 10,
+    name: "stormlikes",
     description:
-      "Buy social media services now to turn potential customers into real ones. All packages are active and cost-effective, get social media services followers instantly!",
-    saves: 4,
-    slug: "social-crow",
-  },
-  {
-    id: 5,
-    name: "Virallized",
-    logo: "/products/Virallized.png",
-    main_image: "/products/virallized_b.png",
-    description:
-      "Get as many as 2,500 real and targeted Instagram followers every month that actually like, comment, and engage with your content by using new AI technology to identify and convert your target audience to followers.",
-    saves: 3,
-    slug: "virallized",
-  },
-  {
-    id: 6,
-    name: "keesy",
-    description:
-      "Keesy is the leading AI Instagram Growth Service in 2024. Get real Instagram followers & engagement with our proprietary AI models and. Start for free today.",
-    saves: 4,
-    logo: "/products/keesy.png",
-    main_image: "/products/keesy_b.png",
-    slug: "keesy",
-  },
-  {
-    id: 7,
-    name: "mediamister",
-    description:
-      "Buy Followers, Fans, Views, Likes, Subscribers, etc., from Media Mister. We are providing social media marketing services at affordable prices",
-    saves: 7,
-    logo: "/products/mediamister.png",
-    main_image: "/products/mediamister_b.png",
-    slug: "media-mister",
-  },
-  {
-    id: 8,
-    name: "sidesmedia",
-    description:
-      "Sidesmedia is highly trusted to help provide you social media followers on all major social platforms. Try Sidesmedia now and gain popularity.",
-    saves: 5,
-    logo: "/products/sides-media.png",
-    main_image: "/products/sidesmedia_b.png",
-    slug: "sidesmedia",
+      "Buy Instagram followers, likes and views easily and safely from Stormlikes - the #1 voted Instagram growth service in the market.",
+    saves: 2,
+    logo: "/products/stormlikes.png",
+    main_image: "/products/stormlikes_b.png",
+    slug: "stormlikes",
   },
   {
     id: 9,
@@ -427,54 +467,14 @@ export const TOOLS = [
     slug: "pixicrowd",
   },
   {
-    id: 10,
-    name: "stormlikes",
+    id: 6,
+    name: "keesy",
     description:
-      "Buy Instagram followers, likes and views easily and safely from Stormlikes - the #1 voted Instagram growth service in the market.",
-    saves: 2,
-    logo: "/products/stormlikes.png",
-    main_image: "/products/stormlikes_b.png",
-    slug: "stormlikes",
-  },
-  {
-    id: 11,
-    name: "Poprey",
-    description:
-      "Buy Instagram likes from Poprey.com at $2.60 per 100. These're safest and cheaper option to get real likes by PayPal, Credit card or BTC. Try it now",
-    saves: 5,
-    logo: "",
-    main_image: "/products/poprey_b.png",
-    slug: "poprey",
-  },
-  {
-    id: 12,
-    name: "Ampfluence",
-    description:
-      "Ampfluence delivers real results with 100% human-powered Instagram management. Dedicated team, account manager, analyst, designer.",
-    saves: 6,
-    logo: "",
-    main_image: "/products/ampfluence_b.png",
-    slug: "ampfluence",
-  },
-  {
-    id: 13,
-    name: "AiGrow",
-    description:
-      "AiGrow is the #1 Instagram growth service you can rely on. No bots. 100% human-powered. Guaranteed results.",
-    saves: 6,
-    logo: "/products/AiGrow.png",
-    main_image: "/products/aigrow_b.png",
-    slug: "aigrow",
-  },
-  {
-    id: 14,
-    name: "kicksta",
-    description:
-      "Get More Instagram Followers Using The Best Organic Instagram Growth Service In 2024. Sign Up Now To Start Getting Real Followers!",
-    saves: 3,
-    logo: "/products/kicksta.png",
-    main_image: "/products/kicksta_b.png",
-    slug: "kicksta",
+    "Keesy is the leading AI Instagram Growth Service in 2024. Get real Instagram followers & engagement with our proprietary AI models and. Start for free today.",
+    saves: 4,
+    logo: "/products/keesy.png",
+    main_image: "/products/keesy_b.png",
+    slug: "keesy",
   },
   {
     id: 14,
@@ -487,44 +487,24 @@ export const TOOLS = [
     slug: "nitreo",
   },
   {
-    id: 15,
-    name: "Plixi",
+    id: 13,
+    name: "AiGrow",
     description:
-      "What is the best price for the best Instagram growth service? See the details for Plixi's pricing that offers the best AI-powered Instagram tool for follower growth.",
-    saves: 5,
-    logo: "/products/plixi.png",
-    main_image: "/products/plixi_b.png",
-    slug: "plixi",
-  },
-  {
-    id: 16,
-    name: "Trendgram",
-    description:
-      "No bots. No fake users.Grow your community with AI targeted IG follower growth.",
-    saves: 7,
-    logo: "/products/Trendgram.png",
-    main_image: "/products/trendgram_b.png",
-    slug: "trendgram",
+      "AiGrow is the #1 Instagram growth service you can rely on. No bots. 100% human-powered. Guaranteed results.",
+    saves: 6,
+    logo: "/products/AiGrow.png",
+    main_image: "/products/aigrow_b.png",
+    slug: "aigrow",
   },
   {
     id: 17,
     name: "Pathsocial",
     description:
-      "Real, Organic Instagram Followers No bots. No fake users. Build your community with AI targeted IG follower growth. No bots. No fake users. Build your communitywith AI targeted IG follower growth.",
+    "Real, Organic Instagram Followers No bots. No fake users. Build your community with AI targeted IG follower growth. No bots. No fake users. Build your communitywith AI targeted IG follower growth.",
     saves: 2,
     logo: "/products/pathsocial.png",
     main_image: "/products/pathsocial_b.png",
     slug: "pathsocial",
-  },
-  {
-    id: 18,
-    name: "AscendViral",
-    description:
-      "Get 100%% real Instagram followers organically. Grow your Instagram account with Ascend Viral! Authentic IG Growth Guaranteed. Sign up today to get started!",
-    saves: 2,
-    logo: "/products/ascendviral.png",
-    main_image: "/products/ascendviral_b.png",
-    slug: "ascendviral",
   },
   {
     id: 19,
@@ -535,6 +515,26 @@ export const TOOLS = [
     logo: "",
     main_image: "/products/trusy_b.png",
     slug: "trusy",
+  },
+  {
+    id: 14,
+    name: "kicksta",
+    description:
+      "Get More Instagram Followers Using The Best Organic Instagram Growth Service In 2024. Sign Up Now To Start Getting Real Followers!",
+    saves: 3,
+    logo: "/products/kicksta.png",
+    main_image: "/products/kicksta_b.png",
+    slug: "kicksta",
+  },
+  {
+    id: 15,
+    name: "Plixi",
+    description:
+      "What is the best price for the best Instagram growth service? See the details for Plixi's pricing that offers the best AI-powered Instagram tool for follower growth.",
+    saves: 5,
+    logo: "/products/plixi.png",
+    main_image: "/products/plixi_b.png",
+    slug: "plixi",
   },
   {
     id: 20,
@@ -557,24 +557,14 @@ export const TOOLS = [
     slug: "combin",
   },
   {
-    id: 22,
-    name: "WolfGrowth",
+    id: 25,
+    name: "FlockSocial",
     description:
-      "Build Real Instagram Growth & Engagement, no spam, no fake followers, no bots. Powered by cutting-edge AI technology that improves with every single execution.",
-    saves: 6,
-    logo: "/products/Wolfgrowth.png",
-    main_image: "/products/wolfgrowth_b.png",
-    slug: "wolfgrowth",
-  },
-  {
-    id: 23,
-    name: "SimplyGram",
-    description:
-      "Get more Instagram followers with SimplyGram. Grow & increase your following with AI-powered optimization. 7,500+ Clients. Try us out for FREE today!",
-    saves: 7,
-    logo: "",
-    main_image: "/products/simplygram_b.png",
-    slug: "simplygram",
+      "Join over 9,000+ of the world's top brands, agencies & influencers by subscribing to Flock Social organic Instagram growth service.",
+    saves: 3,
+    logo: "/products/flocksocial.png",
+    main_image: "/products/flocksocial_b.png",
+    slug: "flocksocial",
   },
   {
     id: 24,
@@ -587,14 +577,24 @@ export const TOOLS = [
     slug: "engagementboost",
   },
   {
-    id: 25,
-    name: "FlockSocial",
+    id: 22,
+    name: "WolfGrowth",
     description:
-      "Join over 9,000+ of the world's top brands, agencies & influencers by subscribing to Flock Social organic Instagram growth service.",
-    saves: 3,
-    logo: "/products/flocksocial.png",
-    main_image: "/products/flocksocial_b.png",
-    slug: "flocksocial",
+      "Build Real Instagram Growth & Engagement, no spam, no fake followers, no bots. Powered by cutting-edge AI technology that improves with every single execution.",
+    saves: 6,
+    logo: "/products/Wolfgrowth.png",
+    main_image: "/products/wolfgrowth_b.png",
+    slug: "wolfgrowth",
+  },
+  {
+    id: 28,
+    name: "OwskiMedia",
+    description:
+      "The number one Instagram growth service. Get real followers, leads, engagement and visibility. Try us today!.",
+    saves: 6,
+    logo: "/products/owskimedia.png",
+    main_image: "/products/owskimedia_b.png",
+    slug: "owskimedia",
   },
   {
     id: 26,
@@ -607,6 +607,16 @@ export const TOOLS = [
     slug: "upleap",
   },
   {
+    id: 23,
+    name: "SimplyGram",
+    description:
+      "Get more Instagram followers with SimplyGram. Grow & increase your following with AI-powered optimization. 7,500+ Clients. Try us out for FREE today!",
+    saves: 7,
+    logo: "",
+    main_image: "/products/simplygram_b.png",
+    slug: "simplygram",
+  },
+  {
     id: 27,
     name: "Stim Social",
     description:
@@ -616,133 +626,123 @@ export const TOOLS = [
     main_image: "/products/stimsocial_b.png",
     slug: "stimsocial",
   },
-  {
-    id: 28,
-    name: "OwskiMedia",
-    description:
-      "The number one Instagram growth service. Get real followers, leads, engagement and visibility. Try us today!.",
-    saves: 6,
-    logo: "/products/owskimedia.png",
-    main_image: "/products/owskimedia_b.png",
-    slug: "owskimedia",
-  },
 ];
 
 export const tool_rating = [
   {
-    "slug": "gainsty",
-    "rating": 4.9
+    slug: "gainsty",
+    rating: 4.9,
   },
   {
-    "slug": "liftinfluence",
-    "rating": 4.5
+    slug: "liftinfluence",
+    rating: 4.5,
   },
   {
-    "slug": "upgrow",
-    "rating": 3.5
+    slug: "upgrow",
+    rating: 3.5,
   },
   {
-    "slug": "social-crow",
-    "rating": 1
+    slug: "social-crow",
+    rating: 1,
   },
   {
-    "slug": "virallized",
-    "rating": 3
+    slug: "virallized",
+    rating: 3,
   },
   {
-    "slug": "keesy",
-    "rating": 4
+    slug: "keesy",
+    rating: 4,
   },
   {
-    "slug": "mediamister",
-    "rating": 1
+    slug: "mediamister",
+    rating: 1,
   },
   {
-    "slug": "sidesmedia",
-    "rating": 1
+    slug: "sidesmedia",
+    rating: 1,
   },
   {
-    "slug": "pixicrowd",
-    "rating": 1
+    slug: "pixicrowd",
+    rating: 1,
   },
   {
-    "slug": "stormlikes",
-    "rating": 1
+    slug: "stormlikes",
+    rating: 1,
   },
   {
-    "slug": "poprey",
-    "rating": 1
+    slug: "poprey",
+    rating: 1,
   },
   {
-    "slug": "ampfluence",
-    "rating": 1
+    slug: "ampfluence",
+    rating: 1,
   },
   {
-    "slug": "aigrow",
-    "rating": 1
+    slug: "aigrow",
+    rating: 1,
   },
   {
-    "slug": "kicksta",
-    "rating": 1
+    slug: "kicksta",
+    rating: 1,
   },
   {
-    "slug": "nitreo",
-    "rating": 2
+    slug: "nitreo",
+    rating: 2,
   },
   {
-    "slug": "plixi",
-    "rating": 1
+    slug: "plixi",
+    rating: 1,
   },
   {
-    "slug": "trendgram",
-    "rating": 2
+    slug: "trendgram",
+    rating: 2,
   },
   {
-    "slug": "pathsocial",
-    "rating": 1
+    slug: "pathsocial",
+    rating: 1,
   },
   {
-    "slug": "ascendviral",
-    "rating": 1
+    slug: "ascendviral",
+    rating: 1,
   },
   {
-    "slug": "trusy",
-    "rating": 1
+    slug: "trusy",
+    rating: 1,
   },
   {
-    "slug": "social-boost",
-    "rating": 4
+    slug: "social-boost",
+    rating: 4,
   },
   {
-    "slug": "combin",
-    "rating": 1
+    slug: "combin",
+    rating: 1,
   },
   {
-    "slug": "wolfgrowth",
-    "rating": 2
+    slug: "wolfgrowth",
+    rating: 2,
   },
   {
-    "slug": "simplygram",
-    "rating": 1
+    slug: "simplygram",
+    rating: 1,
   },
   {
-    "slug": "engagementboost",
-    "rating": 1
+    slug: "engagementboost",
+    rating: 1,
   },
   {
-    "slug": "flocksocial",
-    "rating": 1
+    slug: "flocksocial",
+    rating: 1,
   },
   {
-    "slug": "upleap",
-    "rating": 1
+    slug: "upleap",
+    rating: 1,
   },
   {
-    "slug": "stimsocial",
-    "rating": 1
+    slug: "stimsocial",
+    rating: 1,
   },
   {
-    "slug": "owskimedia",
-    "rating": 1
-  }
-]
+    slug: "owskimedia",
+    rating: 1,
+  },
+];
