@@ -388,7 +388,7 @@ const PricingTier = ({
         <Divider className="my-2" />
 
         <ul className="py-[6px]">
-          {features.map((feature, index) => (
+          {features?.map((feature, index) => (
             <li
               key={index}
               className="flex items-center gap-[16px] text-[#555E68] dark:text-[#F8F8FC] text-sm py-1 px-3"
