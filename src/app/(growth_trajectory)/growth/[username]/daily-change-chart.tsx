@@ -28,7 +28,7 @@ const data = [
   { date: "10/14", followers: 190.02 },
 ]
 
-export function DailyChangeChart({ activeTab, setActiveTab }) {
+export function DailyChangeChart({ activeTab, setActiveTab }:any) {
   return (
     <Card className="divide-y border mb-6 md:mb-8 divide-gray-200 overflow-hidden border-gray-100 bg-white col-span-2 pb-0">
       <CardContent className="p-6">
