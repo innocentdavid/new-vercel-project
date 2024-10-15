@@ -9,7 +9,7 @@ export default function DashboardLayout({
   return (
     <div
       className={
-        "text-tremor-content dark:text-dark-tremor-content-emphasis bg-tremor-background dark:bg-dark-tremor-background"
+        "text-tremor-content dark:text-dark-tremor-content-emphasis _bg-tremor-background dark:bg-dark-tremor-background"
       }
     >
         <>

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import React from "react";
 import GTComponent from "../../GTComponent";
 import { Metadata, ResolvingMetadata } from "next";
+import InstagramDashboard from "./instagram-dashboard";
 
 function decodeURLString(encodedString: string) {
   try {
@@ -66,5 +67,10 @@ export default async function GrowthPage({
     return notFound();
   }
 
-  return <GTComponent userProfile={userProfile} />;
+  return (
+    <div className="bg-white_">
+      <InstagramDashboard />
+      {/* <GTComponent userProfile={userProfile} /> */}
+    </div>
+  );
 }
