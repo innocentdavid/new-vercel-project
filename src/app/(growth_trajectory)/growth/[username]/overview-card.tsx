@@ -6,10 +6,10 @@ import { Eye, Users, UserPlus, ImageIcon } from 'lucide-react'
 
 export function OverviewCard() {
   return (
-    <Card className="divide-y border mb-6 md:mb-8 divide-gray-200 overflow-hidden border-gray-100 bg-white relative pb-0">
-      <CardContent className="p-0">
-        <div className="relative inline-flex items-center w-full px-3 py-3 sm:px-3">
-          <div className="absolute top-0 right-0 mt-4 mr-3">
+    <Card className="divide-y border mb-6 md:mb-8 divide-gray-200 overflow-hidden border-gray-100_ bg-white dark:bg-[#0A0F0F] relative pb-0">
+      <CardContent className="px-0 py-6">
+        <div className="relative inline-flex items-center w-full px-3 sm:px-3">
+          {/* <div className="absolute top-0 right-0 mt-4 mr-3">
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -22,17 +22,17 @@ export function OverviewCard() {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
-          </div>
+          </div> */}
           <Eye className="mr-3 text-purple-500 w-7 h-7" />
-          <h2 className="inline-flex items-center text-xl font-bold tracking-tight text-gray-800 font-dashboard">Overview</h2>
+          <h2 className="inline-flex items-center text-xl font-bold tracking-tight text-gray-800 dark:text-gray-500 font-dashboard">Overview</h2>
         </div>
-        <div className="px-2 pt-1">
+        <div className="px-4 pt-1">
           <div className="flex flex-wrap items-center w-full gap-2 mb-1.5 text-sm font-medium place-content-between">
-            <span className="px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">Aug 16, 2024</span>
+            <span className="_px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">Aug 16, 2024</span>
             <svg className="w-4 h-4 -ml-[1px] text-gray-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 11.9999H21M21 11.9999L14 5M21 11.9999L14 18.9999" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
             </svg>
-            <span className="px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">Oct 14, 2024</span>
+            <span className="_px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">Oct 14, 2024</span>
           </div>
           <div className="flex flex-col justify-between w-full h-full">
             {[

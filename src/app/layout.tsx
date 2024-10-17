@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: APP_NAME,
   description: "Discover the best AI tools and products in 2024. Find the top AI websites and tools to help you grow your business, improve productivity, and drive innovation.",
   applicationName: APP_NAME,
-  metadataBase: new URL("https://new-vercel-project-vert.vercel.app"),
+  metadataBase: new URL("https://followerstool-vert.vercel.app"),
   manifest: "/manifest.json"
 };
 
@@ -48,7 +48,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="">{children}</main>
+          {children}
           <Footer />
         </ThemeProvider>
       </body>

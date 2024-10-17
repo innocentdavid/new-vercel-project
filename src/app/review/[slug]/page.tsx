@@ -70,7 +70,7 @@ export async function generateMetadata(
     title: `FunFun.tool: ${tool?.name} - review`,
     description: seo_description,
     alternates: {
-      canonical: `https://new-vercel-project-vert.vercel.app/tool/${slug}`,
+      canonical: `https://followerstool-vert.vercel.app/tool/${slug}`,
     },
     openGraph: {
       // images: tool?.main_image || "",

@@ -4,6 +4,7 @@ export const TOOLS = [
     slug: "gainsty",
     name: "Gainsty",
     is_verified: true,
+    featured: true,
     toolName: "Caption Writer",
     toolLink: "https://www.gainsty.com/caption-writer",
     siteLink: "https://www.gainsty.com",
@@ -13,7 +14,7 @@ export const TOOLS = [
     socialMediaHandles: [],
     description:
       "Join 11,000+ Instagram users who use Gainsty to grow their Instagram followers and engagement organically.",
-    saves: 6,
+    saves: 3851,
     features: [
       "Human Handoff",
       "Multilingual",
@@ -131,7 +132,7 @@ export const TOOLS = [
     socialMediaHandles: [],
     description:
       "Gain Real and Targeted Followers with our platform, Fueling Your Instagram Success.",
-    saves: 3,
+    saves: 411,
     features: [
       "Human Handoff",
       "Multilingual",
@@ -252,7 +253,7 @@ export const TOOLS = [
     main_image: "/products/virallized_b.png",
     description:
       "Get as many as 2,500 real and targeted Instagram followers every month that actually like, comment, and engage with your content by using new AI technology to identify and convert your target audience to followers.",
-    saves: 3,
+    saves: 67,
     slug: "virallized",
   },
   {

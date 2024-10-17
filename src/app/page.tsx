@@ -3,6 +3,7 @@ import BackgroundBeamsWithCollisionDemo from "@/components/homepage/background-b
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import { tool_rating, TOOLS } from "@/lib/mockToolsData";
 import { tools_details } from "@/lib/tools_details";
+import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
 import Link from "next/link";
 
@@ -235,14 +236,15 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
         </div>
       </div>
       <div className="px-6 mt-auto flex items-center justify-between pb-4">
-        <div className="flex items-center gap-2 text-[#6b7280] tool-label">
+        <div className={cn("flex items-center gap-2 tool-label", tool.featured ? "text-yellow-500":"text-[#6b7280]")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={24}
             height={24}
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#6b7280"
+            // stroke="#6b7280"
+            stroke="currentColor"
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -254,8 +256,8 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
         </div>
 
         <Link
-          rel="nofollow"
-          target="_blank"
+        href={`/tool/${tool.slug}`}
+          // rel="nofollow"
           className="hover:no-underline"
           data-tool-name="M1-Project"
           data-tool-category="marketing"
@@ -263,12 +265,12 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
           data-sponsorship-status="active"
           data-sponsor-position={2}
           data-sponsor-status="not_active"
-          href={`${
-            toolDetails?.siteLink || "https://" + toolDetails?.slug + ".com"
-          }?utm_source=Futurepedia&utm_medium=1004`}
+          // href={`${
+          //   toolDetails?.siteLink || "https://" + toolDetails?.slug + ".com"
+          // }?utm_source=Futurepedia&utm_medium=1004`}
         >
           <button className="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-500 flex items-center gap-2 border-2 border-primary-500 hover:bg-primary-500 hover:text-white h-10 px-4 py-2">
-            <span className="whitespace-nowrap text-lg font-normal">Visit</span>
+            <span className="whitespace-nowrap text-lg font-normal">More</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={3}

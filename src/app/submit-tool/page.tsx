@@ -17,13 +17,13 @@ export default function SubmitToolPage() {
                 </h1>
               </div>
               <p className="max-w-3xl mt-4 text-xl leading-8 text-gray-600 dark:text-gray-400">
-                Boost your presence and reach tens of thousands of potential
-                customers 🤩
+                Boost your Instagram followers growth tool and reach hundred of
+                thousands potential customers.
               </p>
               <p className="max-w-3xl mt-4">
                 {" "}
-                Submitting your product is free, but you have to go through our
-                waiting line.{" "}
+                Submitting your product is paid and you will have to go through
+                our waiting line. See pricing to learn more how it works.{" "}
                 <a href="/how-it-works" className="underline">
                   Click here
                 </a>{" "}
@@ -37,35 +37,37 @@ export default function SubmitToolPage() {
                     <div className="max-w-xs px-8 mx-auto">
                       <p className="text-base font-semibold text-gray-600 dark:text-gray-400">
                         {" "}
-                        Pay once, generate traffic and try to win a life-time
+                        Pay once, get traffic for life and get a valuable
                         backlink.{" "}
                       </p>
                       <p className="flex items-baseline justify-center mt-6 gap-x-2">
                         <span className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          $30
+                          $99
                         </span>
                       </p>
                       <button
                         type="button"
                         className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center mt-10"
                       >
-                        Skip the waiting line
+                        Proceed
                       </button>
                     </div>
-                    <a
+                    {/* <a
                       href="/advertising/skip-the-waiting-line"
                       className="mt-2 text-sm italic hover:underline"
                     >
                       More details{" "}
-                    </a>
+                    </a> */}
                   </div>
                 </div>
                 <div className="p-8 sm:p-10 lg:flex-auto">
                   <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Skip the waiting line
+                    Launch on FollowersTool
                   </h3>
                   <p className="mt-6 text-base leading-7 text-gray-600 dark:text-gray-400">
-                    Launch your product on FollowersTool the day you want{" "}
+                    {/* Launch your product on FollowersTool the day you want{" "} */}
+                    Get your product in front of people searching for Instagram
+                    followers growth tool.
                   </p>
                   <ul
                     role="list"
@@ -77,8 +79,8 @@ export default function SubmitToolPage() {
                         aria-hidden="true"
                         style={{}}
                       />{" "}
-                      Skip the waiting line and launch your product when you
-                      want{" "}
+                      Skip the waiting line and launch your product within a
+                      day.{" "}
                     </li>
                     <li className="flex gap-x-3">
                       <span
@@ -86,8 +88,7 @@ export default function SubmitToolPage() {
                         aria-hidden="true"
                         style={{}}
                       />{" "}
-                      If you're in the first 3 products, you win a special badge
-                      + a mention in our newsletter (6.5K subs) and social media{" "}
+                      Get exposed to 100K+ people every month.{" "}
                     </li>
                     <li className="flex gap-x-3">
                       <span
@@ -95,8 +96,8 @@ export default function SubmitToolPage() {
                         aria-hidden="true"
                         style={{}}
                       />{" "}
-                      Your product stays on FollowersTool forever and earn a lifetime
-                      dofollow backlink, no matter your launch's results{" "}
+                      Your product stays on FollowersTool forever and earn a
+                      lifetime dofollow backlink, no matter your launch results.{" "}
                     </li>
                     <li className="flex gap-x-3">
                       <span
@@ -104,8 +105,7 @@ export default function SubmitToolPage() {
                         aria-hidden="true"
                         style={{}}
                       />{" "}
-                      30% lifetime discount off the premium Testimonial Donut
-                      plan{" "}
+                      30% lifetime discount off Turbo Review plan.{" "}
                     </li>
                   </ul>
                 </div>
@@ -115,16 +115,17 @@ export default function SubmitToolPage() {
                   <div>
                     <div className="flex items-center justify-between">
                       <p className="text-2xl text-gray-900 dark:text-white sm:text-3xl font-semibold truncate">
-                        Skip the waiting line
+                        Launch on FollowersTool
                       </p>
                     </div>
                     <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-2">
-                      Launch your product the day you want
+                      Get your product in front of people searching for
+                      Instagram followers growth tool.
                     </p>
                   </div>
                   <div className="flex flex-row items-baseline gap-x-1">
                     <p className="text-gray-900 dark:text-white text-2xl sm:text-4xl font-semibold">
-                      $30
+                      $99
                     </p>
                   </div>
                   <div className="flex-1">
@@ -136,8 +137,8 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          Skip the waiting line and launch your product when you
-                          want
+                          Skip the waiting line and launch your product within a
+                          day.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -147,9 +148,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          If you're in the first 3 products of the day, you win
-                          a special badge + a mention in our newsletter (6.5K
-                          subs) and social media
+                          Get exposed to 100K+ people every month.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -160,8 +159,8 @@ export default function SubmitToolPage() {
                         />
                         <span className="text-gray-600 dark:text-gray-400">
                           Your product stays on FollowersTool forever and earn a
-                          lifetime dofollow backlink, no matter your launch's
-                          results
+                          lifetime dofollow backlink, no matter your launch
+                          results.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -171,8 +170,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          30% lifetime discount off the premium Testimonial
-                          Donut plan
+                          30% lifetime discount off Turbo Review plan.
                         </span>
                       </li>
                     </ul>
@@ -181,16 +179,17 @@ export default function SubmitToolPage() {
                     type="button"
                     className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
                   >
-                    <span className="">Skip the waiting line</span>
+                    <span className="">Proceed</span>
                   </button>
-                  <a
+                  {/* <a
                     href="/advertising/skip-the-waiting-line"
                     className="mx-auto text-sm italic hover:underline"
                   >
                     More details{" "}
-                  </a>
+                  </a> */}
                 </div>
               </div>
+
               <div className="rounded-xl divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-sand-500 dark:bg-gray-800 relative flex flex-col self-stretch w-full col-span-1">
                 <div className="flex-1 flex flex-col gap-y-6 sm:p-6 p-8 xl:p-10">
                   <div>
@@ -200,12 +199,12 @@ export default function SubmitToolPage() {
                       </p>
                     </div>
                     <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-2">
-                      Sponsor our newsletter
+                      Get sponsored in our newsletter (380K+ readers)
                     </p>
                   </div>
                   <div className="flex flex-row items-baseline gap-x-1">
                     <p className="text-gray-900 dark:text-white text-2xl sm:text-4xl font-semibold">
-                      $57
+                      $179
                     </p>
                   </div>
                   <div className="flex-1">
@@ -218,7 +217,7 @@ export default function SubmitToolPage() {
                         />
                         <span className="text-gray-600 dark:text-gray-400">
                           Displayed at the top of our weekly newsletter in front
-                          of 6,500 subscribers.
+                          of 380,000 subscribers.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -228,8 +227,8 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          First thing people see when they open the newsletter,
-                          after the introduction.
+                          First thing people see when they open the newsletter
+                          and direct link to your website.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -249,8 +248,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          30% lifetime discount off the premium Testimonial
-                          Donut plan
+                          5 Sales Guaranteed.
                         </span>
                       </li>
                     </ul>
@@ -259,14 +257,14 @@ export default function SubmitToolPage() {
                     type="button"
                     className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
                   >
-                    <span className="">Sponsor our newsletter</span>
+                    <span className="">Get in our Newsletter</span>
                   </button>
-                  <a
+                  {/* <a
                     href="/advertising/newsletter-sponsoring"
                     className="mx-auto text-sm italic hover:underline"
                   >
                     More details{" "}
-                  </a>
+                  </a> */}
                 </div>
               </div>
               <div className="rounded-xl divide-y divide-gray-200 dark:divide-gray-800 shadow bg-sand-500 dark:bg-gray-800 relative flex flex-col self-stretch w-full col-span-1 ring-2 ring-primary-500 dark:ring-primary-500">
@@ -274,7 +272,7 @@ export default function SubmitToolPage() {
                   <div>
                     <div className="flex items-center justify-between">
                       <p className="text-2xl text-gray-900 dark:text-white sm:text-3xl font-semibold truncate">
-                        Premium spot
+                        Premium Review
                       </p>
                       <span className="inline-flex items-center font-medium rounded-md text-xs px-2 py-1 bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10 text-primary-500 dark:text-primary-400 ring-1 ring-inset ring-primary-500 dark:ring-primary-400 ring-opacity-25 dark:ring-opacity-25">
                         Best value
@@ -286,7 +284,7 @@ export default function SubmitToolPage() {
                   </div>
                   <div className="flex flex-row items-baseline gap-x-1">
                     <p className="text-gray-900 dark:text-white text-2xl sm:text-4xl font-semibold">
-                      $97
+                      $399
                     </p>
                     <p className="text-gray-500 dark:text-gray-400 text-sm/6 font-medium truncate">
                       /month
@@ -301,8 +299,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          Displayed on the home, weekly, monthly and yearly
-                          pages
+                          Displayed on the top 5 of homepage.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -312,7 +309,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          No "related products" displayed on your product page.
+                          Special Featured badge.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -322,8 +319,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          Displayed among the first 4 products in its category
-                          and tags pages.
+                          Article in the newsletter to 300K+ readers.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -333,7 +329,8 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          20K to 40K impressions
+                          Growth projection pages for visitors and special
+                          dofollow links.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -343,8 +340,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          6 months free access on the premium Testimonial Donut
-                          plan + 30% lifetime discount
+                          SEO-optimized review of your service.
                         </span>
                       </li>
                     </ul>
@@ -353,14 +349,14 @@ export default function SubmitToolPage() {
                     type="button"
                     className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
                   >
-                    <span className="">Buy a premium spot</span>
+                    <span className="">Buy a premium review</span>
                   </button>
-                  <a
+                  {/* <a
                     href="/advertising/premium-spot"
                     className="mx-auto text-sm italic hover:underline"
                   >
                     More details{" "}
-                  </a>
+                  </a> */}
                 </div>
               </div>
               <div className="rounded-xl divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-sand-500 dark:bg-gray-800 relative flex flex-col self-stretch w-full col-span-1">
@@ -368,16 +364,16 @@ export default function SubmitToolPage() {
                   <div>
                     <div className="flex items-center justify-between">
                       <p className="text-2xl text-gray-900 dark:text-white sm:text-3xl font-semibold truncate">
-                        Product Review
+                        Turbo Review
                       </p>
                     </div>
                     <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-2">
-                      We'll write a review of your product
+                      We'll write an extensive review of your product
                     </p>
                   </div>
                   <div className="flex flex-row items-baseline gap-x-1">
                     <p className="text-gray-900 dark:text-white text-2xl sm:text-4xl font-semibold">
-                      $129
+                      $699
                     </p>
                   </div>
                   <div className="flex-1">
@@ -389,7 +385,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          Rank on "[your_product] review" on Google
+                        Rank on “(your_product) review” on Google first 5 spots.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -399,7 +395,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          Earn a backlink
+                        Earn multiple backlinks to your page and boost your DA
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -409,7 +405,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          Strengthen your customer trust
+                        Strengthen your customer trust
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -419,8 +415,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                          1 year free access on the premium Testimonial Donut
-                          plan + 30% lifetime discount
+                        Special review with .com
                         </span>
                       </li>
                     </ul>
@@ -430,18 +425,18 @@ export default function SubmitToolPage() {
                     href="https://uneed.lemonsqueezy.com/buy/c89f1f67-ea7f-4008-ab55-bc5b87be58c7"
                     rel="noopener noreferrer"
                   >
-                    <span className="">Buy a review</span>
+                    <span className="">Buy Turbo Review</span>
                   </a>
-                  <a
+                  {/* <a
                     href="/advertising/product-review"
                     className="mx-auto text-sm italic hover:underline"
                   >
                     More details{" "}
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
-            <div className="px-6 mt-8 lg:px-8">
+            {/* <div className="px-6 mt-8 lg:px-8">
               <div
                 style={
                   {
@@ -583,9 +578,9 @@ export default function SubmitToolPage() {
                   </dt>
                 </div>
               </dl>
-            </div>
-            
-            <div className="px-6 mt-16 max-w-7xl lg:px-8">
+            </div> */}
+
+            {/* <div className="px-6 mt-16 max-w-7xl lg:px-8">
               <h2 className="text-3xl font-bold tracking-tight dark:text-gray-50">
                 {" "}
                 Testimonials{" "}
@@ -979,7 +974,7 @@ export default function SubmitToolPage() {
                   </div>
                 </article>
               </div>
-            </div>
+            </div> */}
           </section>
         </div>
       </div>
