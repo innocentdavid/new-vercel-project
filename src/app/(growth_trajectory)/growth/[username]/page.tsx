@@ -112,7 +112,7 @@ export default async function GrowthPage({
   return (
     <div className="bg-white_">
       <InstagramDashboard user={userProfile} Faqs={faqs} />
-      <GTComponent userProfile={userProfile} />
+      {/* <GTComponent userProfile={userProfile} /> */}
     </div>
   );
 }
