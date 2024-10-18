@@ -6,6 +6,8 @@ export const demoProfile = {
   // followings: null, // 1701,
   followers: 927200, // 67300,
   followings: 1701, // 1701,
+  posts: 17, 
+  biography: "",
 };
 
 type Account = {
