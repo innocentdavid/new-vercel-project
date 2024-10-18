@@ -4,6 +4,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Instagram } from "lucide-react";
 
 export function PlaceholdersAndVanishInput({
   placeholders,
@@ -22,6 +23,7 @@ export function PlaceholdersAndVanishInput({
       setCurrentPlaceholder((prev) => (prev + 1) % placeholders.length);
     }, 3000);
   };
+
   const handleVisibilityChange = () => {
     if (document.visibilityState !== "visible" && intervalRef.current) {
       clearInterval(intervalRef.current); // Clear the interval when the tab is not visible
@@ -191,6 +193,7 @@ export function PlaceholdersAndVanishInput({
         )}
         ref={canvasRef}
       />
+      
       <input
         onChange={(e) => {
           if (!animating) {
@@ -203,10 +206,18 @@ export function PlaceholdersAndVanishInput({
         value={value}
         type="text"
         className={cn(
-          "w-full relative text-sm sm:text-base z-50 border-none dark:text-white bg-transparent text-black h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
+          "w-full relative text-sm sm:text-base z-50 border-none dark:text-white bg-transparent text-black h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-12 pr-20",
           animating && "text-transparent dark:text-transparent"
         )}
       />
+
+      <button
+        disabled={!value}
+        type="submit"
+        className="absolute left-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full transition duration-200 flex items-center justify-center"
+      >
+        <Instagram />
+      </button>
 
       <button
         disabled={!value}
