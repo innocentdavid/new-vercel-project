@@ -1,4 +1,6 @@
-export const demoProfile = {
+import { UserProfile } from "./types";
+
+export const demoProfile: UserProfile = {
   name: "Katharine McPhee Foster",
   username: "katharinefoster",
   profileImage: "/demo-avatars/1.jpeg",
@@ -8,6 +10,8 @@ export const demoProfile = {
   followings: 1701, // 1701,
   posts: 17, 
   biography: "",
+  bio: "",
+  bio_links: []
 };
 
 type Account = {
