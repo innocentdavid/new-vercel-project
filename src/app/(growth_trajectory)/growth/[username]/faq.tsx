@@ -2,6 +2,7 @@ import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { PlusIcon } from "lucide-react";
 import { Faq } from "./instagram-dashboard";
+import { Card } from "@/components/ui/card";
 
 // const faqs = [
 //   {
@@ -49,37 +50,41 @@ import { Faq } from "./instagram-dashboard";
 export function FAQ({ faqs }: { faqs: Faq[] }) {
   // console.log("faqs");
   // console.log(faqs);
-  
+
   return (
-    <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
-      {faqs.map((faq) => (
-        <Disclosure as="div" key={faq.question} className="block">
-          {({ open }) => (
-            <>
-              <dt className="px-6 py-5 bg-gray-100 rounded-xl">
-                <Disclosure.Button className="flex items-start justify-between w-full text-left text-gray-900">
-                  <h3 className="text-lg font-semibold leading-7">
-                    {faq.question}
-                  </h3>
-                  <p className="flex items-center ml-6 h-7">
-                    <PlusIcon
-                      className={`w-6 h-6 ${open ? "transform rotate-45" : ""}`}
-                    />
+    <Card className="!mt-20 bg-white dark:bg-[#0A0F0F] p-6">
+      <dl className="space-y-6 _divide-y divide-gray-900/10">
+        {faqs.map((faq) => (
+          <Disclosure as="div" key={faq.question} className="block">
+            {({ open }) => (
+              <>
+                <dt className="px-6 py-5 bg-[#fafafa] dark:bg-[#0A0F0F]/80 rounded-xl">
+                  <Disclosure.Button className="flex items-start justify-between w-full text-left text-gray-900 dark:text-white">
+                    <h3 className="text-lg font-semibold leading-7">
+                      {faq.question}
+                    </h3>
+                    <p className="flex items-center ml-6 h-7">
+                      <PlusIcon
+                        className={`w-6 h-6 ${
+                          open ? "transform rotate-45" : ""
+                        }`}
+                      />
+                    </p>
+                  </Disclosure.Button>
+                </dt>
+                <Disclosure.Panel
+                  as="dd"
+                  className="px-6 py-5 mt-2 bg-white dark:bg-[#191919] rounded-xl"
+                >
+                  <p className="text-base leading-7 text-gray-600 dark:text-white">
+                    {faq.answer}
                   </p>
-                </Disclosure.Button>
-              </dt>
-              <Disclosure.Panel
-                as="dd"
-                className="px-6 py-5 mt-2 bg-white rounded-xl"
-              >
-                <p className="text-base leading-7 text-gray-600">
-                  {faq.answer}
-                </p>
-              </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
-      ))}
-    </dl>
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+        ))}
+      </dl>
+    </Card>
   );
 }

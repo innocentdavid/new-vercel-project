@@ -15,41 +15,42 @@ import {
   Tooltip as RechartsTooltip,
   ResponsiveContainer,
 } from "recharts";
+import { ChartData } from "../../(home-components)/Charts/FollowersChartV3";
 
-const ratesDataGenerator = () => {
-  const startDate = new Date(Date.now() - 20 * 24 * 60 * 60 * 1000);
-  const endDate = new Date();
-  const data = [];
+// const ratesDataGenerator = () => {
+//   const startDate = new Date(Date.now() - 20 * 24 * 60 * 60 * 1000);
+//   const endDate = new Date();
+//   const data = [];
 
-  for (
-    let date = new Date(startDate.getTime());
-    date <= endDate;
-    date.setDate(date.getDate() + 1)
-  ) {
-    const dateStr = new Intl.DateTimeFormat("en-US", {
-      month: "numeric",
-      day: "numeric",
-    }).format(date);
+//   for (
+//     let date = new Date(startDate.getTime());
+//     date <= endDate;
+//     date.setDate(date.getDate() + 1)
+//   ) {
+//     const dateStr = new Intl.DateTimeFormat("en-US", {
+//       month: "numeric",
+//       day: "numeric",
+//     }).format(date);
 
-    const timeDifferenceInDays =
-      (endDate.getTime() - date.getTime()) / (1000 * 60 * 60 * 24);
-    let rate =
-      5.4 +
-      ((5.1 - 5.4) * (timeDifferenceInDays / 30) ** (1 / 3)) /
-        (1 + (timeDifferenceInDays / 30) ** (1 / 3));
+//     const timeDifferenceInDays =
+//       (endDate.getTime() - date.getTime()) / (1000 * 60 * 60 * 24);
+//     let rate =
+//       5.4 +
+//       ((5.1 - 5.4) * (timeDifferenceInDays / 30) ** (1 / 3)) /
+//         (1 + (timeDifferenceInDays / 30) ** (1 / 3));
 
-    if (data.length === 0) {
-      rate = 5.1;
-    }
-    if (data.length === 1) {
-      rate = 5.15;
-    }
+//     if (data.length === 0) {
+//       rate = 5.1;
+//     }
+//     if (data.length === 1) {
+//       rate = 5.15;
+//     }
 
-    data.push({ date: dateStr, "%": Number(rate.toFixed(2)) });
-  }
+//     data.push({ date: dateStr, "%": Number(rate.toFixed(2)) });
+//   }
 
-  return data;
-};
+//   return data;
+// };
 
 const data = [
   { date: "09/23", "%": 80 },
@@ -76,8 +77,12 @@ const data = [
   { date: "10/14", "%": 190.02 },
 ];
 
-export function DailyChangeChart() {
-  const chartData = ratesDataGenerator();
+export function DailyChangeChart({
+  chartData,
+}: {
+  chartData: { date: string; "%": number }[];
+}) {
+  // const chartData = ratesDataGenerator();
   // const chartData = data;
 
   return (
@@ -246,13 +251,15 @@ export function DailyChangeChart() {
                 dataKey="date"
                 axisLine={{ stroke: "var(--color-gray-200)" }}
                 tickLine={{ stroke: "var(--color-gray-200)" }}
-                tick={{ fill: "var(--color-gray-400)", fontSize: 14 }}
+                // tick={{ fill: "var(--color-gray-400)", fontSize: 14 }}
+                tick={{ fill: "#B4B6BB", fontSize: 12 }}
                 dy={6}
               />
               <YAxis
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: "var(--color-gray-400)", fontSize: 14 }}
+                // tick={{ fill: "var(--color-gray-400)", fontSize: 14 }}
+                tick={{ fill: "#B4B6BB", fontSize: 12 }}
                 dx={-10}
               />
               <RechartsTooltip

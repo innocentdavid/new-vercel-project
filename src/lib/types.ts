@@ -6,8 +6,14 @@ export type UserProfile = {
   followings: number | null;
   posts: number | null;
   biography: string;
+  bio: string;
+  bio_links: {
+    link_type: string;
+    lynx_url: string;
+    title: string;
+    url: string;
+  }[];
 };
-
 
 const userContentSample = {
   id: 13,
@@ -25,4 +31,4 @@ const userContentSample = {
   engagement_rate: null,
 };
 
-export type UserContent = typeof userContentSample[]
+export type UserContent = (typeof userContentSample)[];

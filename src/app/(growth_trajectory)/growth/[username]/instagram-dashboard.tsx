@@ -11,6 +11,9 @@ import { UserProfile } from "@/lib/types";
 import { ChartData } from "../../(home-components)/Charts/FollowersChartV3";
 import minimizeNumber from "@/lib/minimize-number";
 import ProfileOptimization from "./profile-optimization";
+import Image from "next/image";
+import { Check, Copy } from "lucide-react";
+import copy from "copy-to-clipboard";
 
 const followersDataGeneratorV2 = (
   currentFollowersCount: number | null = null,
@@ -133,7 +136,7 @@ const followersDataGeneratorV2 = (
 };
 
 export const tickFormatter = (
-  value: number|string,
+  value: number | string,
   range: "daily" | "weekly" | "monthly"
 ) => {
   const date = new Date(value);
@@ -160,6 +163,41 @@ export const tickFormatter = (
   }
 };
 
+const ratesDataGenerator = () => {
+  const startDate = new Date(Date.now() - 20 * 24 * 60 * 60 * 1000);
+  const endDate = new Date();
+  const data = [];
+
+  for (
+    let date = new Date(startDate.getTime());
+    date <= endDate;
+    date.setDate(date.getDate() + 1)
+  ) {
+    const dateStr = new Intl.DateTimeFormat("en-US", {
+      month: "numeric",
+      day: "numeric",
+    }).format(date);
+
+    const timeDifferenceInDays =
+      (endDate.getTime() - date.getTime()) / (1000 * 60 * 60 * 24);
+    let rate =
+      5.4 +
+      ((5.1 - 5.4) * (timeDifferenceInDays / 30) ** (1 / 3)) /
+        (1 + (timeDifferenceInDays / 30) ** (1 / 3));
+
+    if (data.length === 0) {
+      rate = 5.1;
+    }
+    if (data.length === 1) {
+      rate = 5.15;
+    }
+
+    data.push({ date: dateStr, "%": Number(rate.toFixed(2)) });
+  }
+
+  return data;
+};
+
 export type Faq = { question: string; answer: string };
 
 export default function InstagramDashboard({
@@ -174,6 +212,15 @@ export default function InstagramDashboard({
   );
   const [chartData, setChartData] = useState<ChartData[]>([]);
   const [peekChartData, setPeekChartData] = useState<ChartData[]>([]);
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    copy("FFDGV72MDA");
+    navigator.clipboard.writeText("FFDGV72MDA").then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
 
   useEffect(() => {
     const data = followersDataGeneratorV2(user.followers, "weekly");
@@ -189,6 +236,8 @@ export default function InstagramDashboard({
     const data = followersDataGeneratorV2(user.followers, activeTab);
     setPeekChartData(data);
   }, [activeTab, user]);
+
+  const dailyChartData = ratesDataGenerator();
 
   return (
     <div className="space-y-4 mx-4 sm:mx-6 lg:mx-8 pt-6">
@@ -212,9 +261,7 @@ export default function InstagramDashboard({
               </div>
               <div>
                 <h2 className="text-2xl font-bold">@{user.username} 👋</h2>
-                <p className="text-sm text-gray-500">
-                  {user.name}
-                </p>
+                <p className="text-sm text-gray-500">{user.name}</p>
               </div>
             </div>
             <div className="flex items-center space-x-4 text-sm">
@@ -239,7 +286,7 @@ export default function InstagramDashboard({
                 <p className="text-gray-500">Following</p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
+            {/* <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
               <button
                 className="w-full sm:w-auto group flex items-center justify-center gap-2 px-4 py-[11px] _bg-white dark:!bg-primary-500 border dark:border-transparent border-white border-opacity-25 shadow hover:opacity-60 transition-opacity duration-200 ease-in-out"
                 style={{
@@ -310,6 +357,58 @@ export default function InstagramDashboard({
                   Start Growth
                 </span>
               </button>
+            </div> */}
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
+              <button
+                onClick={copyToClipboard}
+                className="w-full sm:w-auto group flex items-center justify-center gap-2 px-4 py-[11px] bg-white border border-white border-opacity-25 shadow hover:opacity-60 transition-opacity duration-200 ease-in-out"
+                style={{
+                  borderRadius: "9px",
+                  border: "1px solid var(--Gradients-White-Stroke, #FFF)",
+                  background:
+                    "linear-gradient(180deg, rgba(223, 225, 231, 0.00) 0%, rgba(223, 225, 231, 0.05) 100%), var(--Neutral-0, #FFF)",
+                  boxShadow:
+                    "rgba(225, 226, 228, 0.56) 0px 0px 0px 1px, rgba(119, 124, 133, 0.12) 0px 1px 2px 0px",
+                }}
+              >
+                {copied ? (
+                  <Check className="w-[1.1rem] h-[1.1rem]" />
+                ) : (
+                  <Copy className="w-[1.1rem] h-[1.1rem]" />
+                )}
+                <span className="text-sm font-medium leading-tight text-center text-gray-900">
+                  {copied ? "Copied!" : "Copy Coupon"}
+                </span>
+              </button>
+              <a
+                href="https://gainsty.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto flex items-center group justify-center gap-2 px-[18px] py-[11px] hover:opacity-90 transition-opacity duration-200 ease-in-out"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: "9px",
+                  background:
+                    "linear-gradient(135deg, #00C853 0%, #00C853 70%, #2196F3 100%)",
+                  boxShadow:
+                    "rgba(76, 175, 80, 0.4) 0px 1px 2px, rgba(255, 255, 255, 0.4) 0px 0px 0px 1px inset",
+                  border: "1px solid rgba(76, 175, 80, 0.4)",
+                  filter: "saturate(1.15)",
+                }}
+              >
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gainsty-1-ZWbTUK9mEwERBwf6unAjo4E35UXXV5.png"
+                  alt="Gainsty Logo"
+                  width={24}
+                  height={24}
+                  className="w-[1.1rem] h-[1.1rem]"
+                />
+                <span className="text-sm font-medium leading-tight text-white text-center text-shadow">
+                  Start Growth
+                </span>
+              </a>
             </div>
           </div>
         </CardContent>
@@ -317,16 +416,18 @@ export default function InstagramDashboard({
 
       <FollowersGrowthChart chartData={chartData} />
 
-      <ProfileOptimization />
-      
       <div className="grid grid-cols-1 gap-0 mt-3 sm:grid-cols-3 lg:gap-6">
         <DailyChangeChart
-          // activeTab={activeTab}
-          // setActiveTab={setActiveTab}
-          // chartData={peekChartData}
+        // activeTab={activeTab}
+        // setActiveTab={setActiveTab}
+        // chartData={peekChartData}
+        chartData={dailyChartData}
         />
-        <OverviewCard />
+
+        <OverviewCard chartData={chartData} />
       </div>
+
+      <ProfileOptimization user={user} />
 
       <FAQ faqs={Faqs} />
     </div>

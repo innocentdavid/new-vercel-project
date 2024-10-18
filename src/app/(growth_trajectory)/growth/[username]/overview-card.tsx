@@ -1,10 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react'
-import { Card, CardContent } from "@/components/ui/card"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { Eye, Users, UserPlus, ImageIcon } from 'lucide-react'
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Eye, Users, UserPlus, ImageIcon } from "lucide-react";
+import { ChartData } from "../../(home-components)/Charts/FollowersChartV3";
 
-export function OverviewCard() {
+export function OverviewCard({ chartData }: { chartData: ChartData[] }) {
+  if (!(chartData.length > 0)) return <></>;
+
+  // console.log(`chartData[0].date.split(" ")[0]`);
+  // console.log(chartData[0].date.split(" ")[0]);
+
+  const from = new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "2-digit",
+  }).format(new Date(chartData[0].date.split(" ")[0]));
+  const to = new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "2-digit",
+  }).format(new Date(chartData[chartData.length - 1].date.split(" ")[0]));
+
   return (
     <Card className="divide-y border mb-6 md:mb-8 divide-gray-200 overflow-hidden border-gray-100_ bg-white dark:bg-[#0A0F0F] relative pb-0">
       <CardContent className="px-0 py-6">
@@ -24,36 +38,78 @@ export function OverviewCard() {
             </TooltipProvider>
           </div> */}
           <Eye className="mr-3 text-purple-500 w-7 h-7" />
-          <h2 className="inline-flex items-center text-xl font-bold tracking-tight text-gray-800 dark:text-gray-500 font-dashboard">Overview</h2>
+          <h2 className="inline-flex items-center text-xl font-bold tracking-tight text-gray-800 dark:text-gray-500 font-dashboard">
+            Overview
+          </h2>
         </div>
         <div className="px-4 pt-1">
           <div className="flex flex-wrap items-center w-full gap-2 mb-1.5 text-sm font-medium place-content-between">
-            <span className="_px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">Aug 16, 2024</span>
-            <svg className="w-4 h-4 -ml-[1px] text-gray-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 11.9999H21M21 11.9999L14 5M21 11.9999L14 18.9999" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+            <span className="_px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">
+              {from}
+            </span>
+            <svg
+              className="w-4 h-4 -ml-[1px] text-gray-600"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 11.9999H21M21 11.9999L14 5M21 11.9999L14 18.9999"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
             </svg>
-            <span className="_px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">Oct 14, 2024</span>
+            <span className="_px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">
+              {to}
+            </span>
           </div>
           <div className="flex flex-col justify-between w-full h-full">
             {[
-              { title: "Followers", icon: Users, change: "+25,615", value: "-55,608" },
+              {
+                title: "Followers",
+                icon: Users,
+                change:
+                  "+" +
+                  (chartData[chartData.length - 1].Followers -
+                    chartData[0].Followers),
+                value: chartData[chartData.length - 1].Followers,
+              },
               { title: "Following", icon: UserPlus, change: "0", value: "+2" },
-              { title: "Posts", icon: ImageIcon, change: "+12", value: "+190" }
+              { title: "Posts", icon: ImageIcon, change: "+0", value: "+0" },
             ].map((item, index) => (
-              <div key={item.title} className={`flex flex-row items-center justify-between w-full px-2 py-4 lg:px-0 ${index !== 2 ? 'border-b border-b-1' : ''}`}>
+              <div
+                key={item.title}
+                className={`flex flex-row items-center justify-between w-full px-2 py-4 lg:px-0 ${
+                  index !== 2 ? "border-b border-b-1" : ""
+                }`}
+              >
                 <div className="flex flex-col space-y-1.5 font-dashboard">
                   <div className="inline-flex flex-row items-center text-base font-medium">
                     <item.icon className="w-4 h-4 mr-2" />
                     {item.title}
                   </div>
                   <div className="text-sm font-normal text-gray-500">
-                    <span className={`px-1.5 mr-0.5 font-medium py-0.5 rounded-md ${item.title === 'Following' ? 'text-rose-500 bg-rose-100' : 'text-green-500 bg-green-100 border-green-400'}`}>
+                    <span
+                      className={`px-1.5 mr-0.5 font-medium py-0.5 rounded-md ${
+                        item.title === "Following"
+                          ? "text-rose-500 bg-rose-100"
+                          : "text-green-500 bg-green-100 border-green-400"
+                      }`}
+                    >
                       {item.change}
                     </span>
-                    {' vs Aug 16 - Sep 16'}
+                    {` vs ${from} - ${to}`}
                   </div>
                 </div>
-                <div className={`px-3 py-2 text-base font-semibold leading-5 rounded-lg font-dashboard ${item.title === 'Followers' ? 'bg-rose-100 text-rose-500' : 'bg-green-100 text-green-500'}`}>
+                <div
+                  className={`px-3 py-2 text-base font-semibold leading-5 rounded-lg font-dashboard ${
+                    item.title === "Followers"
+                      ? "bg-green-100 text-green-500"
+                      : "bg-green-100 text-green-500"
+                  }`}
+                >
                   {item.value}
                 </div>
               </div>
@@ -62,5 +118,5 @@ export function OverviewCard() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

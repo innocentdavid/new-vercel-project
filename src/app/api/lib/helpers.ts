@@ -32,10 +32,11 @@ export const retrieveInstagramContent = async (username?: string) => {
       const response = await axios.request(options(username));
   
       const fetchedData = response.data.data.items;
+      
       let satisfiedDataToAdd;
   
       if (fetchedData) {
-        satisfiedDataToAdd = fetchedData.map((d: any) => ({
+        satisfiedDataToAdd = fetchedData.slice(0, 3).map((d: any) => ({
           username: d.user.username,
           caption: {
             created_at: d.caption?.created_at,
