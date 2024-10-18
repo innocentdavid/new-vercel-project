@@ -7,9 +7,8 @@ import React from "react";
 import GTComponent from "../../GTComponent";
 import { Metadata, ResolvingMetadata } from "next";
 import InstagramDashboard from "./instagram-dashboard";
-import { retrieveUserContent } from "@/lib/helpers";
-import { retrieveInstagramContent } from "@/app/api/instagram-content/[username]/route";
 import { supabase } from "@/lib/supabaseClient";
+import { retrieveInstagramContent } from "@/app/api/lib/helpers";
 
 function decodeURLString(encodedString: string) {
   try {
