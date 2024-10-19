@@ -19,14 +19,19 @@ const geistMono = localFont({
 });
 
 const APP_NAME = "FollowersTool";
-const APP_DEFAULT_TITLE = "FollowersTool";
+// const APP_DEFAULT_TITLE = "FollowersTool";
 
 export const metadata: Metadata = {
   title: APP_NAME,
   description: "Discover the best AI tools and products in 2024. Find the top AI websites and tools to help you grow your business, improve productivity, and drive innovation.",
   applicationName: APP_NAME,
-  metadataBase: new URL("https://followerstool-vert.vercel.app"),
-  manifest: "/manifest.json"
+  metadataBase: new URL("https://followerstool.vercel.app"),
+  manifest: "/manifest.json",
+  openGraph: {
+    type: "website",
+    siteName: APP_NAME,
+    images: "https://followerstool.vercel.app/og_image.png",
+  },
 };
 
 export default function RootLayout({

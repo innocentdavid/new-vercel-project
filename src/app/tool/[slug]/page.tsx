@@ -72,10 +72,10 @@ export async function generateMetadata(
   const seo_description = generateSeoDescription(tool?.hero_sub_heading||"");
 
   return {
-    title: `FunFun.tool: ${tool?.name}`,
+    title: `FollowersTool: ${tool?.name} Instagram Overview`,
     description: seo_description,
     alternates: {
-      canonical: `https://followerstool-vert.vercel.app/tool/${slug}`,
+      canonical: `https://followerstool.vercel.app/tool/${slug}`,
     },
     openGraph: {
       // images: tool?.main_image || "",
@@ -415,13 +415,13 @@ const PricingTier = ({
       </CardContent>
     </div>
 
-    <CardFooter className="p-0">
+    {/* <CardFooter className="p-0">
       <Button
         variant={"outline"}
         className="w-full border-[#9d174d] text-[#9d174d] hover:bg-[#9d174d] dark:text-[#fbcfe8]"
       >
         {buttonText}
       </Button>
-    </CardFooter>
+    </CardFooter> */}
   </Card>
 );

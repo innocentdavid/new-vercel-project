@@ -67,10 +67,10 @@ export async function generateMetadata(
   const seo_description = generateSeoDescription(tool?.content || "");
 
   return {
-    title: `FunFun.tool: ${tool?.name} - review`,
+    title: `FollowersTool: ${tool?.name} Review 2024`,
     description: seo_description,
     alternates: {
-      canonical: `https://followerstool-vert.vercel.app/tool/${slug}`,
+      canonical: `https://followerstool.vercel.app/review/${slug}`,
     },
     openGraph: {
       // images: tool?.main_image || "",
@@ -672,10 +672,11 @@ export default async function ReviewPage({
                   title={`Gainsty`}
                   stars={5}
                   description={`Join 11,000+ Instagram users who use Gainsty to grow their Instagram followers and engagement organically.`}
-                  tags={["newsletter", "indie-making"]}
+                  tags={["Instagram", "Followers", "Growth"]}
                   premium={true}
+                  slug={"/tool/gainsty"}
                   deals={true}
-                />
+                  />
                 <BestProductCard
                   icon={`/products/liftinfluece-logo.png`}
                   title={`Liftinfluece`}
@@ -683,6 +684,7 @@ export default async function ReviewPage({
                   description={`Gain Real and Targeted Followers with our platform, Fueling Your Instagram Success.`}
                   tags={[]}
                   premium={false}
+                  slug={"/tool/liftinfluece"}
                   deals={false}
                 />
               </div>
@@ -733,6 +735,7 @@ function BestProductCard(product: {
   description: string;
   tags: string[];
   premium: boolean;
+  slug: string;
   deals: boolean;
 }) {
   return (
@@ -762,7 +765,7 @@ function BestProductCard(product: {
               loading="lazy"
               decoding="async"
               src={product.icon}
-              className="w-12 h-12 rounded-[7.5px] md:group-hover:opacity-0 z-10 text-pr50bg-primary-50"
+              className="w-12 h-12 rounded-[7.5px] _md:group-hover:opacity-0 z-10 text-pr50bg-primary-50"
             />
           </div>
           <div className="flex flex-col flex-1 w-full ml-4">
@@ -773,24 +776,20 @@ function BestProductCard(product: {
             </div>
             <div className="flex items-center space-x-1">
               {Array.from({ length: product.stars }).map((_, i) => (
-                <Star
-                  key={i}
-                  size={12}
-                  className="text-[gold] fill-[gold]"
-                />
+                <Star key={i} size={12} className="text-[gold] fill-[gold]" />
               ))}
             </div>
           </div>
         </div>
         <div className="flex flex-col items-start px-4">
-          <p className="dark:text-gray-50 text-sm h-[80px] line-clamp-4">
+          <p className="dark:text-black text-sm h-[80px] line-clamp-4">
             {product.description}
           </p>
           <div className="flex pt-4 pb-4 space-x-1 overflow-hidden">
             {product.tags.map((tag, i) => (
               <div key={i}>
                 <a
-                  href={`/tags/${tag}`}
+                  href={`/tool/${product.slug}`}
                   className="cursor-pointer whitespace-nowrap text-xs text-gray-500 font-medium rounded-md border-black dark:bg-ngray-500 dark:border-gray-800 dark:border-0 dark:hover:text-primary-500 dark:text-ngray-100 hover:underline capitalize"
                 >
                   #{tag.replace("-", " ")}

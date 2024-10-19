@@ -6,6 +6,7 @@ import { tools_details } from "@/lib/tools_details";
 import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
 import Link from "next/link";
+import { Fragment } from "react";
 
 export default function Home() {
   return (
@@ -19,10 +20,8 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4">
           {TOOLS.map((tool, i) => (
-            <>
-              {/* <ProductCard key={i} {...tool} /> */}
-              <ProductCard_V2 key={i} {...tool} />
-            </>
+            // {/* <ProductCard key={i} {...tool} /> */}
+            <ProductCard_V2 key={i} {...tool} />
           ))}
         </div>
         {/* <div className="flex justify-center mt-8">
@@ -96,7 +95,7 @@ export default function Home() {
 
 function ProductCard_V2(tool: (typeof TOOLS)[0]) {
   const rating = tool_rating.find((t) => t.slug === tool.slug)?.rating;
-  const toolDetails = tools_details.find((t) => t.slug === tool.slug);
+  // const toolDetails = tools_details.find((t) => t.slug === tool.slug);
 
   return (
     <div className="flex flex-col bg-card text-card-foreground h-full w-full rounded-xl border shadow-lg overflow-hidden">
@@ -184,7 +183,7 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
       </div>
       <div className="px-6">
         <div className="flex justify-between text-lg">
-          <span>Paid</span>
+          <span>{tool.subscription_type}</span>
           <span className="flex items-center text-slate-500 gap-1">
             <div className="">{tool.saves}</div>
             <AddBookmark>
@@ -236,7 +235,12 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
         </div>
       </div>
       <div className="px-6 mt-auto flex items-center justify-between pb-4">
-        <div className={cn("flex items-center gap-2 tool-label", tool.featured ? "text-yellow-500":"text-[#6b7280]")}>
+        <div
+          className={cn(
+            "flex items-center gap-2 tool-label",
+            tool.featured ? "text-yellow-500" : "text-[#6b7280]"
+          )}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={24}
@@ -256,7 +260,7 @@ function ProductCard_V2(tool: (typeof TOOLS)[0]) {
         </div>
 
         <Link
-        href={`/tool/${tool.slug}`}
+          href={`/tool/${tool.slug}`}
           // rel="nofollow"
           className="hover:no-underline"
           data-tool-name="M1-Project"
