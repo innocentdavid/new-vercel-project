@@ -47,8 +47,8 @@ const BuyPlanPopUp = ({ children, plan }: { children: ReactNode; plan: string })
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>
         <DialogHeader className="">
-          <DialogTitle>Buy Plan</DialogTitle>
-          <DialogDescription>({plan})</DialogDescription>
+          <DialogTitle>Plan Purchase</DialogTitle>
+          <DialogDescription>Enter your contact details and we will contact you within the next 48 hours with the offer from FollowersTool.</DialogDescription>
         </DialogHeader>
 
         <Label htmlFor="FullName">Full Name</Label>

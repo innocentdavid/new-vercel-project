@@ -8,16 +8,21 @@ export function OverviewCard({ chartData }: { chartData: ChartData[] }) {
   if (!(chartData.length > 0)) return <></>;
 
   // console.log(`chartData[0].date.split(" ")[0]`);
-  // console.log(chartData[0].date.split(" ")[0]);
+  // console.log(chartData?.[0]?.date?.split(" ")?.[0]);
 
-  const from = new Intl.DateTimeFormat("en-US", {
+  const from = new Date(chartData?.[0]?.date?.split(" ")?.[0] || "");
+  const fromFormated = new Intl.DateTimeFormat("en-US", {
     month: "short",
     day: "2-digit",
-  }).format(new Date(chartData[0].date.split(" ")[0]));
-  const to = new Intl.DateTimeFormat("en-US", {
+  }).format(from);
+
+  const to = new Date(
+    chartData?.[chartData?.length - 1]?.date?.split(" ")?.[0] || ""
+  );
+  const toFormated = new Intl.DateTimeFormat("en-US", {
     month: "short",
     day: "2-digit",
-  }).format(new Date(chartData[chartData.length - 1].date.split(" ")[0]));
+  }).format(to);
 
   return (
     <Card className="divide-y border mb-6 md:mb-8 divide-gray-200 overflow-hidden border-gray-100_ bg-white dark:bg-[#0A0F0F] relative pb-0">
@@ -45,7 +50,7 @@ export function OverviewCard({ chartData }: { chartData: ChartData[] }) {
         <div className="px-4 pt-1">
           <div className="flex flex-wrap items-center w-full gap-2 mb-1.5 text-sm font-medium place-content-between">
             <span className="_px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">
-              {from}
+              {fromFormated}
             </span>
             <svg
               className="w-4 h-4 -ml-[1px] text-gray-600"
@@ -62,7 +67,7 @@ export function OverviewCard({ chartData }: { chartData: ChartData[] }) {
               ></path>
             </svg>
             <span className="_px-4 py-1.5 text-[#6B7280] rounded-lg bg-dashbg">
-              {to}
+              {toFormated}
             </span>
           </div>
           <div className="flex flex-col justify-between w-full h-full">
@@ -100,7 +105,7 @@ export function OverviewCard({ chartData }: { chartData: ChartData[] }) {
                     >
                       {item.change}
                     </span>
-                    {` vs ${from} - ${to}`}
+                    {` vs ${fromFormated} - ${toFormated}`}
                   </div>
                 </div>
                 <div

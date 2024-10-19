@@ -144,6 +144,7 @@ export const tickFormatter = (
     return new Intl.DateTimeFormat("en-US", {
       month: "2-digit",
       day: "2-digit",
+      year: "2-digit",
     }).format(date);
   } else if (range === "weekly") {
     const weekStart = new Date(value);
@@ -152,9 +153,11 @@ export const tickFormatter = (
     return `${new Intl.DateTimeFormat("en-US", {
       month: "2-digit",
       day: "2-digit",
+      year: "2-digit",
     }).format(weekStart)} - ${new Intl.DateTimeFormat("en-US", {
       month: "2-digit",
       day: "2-digit",
+      year: "2-digit",
     }).format(weekEnd)}`;
   } else if (range === "monthly") {
     return new Intl.DateTimeFormat("en-US", { month: "short" }).format(date);

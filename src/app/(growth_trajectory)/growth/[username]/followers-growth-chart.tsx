@@ -121,7 +121,8 @@ export function FollowersGrowthChart({
         <div className="w-full m-0 mt-6" style={{ height: "265px" }}>
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart
-              data={chartData}
+              // data={chartData.map(c => c)}
+              data={chartData.map(c => ({ ...c, date: c.date.split("/").slice(0, 2).join("/") }))}
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
             >
               <defs>

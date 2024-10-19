@@ -154,7 +154,7 @@ export function DailyChangeChart({
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
-            <p className="text-2xl font-bold text-gray-900 dark:text-card-foreground whitespace-nowrap">
+            <div className="text-2xl font-bold text-gray-900 dark:text-card-foreground whitespace-nowrap">
               <span className="inline-flex items-center font-dashboard">
                 {chartData[chartData.length - 1]["%"]}%
               </span>
@@ -162,7 +162,7 @@ export function DailyChangeChart({
                 a={chartData[0]["%"]}
                 b={chartData[chartData.length - 1]["%"]}
               />
-            </p>
+            </div>
           </div>
           {/* <div className="flex w-full">
             <div className="relative inline-flex items-center justify-start w-full pr-1 mt-3 sm:justify-end sm:mt-0">
