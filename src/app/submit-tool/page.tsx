@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import BuyPlanPopUp from "@/components/BuyPlanPopUp";
 import React from "react";
 
 export default function SubmitToolPage() {
@@ -42,12 +43,15 @@ export default function SubmitToolPage() {
                           $99
                         </span>
                       </p>
-                      <button
-                        type="button"
-                        className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center mt-10"
-                      >
-                        Proceed
-                      </button>
+
+                      <BuyPlanPopUp plan="lifetime">
+                        <button
+                          type="button"
+                          className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center mt-10"
+                        >
+                          Proceed
+                        </button>
+                      </BuyPlanPopUp>
                     </div>
                     {/* <a
                       href="/advertising/skip-the-waiting-line"
@@ -172,12 +176,15 @@ export default function SubmitToolPage() {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    type="button"
-                    className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
-                  >
-                    <span className="">Proceed</span>
-                  </button>
+
+                  <BuyPlanPopUp plan="lifetime">
+                    <button
+                      type="button"
+                      className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
+                    >
+                      <span className="">Proceed</span>
+                    </button>
+                  </BuyPlanPopUp>
                   {/* <a
                     href="/advertising/skip-the-waiting-line"
                     className="mx-auto text-sm italic hover:underline"
@@ -250,12 +257,15 @@ export default function SubmitToolPage() {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    type="button"
-                    className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
-                  >
-                    <span className="">Get in our Newsletter</span>
-                  </button>
+
+                  <BuyPlanPopUp plan="sponsorship">
+                    <button
+                      type="button"
+                      className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
+                    >
+                      <span className="">Get in our Newsletter</span>
+                    </button>
+                  </BuyPlanPopUp>
                   {/* <a
                     href="/advertising/newsletter-sponsoring"
                     className="mx-auto text-sm italic hover:underline"
@@ -268,10 +278,10 @@ export default function SubmitToolPage() {
                 <div className="flex-1 flex flex-col gap-y-6 sm:p-6 p-8 xl:p-10">
                   <div>
                     <div className="flex items-center justify-between">
-                      <p className="text-2xl text-gray-900 dark:text-white sm:text-3xl font-semibold truncate">
+                      <p className="text-2xl text-gray-900 dark:text-white sm:text-3xl font-semibold truncate_">
                         Premium Review
                       </p>
-                      <span className="inline-flex items-center font-medium rounded-md text-xs px-2 py-1 bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10 text-primary-500 dark:text-primary-400 ring-1 ring-inset ring-primary-500 dark:ring-primary-400 ring-opacity-25 dark:ring-opacity-25">
+                      <span className="inline-flex items-center font-medium rounded-md text-xs px-2 py-1 bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10 text-primary-500 dark:text-primary-400 ring-1 ring-inset ring-primary-500 dark:ring-primary-400 ring-opacity-25 dark:ring-opacity-25 whitespace-nowrap">
                         Best value
                       </span>
                     </div>
@@ -342,12 +352,15 @@ export default function SubmitToolPage() {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    type="button"
-                    className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
-                  >
-                    <span className="">Buy a premium review</span>
-                  </button>
+
+                  <BuyPlanPopUp plan="premium-preview">
+                    <button
+                      type="button"
+                      className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
+                    >
+                      <span className="">Buy a premium review</span>
+                    </button>
+                  </BuyPlanPopUp>
                   {/* <a
                     href="/advertising/premium-spot"
                     className="mx-auto text-sm italic hover:underline"
@@ -382,7 +395,8 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                        Rank on “(your_product) review” on Google first 5 spots.
+                          Rank on “(your_product) review” on Google first 5
+                          spots.
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -392,7 +406,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                        Earn multiple backlinks to your page and boost your DA
+                          Earn multiple backlinks to your page and boost your DA
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -402,7 +416,7 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                        Strengthen your customer trust
+                          Strengthen your customer trust
                         </span>
                       </li>
                       <li className="flex items-center gap-x-3">
@@ -412,18 +426,20 @@ export default function SubmitToolPage() {
                           style={{}}
                         />
                         <span className="text-gray-600 dark:text-gray-400">
-                        Special review with .com
+                          Special review with .com
                         </span>
                       </li>
                     </ul>
                   </div>
-                  <a
-                    className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
-                    href="https://uneed.lemonsqueezy.com/buy/c89f1f67-ea7f-4008-ab55-bc5b87be58c7"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="">Buy Turbo Review</span>
-                  </a>
+
+                  <BuyPlanPopUp plan="turbo-review">
+                    <button
+                      className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 dark:disabled:bg-primary-400 shadow-sm text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-500 dark:hover:bg-primary-600 disabled:bg-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 w-full flex justify-center items-center"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="">Buy Turbo Review</span>
+                    </button>
+                  </BuyPlanPopUp>
                   {/* <a
                     href="/advertising/product-review"
                     className="mx-auto text-sm italic hover:underline"

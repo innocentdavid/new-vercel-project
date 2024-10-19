@@ -87,7 +87,7 @@ export default async function ReviewPage({
   const slug = decodeURLString(params.slug);
   const tool = await getToolBySlug(slug);
   if (!tool) return notFound();
-  const toolDetails = tools_details.find(t => t.slug === tool.slug)
+  const toolDetails = tools_details.find((t) => t.slug === tool.slug);
 
   return (
     <div
@@ -112,7 +112,9 @@ export default async function ReviewPage({
               </p> */}
               <div className="flex flex-wrap items-center gap-3 mt-3 current-post-tags-wrapper _lg:mt-10">
                 <span className="text-sm text-gray-400 current-post-publish-date">
-                  <time title={toolDetails?.added_on.toLocaleString()||""}>{new Date(toolDetails?.added_on||"").toLocaleDateString()}</time>
+                  <time title={toolDetails?.added_on.toLocaleString() || ""}>
+                    {new Date(toolDetails?.added_on || "").toLocaleDateString()}
+                  </time>
                 </span>
               </div>
             </div>
@@ -666,28 +668,19 @@ export default async function ReviewPage({
               </h4>
               <div className="grid gap-4 lg:grid-cols-3 sm:grid-cols-2">
                 <BestProductCard
-                  icon={`https://apcdouatoejrvwoqevfc.supabase.co/storage/v1/object/public/logos/logos/1726575899942-icon.png`}
-                  title={`Startup Spotlight`}
+                  icon={`/products/gainsty-dark.png`}
+                  title={`Gainsty`}
                   stars={5}
-                  description={`Discover & Share Trending Micro-Startups. Promote yours for $0.`}
+                  description={`Join 11,000+ Instagram users who use Gainsty to grow their Instagram followers and engagement organically.`}
                   tags={["newsletter", "indie-making"]}
                   premium={true}
                   deals={true}
                 />
                 <BestProductCard
-                  icon={`https://apcdouatoejrvwoqevfc.supabase.co/storage/v1/object/public/logos/logos/1707906157850-Groupe1410103862.jpg`}
-                  title={`Marketing Strategy Generator`}
+                  icon={`/products/liftinfluece-logo.png`}
+                  title={`Liftinfluece`}
                   stars={5}
-                  description={`Perfect marketing strategy for your product in 5 minutes. Done by AI for busy Solopreneurs. Updated for 2024.`}
-                  tags={[]}
-                  premium={false}
-                  deals={false}
-                />
-                <BestProductCard
-                  icon={`https://apcdouatoejrvwoqevfc.supabase.co/storage/v1/object/public/logos/logos/indexplease_20240305121521.png`}
-                  title={`IndexPlease`}
-                  stars={5}
-                  description={`IndexPlease will automatically index your pages on Google, Microsoft Bing, Naver, Seznam.cz and Yandex within 48 hours.`}
+                  description={`Gain Real and Targeted Followers with our platform, Fueling Your Instagram Success.`}
                   tags={[]}
                   premium={false}
                   deals={false}
@@ -783,7 +776,7 @@ function BestProductCard(product: {
                 <Star
                   key={i}
                   size={12}
-                  className="text-gray-400 fill-gray-400"
+                  className="text-[gold] fill-[gold]"
                 />
               ))}
             </div>
