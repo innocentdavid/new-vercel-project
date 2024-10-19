@@ -56,9 +56,10 @@ export async function generateMetadata(
   // const previousImages = (await parent).openGraph?.images || [];
 
   return {
-    title: `@${username} Growth | FollowersTool`,
+    title: `@${username} Instagram Growth Projection`,
+    description: `Get to know how @${username} can get more followers and likes on Instagram with FollowersTool.`,
     alternates: {
-      canonical: `https://www.followTool.com/growth/${username}`,
+      canonical: `https://followerstool.vercel.app/growth/${username}`,
     },
     // openGraph: {
     //   images: [article?.seo_image_url!, ...previousImages],

@@ -122,7 +122,7 @@ export function DailyChangeChart({
                         d="M13.806 9.064c-.623-.712-.935-1.069-1.305-1.2a1.5 1.5 0 0 0-1.002 0c-.37.131-.682.488-1.305 1.2L8.483 11.02c-1.106 1.264-1.66 1.896-1.677 2.432a1.5 1.5 0 0 0 .548 1.208C7.77 15 8.61 15 10.29 15h3.422c1.68 0 2.52 0 2.934-.34a1.5 1.5 0 0 0 .549-1.208c-.017-.536-.57-1.168-1.677-2.432z"
                       ></path>
                     </svg>
-                    Daily Change
+                    Engagement Rate
                     <svg
                       className="w-[18px] h-[18px] ml-2 place-self-center ignore fill-gray-300"
                       stroke="none"
@@ -324,7 +324,7 @@ const PercentageIncrease: React.FC<PercentageIncreaseProps> = ({ a, b }) => {
           clipRule="evenodd"
         ></path>
       </svg>
-      {percentageIncrease}
+      +{percentageIncrease}
     </div>
     // <div
     //   className="ml-4 mt-[3px] mb-1 align-middle inline-flex items-center rounded-full text-shadow px-2.5 py-0.5 text-sm font-medium text-white"
