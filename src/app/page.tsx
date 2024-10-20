@@ -95,7 +95,7 @@ const Badge = ({ text, type }: { text: string; type: string }) => {
   const baseClasses =
     "flex items-center px-2 py-1 text-xs font-medium border rounded-full shadow cursor-default";
   const typeClasses: any = {
-    premium: "text-primary-500 border-primary-500 bg-primary-50",
+    // premium: "text-primary-500 border-primary-500 bg-primary-50",
     best: "text-green-600 border-green-600 bg-green-50",
     warning: "text-yellow-600 border-yellow-600 bg-yellow-50",
     danger: "text-red-600 border-red-600 bg-red-50",

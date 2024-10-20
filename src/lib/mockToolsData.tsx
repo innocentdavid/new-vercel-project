@@ -264,7 +264,7 @@ export const TOOLS = [
       "No bots. No fake users.Grow your community with AI targeted IG follower growth.",
     saves: 7,
     badges: [
-      { text: "Scam", type: "scam" },
+      { text: "Scam", type: "danger" },
       { text: "Fake Followers", type: "warning" },
     ],
     logo: "/products/Trendgram.png",
@@ -347,7 +347,7 @@ export const TOOLS = [
     saves: 4,
     badges: [
       { text: "Fake Followers", type: "warning" },
-      { text: "Scam", type: "scam" },
+      { text: "Scam", type: "danger" },
     ],
     features: [
       "Human Handoff",
@@ -495,7 +495,7 @@ export const TOOLS = [
     "Keesy is the leading AI Instagram Growth Service in 2024. Get real Instagram followers & engagement with our proprietary AI models and. Start for free today.",
     saves: 4,
     badges: [
-      { text: "Scam", type: "scam" },
+      { text: "Scam", type: "danger" },
       { text: "Fake Followers", type: "warning" },
     ],
     logo: "/products/keesy.png",
@@ -582,7 +582,7 @@ export const TOOLS = [
       "What is the best price for the best Instagram growth service? See the details for Plixi's pricing that offers the best AI-powered Instagram tool for follower growth.",
     saves: 5,
     badges: [
-      { text: "Scam", type: "scam" },
+      { text: "Scam", type: "danger" },
       { text: "Fake Followers", type: "warning" },
     ],
     logo: "/products/plixi.png",
