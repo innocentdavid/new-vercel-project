@@ -754,9 +754,9 @@ function BestProductCard(product: {
         </span>
       )}
 
-      <Link href="/tool/startup-spotlight" className="">
+      <Link href={`/tool/${product.slug}`} className="">
         <div className="flex items-center p-4 overflow-hidden">
-          <a href="/tool/startup-spotlight" className="" />
+          <a href={`/tool/${product.slug}`} className="" />
           <div className="relative w-[48px] min-w-[48px] h-[48px]">
             <Image
               width={48}

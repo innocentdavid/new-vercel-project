@@ -2,11 +2,9 @@ import AddBookmark from "@/components/AddBookmark";
 import BackgroundBeamsWithCollisionDemo from "@/components/homepage/background-beams-with-collision-demo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import { tool_rating, TOOLS } from "@/lib/mockToolsData";
-import { tools_details } from "@/lib/tools_details";
 import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
 import Link from "next/link";
-import { Fragment } from "react";
 
 export default function Home() {
   return (

@@ -156,11 +156,11 @@ export function DailyChangeChart({
             </TooltipProvider>
             <div className="text-2xl font-bold text-gray-900 dark:text-card-foreground whitespace-nowrap">
               <span className="inline-flex items-center font-dashboard">
-                {chartData[chartData.length - 1]["%"]}%
+                {chartData?.[chartData.length - 1]?.["%"]}%
               </span>
               <PercentageIncrease
-                a={chartData[0]["%"]}
-                b={chartData[chartData.length - 1]["%"]}
+                a={chartData?.[0]?.["%"]}
+                b={chartData[chartData.length - 1]?.["%"]}
               />
             </div>
           </div>

@@ -240,7 +240,21 @@ export default function InstagramDashboard({
     setPeekChartData(data);
   }, [activeTab, user]);
 
-  const dailyChartData = ratesDataGenerator();
+  const [dailyChartData, setDailyChartData] = useState<
+    {
+      date: string;
+      "%": number;
+    }[]
+  >([]);
+
+  useEffect(() => {
+    try {
+      const dailyChartData = ratesDataGenerator();
+      setDailyChartData(dailyChartData);
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
 
   return (
     <div className="space-y-4 mx-4 sm:mx-6 lg:mx-8 pt-6">
@@ -421,18 +435,18 @@ export default function InstagramDashboard({
 
       <div className="grid grid-cols-1 gap-0 mt-3 sm:grid-cols-3 lg:gap-6">
         <DailyChangeChart
-        // activeTab={activeTab}
-        // setActiveTab={setActiveTab}
-        // chartData={peekChartData}
-        chartData={dailyChartData}
+          // activeTab={activeTab}
+          // setActiveTab={setActiveTab}
+          // chartData={peekChartData}
+          chartData={dailyChartData}
         />
 
         <OverviewCard chartData={chartData} />
       </div>
 
-      <ProfileOptimization user={user} />
+      {user.bio && <ProfileOptimization user={user} />}
 
-      <FAQ faqs={Faqs} />
+      {Faqs.length > 0 && <FAQ faqs={Faqs} />}
     </div>
   );
 }
