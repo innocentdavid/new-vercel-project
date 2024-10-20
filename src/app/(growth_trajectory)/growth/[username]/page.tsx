@@ -4,7 +4,6 @@ import getUserProfileData from "@/lib/profile-data";
 import { UserProfile } from "@/lib/types";
 import { notFound } from "next/navigation";
 import React from "react";
-import GTComponent from "../../GTComponent";
 import { Metadata, ResolvingMetadata } from "next";
 import InstagramDashboard from "./instagram-dashboard";
 import { supabase } from "@/lib/supabaseClient";
@@ -81,48 +80,49 @@ export default async function GrowthPage({
 
   let faqs;
   let bio;
-  const { data } = await supabase
-    .from("users")
-    .select("*")
-    .eq("username", username)
-    .single();
+  try {
+    const { data } = await supabase
+      .from("users")
+      .select("*")
+      .eq("username", username)
+      .single();
 
-  if (data && data.length > 0) {
-    faqs = data.faqs;
-    bio = data.bio;
-  } else {
-    const contents = await retrieveInstagramContent(username);
-    const constent_0 = contents?.[0]?.caption?.text || "";
-    const constent_1 = contents?.[1]?.caption?.text || "";
-    const constent_2 = contents?.[2]?.caption?.text || "";
+    if (data && data.length > 0) {
+      faqs = data.faqs;
+      bio = data.bio;
+    } else {
+      const contents = await retrieveInstagramContent(username);
+      const constent_0 = contents?.[0]?.caption?.text || "";
+      const constent_1 = contents?.[1]?.caption?.text || "";
+      const constent_2 = contents?.[2]?.caption?.text || "";
 
-    const Faqs: any = await generateFaq(
-      userProfile.username,
-      userProfile.name,
-      userProfile.followers || 100,
-      userProfile.followings || 10,
-      userProfile.posts || 20,
-      userProfile.biography,
-      constent_0,
-      constent_1,
-      constent_2
-    );
-    const data = JSON.parse(Faqs);
-    faqs = data.faq;
-    bio = data.bio;
-    await supabase.from("users").insert({ username, faqs, bio });
+      const Faqs: any = await generateFaq(
+        userProfile.username,
+        userProfile.name,
+        userProfile.followers || 100,
+        userProfile.followings || 10,
+        userProfile.posts || 20,
+        userProfile.biography,
+        constent_0,
+        constent_1,
+        constent_2
+      );
+      const data = JSON.parse(Faqs);
+      faqs = data.faq;
+      bio = data.bio;
+      await supabase.from("users").insert({ username, faqs, bio });
+    }
+
+    // console.log("faqs");
+    // console.log(faqs);
+    // console.log("faqs");
+  } catch (error) {
+    console.log(error);
   }
-
-  // console.log("faqs");
-  // console.log(faqs);
-  // console.log("faqs");
 
   return (
     <div className="bg-white_">
-      <InstagramDashboard
-        user={{ ...userProfile, bio }}
-        Faqs={faqs}
-      />
+      {/* <InstagramDashboard user={{ ...userProfile, bio }} Faqs={faqs} /> */}
       {/* <GTComponent userProfile={userProfile} /> */}
     </div>
   );
