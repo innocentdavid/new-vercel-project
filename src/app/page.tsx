@@ -12,7 +12,7 @@ export default function Home() {
       <BackgroundBeamsWithCollisionDemo />
 
       <section className="max-w-[1536px] mx-auto py-20">
-        <h2 className="mb-6 text-center text-3xl font-bold">
+        <h2 className="mb-8 text-center text-3xl font-bold">
           Instagram Followers Growth Tools 2024
         </h2>
 
@@ -91,12 +91,32 @@ export default function Home() {
 //   );
 // }
 
+const Badge = ({ text, type }: { text: string; type: string }) => {
+  const baseClasses =
+    "flex items-center px-2 py-1 text-xs font-medium border rounded-full shadow cursor-default";
+  const typeClasses: any = {
+    premium: "text-primary-500 border-primary-500 bg-primary-50",
+    best: "text-green-600 border-green-600 bg-green-50",
+    warning: "text-yellow-600 border-yellow-600 bg-yellow-50",
+    danger: "text-red-600 border-red-600 bg-red-50",
+  };
+  return <span className={`${baseClasses} ${typeClasses[type]}`}>{text}</span>;
+};
+
 function ProductCard_V2(tool: (typeof TOOLS)[0]) {
   const rating = tool_rating.find((t) => t.slug === tool.slug)?.rating;
   // const toolDetails = tools_details.find((t) => t.slug === tool.slug);
 
   return (
-    <div className="flex flex-col bg-card text-card-foreground h-full w-full rounded-xl border shadow-lg overflow-hidden">
+    <div className="flex flex-col bg-card text-card-foreground h-full w-full rounded-xl border shadow-lg relative">
+      {tool.badges && (
+        <div className="absolute z-20 right-2 -top-3 flex items-center gap-2">
+          {tool.badges.length > 0 &&
+            tool.badges.map((badge, i) => (
+              <Badge key={i} text={badge.text} type={badge.type} />
+            ))}
+        </div>
+      )}
       <div className="px-6 pb-2 pt-4 flex h-24 flex-row items-start gap-4">
         <Link href={`/tool/${tool.slug}`}>
           <div className="relative flex flex-shrink-0 rounded-xl border">

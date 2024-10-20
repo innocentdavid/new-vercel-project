@@ -54,8 +54,8 @@ export const retrieveInstagramContent = async (username?: string) => {
       }
   
       return satisfiedDataToAdd.caption;
-    } catch (error) {
-      console.log(error);
+    } catch (error:any) {
+      console.log(error.message);
       return [];
     }
   };

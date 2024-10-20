@@ -16,6 +16,10 @@ export const TOOLS = [
     description:
       "Join 11,000+ Instagram users who use Gainsty to grow their Instagram followers and engagement organically.",
     saves: 3851,
+    badges: [
+      { text: "Best 2024", type: "best" },
+      { text: "Premium", type: "premium" },
+    ],
     features: [
       "Human Handoff",
       "Multilingual",
@@ -117,7 +121,6 @@ export const TOOLS = [
         a: "Outline the policies related to users under a certain age.",
       },
     ],
-    audio: null,
   },
   {
     id: 2,
@@ -125,6 +128,7 @@ export const TOOLS = [
     slug: "liftinfluence",
     name: "Liftinfluence",
     is_verified: true,
+    featured: true,
     toolName: "Caption Writer",
     toolLink: "https://www.liftinfluence.com/caption-writer",
     siteLink: "https://www.liftinfluence.com",
@@ -135,6 +139,9 @@ export const TOOLS = [
     description:
       "Gain Real and Targeted Followers with our platform, Fueling Your Instagram Success.",
     saves: 411,
+    badges: [
+      { text: "Premium", type: "premium" },
+    ],
     features: [
       "Human Handoff",
       "Multilingual",
@@ -256,6 +263,10 @@ export const TOOLS = [
     description:
       "No bots. No fake users.Grow your community with AI targeted IG follower growth.",
     saves: 7,
+    badges: [
+      { text: "Scam", type: "scam" },
+      { text: "Fake Followers", type: "warning" },
+    ],
     logo: "/products/Trendgram.png",
     main_image: "/products/trendgram_b.png",
     slug: "trendgram",
@@ -269,6 +280,9 @@ export const TOOLS = [
     description:
       "Buy social media services now to turn potential customers into real ones. All packages are active and cost-effective, get social media services followers instantly!",
     saves: 4,
+    badges: [
+      { text: "Fake Followers", type: "warning" },
+    ],
     slug: "social-crow",
   },
   {
@@ -331,6 +345,10 @@ export const TOOLS = [
     description:
       "UpGrow is the Best Instagram Growth Service in 2024. ⚡ Get more real Instagram followers with our AI-powered growth engine to get 10x faster results. Get real Instagram followers with organic AI Growth and automation.",
     saves: 4,
+    badges: [
+      { text: "Fake Followers", type: "warning" },
+      { text: "Scam", type: "scam" },
+    ],
     features: [
       "Human Handoff",
       "Multilingual",
@@ -476,6 +494,10 @@ export const TOOLS = [
     description:
     "Keesy is the leading AI Instagram Growth Service in 2024. Get real Instagram followers & engagement with our proprietary AI models and. Start for free today.",
     saves: 4,
+    badges: [
+      { text: "Scam", type: "scam" },
+      { text: "Fake Followers", type: "warning" },
+    ],
     logo: "/products/keesy.png",
     main_image: "/products/keesy_b.png",
     slug: "keesy",
@@ -487,6 +509,9 @@ export const TOOLS = [
     description:
       "Get 100%% real Instagram followers organically. Grow your Instagram account with Ascend Viral! Authentic IG Growth Guaranteed. Sign up today to get started!",
     saves: 2,
+    badges: [
+      { text: "Premium", type: "premium" },
+    ],
     logo: "/products/ascendviral.png",
     main_image: "/products/ascendviral_b.png",
     slug: "ascendviral",
@@ -520,6 +545,9 @@ export const TOOLS = [
     description:
     "Real, Organic Instagram Followers No bots. No fake users. Build your community with AI targeted IG follower growth. No bots. No fake users. Build your communitywith AI targeted IG follower growth.",
     saves: 2,
+    badges: [
+      { text: "Fake Followers", type: "warning" },
+    ],
     logo: "/products/pathsocial.png",
     main_image: "/products/pathsocial_b.png",
     slug: "pathsocial",
@@ -553,6 +581,10 @@ export const TOOLS = [
     description:
       "What is the best price for the best Instagram growth service? See the details for Plixi's pricing that offers the best AI-powered Instagram tool for follower growth.",
     saves: 5,
+    badges: [
+      { text: "Scam", type: "scam" },
+      { text: "Fake Followers", type: "warning" },
+    ],
     logo: "/products/plixi.png",
     main_image: "/products/plixi_b.png",
     slug: "plixi",
@@ -562,8 +594,11 @@ export const TOOLS = [
     subscription_type: "Paid",
     name: "Social Boost",
     description:
-      "Social Boost is best organic instagram growth service - helps businesses, influencers and individuals gain more Instagram followers and better engagement.",
+    "Social Boost is best organic instagram growth service - helps businesses, influencers and individuals gain more Instagram followers and better engagement.",
     saves: 4,
+    badges: [
+      { text: "Premium", type: "premium" },
+    ],
     logo: "",
     main_image: "/products/social-boost_b.png",
     slug: "social-boost",
@@ -586,6 +621,9 @@ export const TOOLS = [
     description:
       "Join over 9,000+ of the world's top brands, agencies & influencers by subscribing to Flock Social organic Instagram growth service.",
     saves: 3,
+    badges: [
+      { text: "Fake Followers", type: "warning" },
+    ],
     logo: "/products/flocksocial.png",
     main_image: "/products/flocksocial_b.png",
     slug: "flocksocial",
@@ -597,6 +635,9 @@ export const TOOLS = [
     description:
       "Start Now For FREE! No risk, cancel, anytime. Join thousands of users growing 1-10K Followers monthly! Custom Targeting • 100% REAL Growth • Boost Engagement",
     saves: 2,
+    badges: [
+      { text: "Fake Followers", type: "warning" },
+    ],
     logo: "/products/Engagementboost.png",
     main_image: "/products/engagementboost_b.png",
     slug: "engagementboost",
@@ -608,6 +649,9 @@ export const TOOLS = [
     description:
       "Build Real Instagram Growth & Engagement, no spam, no fake followers, no bots. Powered by cutting-edge AI technology that improves with every single execution.",
     saves: 6,
+    badges: [
+      { text: "Fake Followers", type: "warning" },
+    ],
     logo: "/products/Wolfgrowth.png",
     main_image: "/products/wolfgrowth_b.png",
     slug: "wolfgrowth",
@@ -630,6 +674,9 @@ export const TOOLS = [
     description:
       "Get more Instagram followers with Upleap, the best organic Instagram growth tool in 2023. Sign Up today and start getting real followers!",
     saves: 4,
+    badges: [
+      { text: "Fake Followers", type: "warning" },
+    ],
     logo: "",
     main_image: "/products/upleap_b.png",
     slug: "upleap",
