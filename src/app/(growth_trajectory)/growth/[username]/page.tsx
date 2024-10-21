@@ -91,26 +91,26 @@ export default async function GrowthPage({
       faqs = data.faqs;
       bio = data.bio;
     } else {
-      const contents = await retrieveInstagramContent(username);
-      const constent_0 = contents?.[0]?.caption?.text || "";
-      const constent_1 = contents?.[1]?.caption?.text || "";
-      const constent_2 = contents?.[2]?.caption?.text || "";
+      // const contents = await retrieveInstagramContent(username);
+      // const constent_0 = contents?.[0]?.caption?.text || "";
+      // const constent_1 = contents?.[1]?.caption?.text || "";
+      // const constent_2 = contents?.[2]?.caption?.text || "";
 
-      const Faqs: any = await generateFaq(
-        userProfile.username,
-        userProfile.name,
-        userProfile.followers || 100,
-        userProfile.followings || 10,
-        userProfile.posts || 20,
-        userProfile.biography,
-        constent_0,
-        constent_1,
-        constent_2
-      );
-      const data = JSON.parse(Faqs);
-      faqs = data.faq;
-      bio = data.bio;
-      await supabase.from("users").insert({ username, faqs, bio });
+      // const Faqs: any = await generateFaq(
+      //   userProfile.username,
+      //   userProfile.name,
+      //   userProfile.followers || 100,
+      //   userProfile.followings || 10,
+      //   userProfile.posts || 20,
+      //   userProfile.biography,
+      //   constent_0,
+      //   constent_1,
+      //   constent_2
+      // );
+      // const data = JSON.parse(Faqs);
+      // faqs = data.faq;
+      // bio = data.bio;
+      // await supabase.from("users").insert({ username, faqs, bio });
     }
 
     // console.log("faqs");
