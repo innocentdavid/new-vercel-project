@@ -14,6 +14,8 @@ import ProfileOptimization from "./profile-optimization";
 import Image from "next/image";
 import { Check, Copy } from "lucide-react";
 import copy from "copy-to-clipboard";
+import { supabase } from "@/lib/supabaseClient";
+import axios from "axios";
 
 const followersDataGeneratorV2 = (
   currentFollowersCount: number | null = null,
@@ -204,12 +206,13 @@ const ratesDataGenerator = () => {
 export type Faq = { question: string; answer: string };
 
 export default function InstagramDashboard({
-  user,
-  Faqs,
+  initialUser,
+  initialFaqs,
 }: {
-  user: UserProfile;
-  Faqs: Faq[];
+  initialUser: UserProfile;
+  initialFaqs: Faq[];
 }) {
+  const [user, setUser] = useState(initialUser);
   const [activeTab, setActiveTab] = useState<"daily" | "weekly" | "monthly">(
     "monthly"
   );
@@ -255,6 +258,47 @@ export default function InstagramDashboard({
       console.log(error);
     }
   }, []);
+
+  const [Faqs, setFaqs] = useState(initialFaqs);
+  const [loadingFaqs, setLoadingFaqs] = useState(true);
+
+  useEffect(() => {
+    if (!Faqs) {
+      const getFaqs = async () => {
+        try {
+          const response = await axios.get(
+            `/api/generate-faqs?username=${encodeURIComponent(
+              user.username
+            )}&fullName=${encodeURIComponent(user.name)}&followers_count=${
+              user.followers
+            }&followings_count=${user.followings}&post_count=${
+              user.posts
+            }&biography=${encodeURIComponent(user.biography)}`
+          );
+          if (response.status === 200) {
+            const Faqs = response.data;
+            // console.log("raw Faqs");
+            // console.log(Faqs);
+
+            const data = JSON.parse(Faqs);
+            const faqs = data.faq;
+            const bio = data.bio;
+            setFaqs(faqs);
+            setUser((user) => ({ ...user, bio }));
+            await supabase
+              .from("users")
+              .insert({ username: user.username, faqs, bio });
+          }
+        } catch (error) {
+          console.log(error);
+        }
+        setLoadingFaqs(false);
+      };
+      getFaqs();
+    } else {
+      setLoadingFaqs(false);
+    }
+  }, [Faqs, user]);
 
   return (
     <div className="space-y-4 mx-4 sm:mx-6 lg:mx-8 pt-6">
@@ -443,6 +487,14 @@ export default function InstagramDashboard({
 
         <OverviewCard chartData={chartData} />
       </div>
+
+      {loadingFaqs && (
+        <div className="flex flex-col space-y-2 pb-8">
+          <div className="w-full h-4 bg-gray-300 rounded animate-pulse"></div>
+          <div className="w-3/4 h-4 bg-gray-300 rounded animate-pulse"></div>
+          <div className="w-1/2 h-4 bg-gray-300 rounded animate-pulse"></div>
+        </div>
+      )}
 
       {user.bio && <ProfileOptimization user={user} />}
 

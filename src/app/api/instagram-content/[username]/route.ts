@@ -1,10 +1,3 @@
-import axios from "axios";
-import {
-  addSingleInstagramContent,
-  getCaptions,
-  getSingleInstagramContent,
-  Post,
-} from "@/supabase/db";
 import { retrieveInstagramContent } from "../../lib/helpers";
 
 export async function GET(
