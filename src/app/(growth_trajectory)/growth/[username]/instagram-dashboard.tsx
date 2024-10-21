@@ -446,7 +446,7 @@ export default function InstagramDashboard({
 
       {user.bio && <ProfileOptimization user={user} />}
 
-      {Faqs.length > 0 && <FAQ faqs={Faqs} />}
+      {Faqs && Faqs.length > 0 && <FAQ faqs={Faqs} />}
     </div>
   );
 }
