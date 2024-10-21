@@ -22,11 +22,14 @@ const APP_NAME = "FollowersTool";
 // const APP_DEFAULT_TITLE = "FollowersTool";
 
 export const metadata: Metadata = {
-  title: APP_NAME,
-  description: "Discover the best AI tools and products in 2024. Find the top AI websites and tools to help you grow your business, improve productivity, and drive innovation.",
+  title: `FollowersTool: Directory of Best Instagram Followers Growth Tools`,
+  description: "Explore over 60 Instagram followers growth services with genuine, unfiltered reviews. See what others say and save on subscriptions with exclusive coupon codes.",
   applicationName: APP_NAME,
   metadataBase: new URL("https://followerstool.vercel.app"),
   manifest: "/manifest.json",
+  alternates: {
+    canonical: `https://followerstool.vercel.app`,
+  },
   openGraph: {
     type: "website",
     siteName: APP_NAME,
