@@ -523,6 +523,9 @@ export const TOOLS = [
     description:
       "Get more Instagram followers with the best Instagram growth service. Simply sign up, add your Instagram account, and grow. Get followers faster now!",
     saves: 4,
+    badges: [
+      { text: "Fake Followers", type: "warning" },
+    ],
     logo: "",
     main_image: "/products/nitreo_b.png",
     slug: "nitreo",
@@ -716,7 +719,7 @@ export const tool_rating = [
   },
   {
     slug: "upgrow",
-    rating: 3.5,
+    rating: 1.5,
   },
   {
     slug: "social-crow",
@@ -728,7 +731,7 @@ export const tool_rating = [
   },
   {
     slug: "keesy",
-    rating: 4,
+    rating: 2,
   },
   {
     slug: "mediamister",
@@ -760,7 +763,7 @@ export const tool_rating = [
   },
   {
     slug: "kicksta",
-    rating: 1,
+    rating: 1.5,
   },
   {
     slug: "nitreo",
@@ -780,7 +783,7 @@ export const tool_rating = [
   },
   {
     slug: "ascendviral",
-    rating: 1,
+    rating: 3.5,
   },
   {
     slug: "trusy",
@@ -820,6 +823,6 @@ export const tool_rating = [
   },
   {
     slug: "owskimedia",
-    rating: 1,
+    rating: 3,
   },
 ];
