@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapEntries = TOOLS.map((tool) => ({
     url: `${BASE_URL}/tool/${escapeXml(tool.slug)}`,
     // lastModified: tool.created_at || new Date(),
-    lastModified: new Date("Oct. 15th, 2024"),
+    lastModified: new Date("2024-10-15"),
   }));
 
   return sitemapEntries;
