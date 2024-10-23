@@ -56,7 +56,7 @@ export async function generateMetadata(
     title: `@${username} Instagram Growth Projection`,
     description: `Get to know how @${username} can get more followers and likes on Instagram with FollowersTool.`,
     alternates: {
-      canonical: `https://followerstool.vercel.app/growth/${username}`,
+      canonical: `https://www.followerstool.com/growth/${username}`,
     },
     // openGraph: {
     //   images: [article?.seo_image_url!, ...previousImages],

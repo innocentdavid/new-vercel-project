@@ -70,7 +70,7 @@ export async function generateMetadata(
     title: `FollowersTool: ${tool?.name} Review 2024`,
     description: seo_description,
     alternates: {
-      canonical: `https://followerstool.vercel.app/review/${slug}`,
+      canonical: `https://www.followerstool.com/review/${slug}`,
     },
     openGraph: {
       // images: tool?.main_image || "",

@@ -75,7 +75,7 @@ export async function generateMetadata(
     title: `FollowersTool: ${tool?.name} Instagram Overview`,
     description: seo_description,
     alternates: {
-      canonical: `https://followerstool.vercel.app/tool/${slug}`,
+      canonical: `https://www.followerstool.com/tool/${slug}`,
     },
     openGraph: {
       // images: tool?.main_image || "",

@@ -2,7 +2,7 @@ import { escapeXml } from "@/lib/helpers";
 import { supabase } from "@/lib/supabaseClient";
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://followerstool.vercel.app";
+const BASE_URL = "https://www.followerstool.com";
 const ITEM_PER_PAGE = 3000;
 
 async function getTotalData() {
