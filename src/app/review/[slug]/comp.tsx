@@ -25,7 +25,7 @@ import { toHtml } from "hast-util-to-html";
 async function convertMarkdownToc(input: string): Promise<string> {
   const markdownContent = input // extractMarkdownContent(input);
 
-  // Generate the TOC from the markdown AST
+  // Generate the TOC from the markdown AST.
   const tocProcessor = unified().use(remarkParse).use(remarkGfm);
 
   const tree = tocProcessor.parse(markdownContent) as any;
