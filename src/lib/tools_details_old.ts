@@ -621,7 +621,7 @@ export const tools_details = [
   {
     id: 7,
     name: "Media Mister",
-    slug: "media-mister",
+    slug: "mediamister",
     logo: "/products/mediamister.png",
     main_image: "/products/mediamister_b.png",
     siteLink: "https://www.mediamister.com",

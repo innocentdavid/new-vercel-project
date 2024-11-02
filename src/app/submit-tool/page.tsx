@@ -22,7 +22,7 @@ export default function SubmitToolPage() {
                 {" "}
                 Submitting your product is paid and you will have to go through
                 our waiting line. See pricing to learn more how it works.{" "}
-                <a href="/how-it-works" className="underline">
+                <a href="/#how-it-works" className="underline">
                   Click here
                 </a>{" "}
                 to learn more about how it works.{" "}

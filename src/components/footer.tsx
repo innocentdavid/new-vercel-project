@@ -49,93 +49,94 @@ export default function Footer() {
               </span>
               <div className="flex flex-col flex-wrap gap-y-2 gap-x-12 mb-24 max-h-[170px]">
                 <div>
-                  <a
+                  <Link
+                  hrefLang="en"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/en"
+                    href="#en"
                   >
                     🇺🇸 English
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     hrefLang="de"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/de"
+                    href="#de"
                   >
                     🇩🇪 Deutsch
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     hrefLang="fr"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/fr"
+                    href="#fr"
                   >
                     🇫🇷 Français
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     hrefLang="it"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/it"
+                    href="#it"
                   >
                     🇮🇹 Italiano
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     hrefLang="es"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/es"
+                    href="#es"
                   >
                     🇪🇸 Español
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     hrefLang="nl"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/nl"
+                    href="#nl"
                   >
                     🇳🇱 Nederlands
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     hrefLang="pt"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/pt"
+                    href="#pt"
                   >
                     🇵🇹 Português
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     hrefLang="sv"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/sv"
+                    href="#sv"
                   >
                     🇸🇪 Svenska
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     hrefLang="ja"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/ja"
+                    href="#ja"
                   >
                     🇯🇵 日本語
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     hrefLang="ko"
                     className="hover:underline text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
-                    href="/ko"
+                    href="#ko"
                   >
                     🇰🇷 한국어
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

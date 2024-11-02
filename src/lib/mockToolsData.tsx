@@ -327,7 +327,7 @@ export const TOOLS = [
     saves: 7,
     logo: "/products/mediamister.png",
     main_image: "/products/mediamister_b.png",
-    slug: "media-mister",
+    slug: "mediamister",
   },
   {
     id: 3,
