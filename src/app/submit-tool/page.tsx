@@ -22,9 +22,13 @@ export default function SubmitToolPage() {
                 {" "}
                 Submitting your product is paid and you will have to go through
                 our waiting line. See pricing to learn more how it works.{" "}
-                <a href="/#how-it-works" className="underline">
-                  Click here
-                </a>{" "}
+                <BuyPlanPopUp plan="lifetime">
+                  <span 
+                  // href="/#how-it-works" 
+                  className="underline cursor-pointer">
+                    Click here
+                  </span>
+                </BuyPlanPopUp>{" "}
                 to learn more about how it works.{" "}
               </p>
             </div>

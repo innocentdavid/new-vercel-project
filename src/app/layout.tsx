@@ -37,6 +37,19 @@ export const metadata: Metadata = {
     siteName: APP_NAME,
     images: "https://www.followerstool.com/og_image.png",
   },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
