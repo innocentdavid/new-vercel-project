@@ -62,6 +62,7 @@ export default function Header() {
                   </li>
                 ))} */}
               </ul>
+              {/* . */}
               {!pathname.includes("/growth/") && (
                 <Link href={`/submit-tool`}>
                   <Button className="bg-pink-500 text-white hover:bg-pink-600 py-[6px] h-fit">
