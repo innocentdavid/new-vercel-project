@@ -43,6 +43,7 @@ export default function Header() {
             </div>
             <span className="text-lg font-semibold">FollowersTool</span>
           </Link>
+          {/* . */}
 
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4">
