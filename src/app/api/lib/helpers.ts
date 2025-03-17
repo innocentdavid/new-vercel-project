@@ -6,7 +6,7 @@ const API_KEY = process.env.X_RAPID_API_KEY;
 
 const options = (username?: string) => ({
   method: "GET",
-  url: "https://instagram-scraper-api2.p.rapidapi.com/v1.2/posts",
+  url: "https://media-api4.p.rapidapi.com/v1.2/posts",
   params: {
     username_or_id_or_url: username ?? "",
 
@@ -14,7 +14,7 @@ const options = (username?: string) => ({
   },
   headers: {
     "X-RapidAPI-Key": API_KEY,
-    "X-RapidAPI-Host": "instagram-scraper-api2.p.rapidapi.com",
+    "X-RapidAPI-Host": "media-api4.p.rapidapi.com",
   },
 });
 
